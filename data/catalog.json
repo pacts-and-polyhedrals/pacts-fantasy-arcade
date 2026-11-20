@@ -1,0 +1,2551 @@
+{
+ "metadata": {
+  "catalog_title": "Pacts & Polyhedrals Fantasy Minigames and Activities",
+  "catalog_version": "0.5.2-alpha.5.2",
+  "date": "2026-11-19",
+  "target": "Foundry VTT v14, system-neutral module",
+  "note": "Full 131-entry design registry: 73 coded-alpha implementations and 58 proposals. Stage 5 adds 14 interactive arena, wizard, bard, grappling, defence and stealth engines plus shared NPC tactics and motion. Coded does not imply live Foundry/Forge certification; implementation_status and release_stage are authoritative.",
+  "provenance_labels": {
+   "existing_browser_prototype": "Playable standalone browser prototype; Foundry multiplayer not yet built",
+   "historical_table_rules": "Prior TTRPG rules/actual-play use; not Foundry coded",
+   "historical_concept": "Prior conversation activity or puzzle; automation proposed",
+   "historical_macro": "Earlier Foundry macro, complete live compatibility not verified",
+   "new_proposal": "New design proposed for this module"
+  },
+  "phase_labels": {
+   "1": "Core release",
+   "2": "Expansion",
+   "3": "Advanced/seasonal"
+  },
+  "core_rules": {
+   "host": "GM-authoritative validated actions and deterministic replay",
+   "no_system_lockin": "Independent points, dice and turns; optional adapters for D&D5e and other systems",
+   "gm_npc": "GM gets same seat controls as players and may delegate to AI midmatch",
+   "accessibility": "Reduced motion, no-timer mode, captions, color-blind patterns, text labels",
+   "fairness": "No private information in shared packets, auditable game log, configurable stakes or points-only",
+   "tutorial": "Guided demo->practice round->live match with NPC voice/cues and skip option"
+  },
+  "module_version": "0.5.0-alpha.5",
+  "module_coded_games": 73,
+  "module_remaining_planned": 58
+ },
+ "games": [
+  {
+   "id": "wyvern-chess",
+   "title": "Wyvern Chess",
+   "category": "Board & strategy",
+   "provenance": "existing_browser_prototype",
+   "phase": "2",
+   "engine": "board",
+   "player_loop": "Move fantasy pieces across Sky, Land and Underworld; outplay another seat or AI.",
+   "automation": "Validate legal moves and checkmate; animate captures, layer transitions, lessons, hint and AI turns.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 3
+  },
+  {
+   "id": "three-wyrms-ante",
+   "title": "Three Wyrms Ante",
+   "category": "Board & strategy",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "cards",
+   "player_loop": "Build creature-colour sets, decide whether to raise, fold, or claim a trick.",
+   "automation": "Deal secret hands, calculate combos, resolve bets and animate dragon cards.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 3
+  },
+  {
+   "id": "king-s-gambit",
+   "title": "King's Gambit",
+   "category": "Board & strategy",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "board",
+   "player_loop": "Move six units on a tactical 5x5 court to capture a royal banner.",
+   "automation": "Enforce turns, line of sight, captures, promotions and positional AI.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 3
+  },
+  {
+   "id": "runestone-checkers",
+   "title": "Runestone Checkers",
+   "category": "Board & strategy",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "board",
+   "player_loop": "Jump opponent stones and decide when to awaken rune powers.",
+   "automation": "Highlight legal jumps, chain captures, trigger rune effects and score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "dwarven-dominoes",
+   "title": "Dwarven Dominoes",
+   "category": "Board & strategy",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "board",
+   "player_loop": "Match glyph ends and choose when to play doubles for extra turns.",
+   "automation": "Place snapping tiles, enforce legal plays and update cumulative score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "goblin-s-bones",
+   "title": "Goblin's Bones",
+   "category": "Board & strategy",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "board",
+   "player_loop": "Draw bones and build scoring chains on a small table.",
+   "automation": "Shuffle bag, reveal glyphs, animate tile placements and detect patterns.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "elemental-conquest",
+   "title": "Elemental Conquest",
+   "category": "Board & strategy",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "board",
+   "player_loop": "Place fire, water, air and earth counters to capture territory.",
+   "automation": "Run adjacency and countering rules, animate elemental clashes and tally control.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 3
+  },
+  {
+   "id": "siege-of-the-seven-towers",
+   "title": "Siege of the Seven Towers",
+   "category": "Board & strategy",
+   "provenance": "new_proposal",
+   "phase": "3",
+   "engine": "board",
+   "player_loop": "Command small armies, supply routes and siege weapons on a hex board.",
+   "automation": "Pathfinder, attack preview, cover, turns, siege destruction and NPC strategy.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "royal-hunt",
+   "title": "Royal Hunt",
+   "category": "Board & strategy",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "deduction",
+   "player_loop": "Track a disguised quarry on a hidden-information board.",
+   "automation": "GM-only clues, reveal and move log, deduction validation and chase animation.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 3
+  },
+  {
+   "id": "three-dragon-slots",
+   "title": "Three-Dragon Slots",
+   "category": "Dice & wagers",
+   "provenance": "historical_table_rules",
+   "phase": "1",
+   "engine": "slots",
+   "player_loop": "Spin three symbol dice, hold reels or re-spin, then bank or risk a win.",
+   "automation": "Animated reels, 3d6 outcome/paytable, optional rigging, payout and history.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "crown-bones",
+   "title": "Crown & Bones",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "dice",
+   "player_loop": "Roll five d6 up to three times, hold dice and fill scoring rows.",
+   "automation": "Dice physics/animation, holds, scorecard, legal rerolls and final ranking.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "goblin-s-bluff",
+   "title": "Goblin's Bluff",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "dice",
+   "player_loop": "Secret-roll five d6 and raise, call, or challenge rivals' face-count bids.",
+   "automation": "Private cups, bid validation, simultaneous reveal and elimination.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "serpent-s-seven",
+   "title": "Serpent's Seven",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "dice",
+   "player_loop": "Roll two d6 to bank points or push again; doubles trigger danger.",
+   "automation": "Roll resolution, streak multiplier, bust display and dealer AI.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "devil-s-knuckles",
+   "title": "Devil's Knuckles",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "dice",
+   "player_loop": "Roll four d6, lock up to two, then reroll once to form ranked patterns.",
+   "automation": "Pattern evaluator, lock toggles, animated rolls and instant scoring.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "giant-s-grip",
+   "title": "Giant's Grip",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "dice",
+   "player_loop": "Bid on total of three dice and choose a safe or risky smash.",
+   "automation": "Escalating wager, smash animation, bust and point totals.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "lucky-kobold",
+   "title": "Lucky Kobold",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "dice",
+   "player_loop": "Choose one of three runes and roll d4-d8-d12 to match the chosen omen.",
+   "automation": "Display odds, resolve pattern and animate small jackpot.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "wyrm-s-eye",
+   "title": "Wyrm's Eye",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "dice",
+   "player_loop": "Guess whether the next d12 is higher, lower or equal to a visible die.",
+   "automation": "Concealed seed, reveal, streak limit and optional point-only mode.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "seven-skulls",
+   "title": "Seven Skulls",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "dice",
+   "player_loop": "Toss seven skull tokens; choose which to keep and when to stop.",
+   "automation": "Simulated throws, locked tokens, combination scoring and risk escalation.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "rune-yahtzee",
+   "title": "Rune Yahtzee",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "dice",
+   "player_loop": "Form runic straights, triplets or quintuplets across three roll phases.",
+   "automation": "Score sheet, pattern engine, dice holds and magical effect variants.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "king-s-high-roll",
+   "title": "King's High Roll",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "dice",
+   "player_loop": "Each player may reroll one die before comparing hidden totals.",
+   "automation": "Secret rolling, reveal, tie breakers, NPC decisions and bracket tracker.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "cauldron-craps",
+   "title": "Cauldron Craps",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "dice",
+   "player_loop": "Bet on a point number and choose among fixed outcomes before dice fly.",
+   "automation": "Two-dice shooter, fair odds, rerolls according to point rules and ledger.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "witches-triad",
+   "title": "Witches' Triad",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "dice",
+   "player_loop": "Roll d4, d6 and d8 and select a sequence to match an open prophecy.",
+   "automation": "Pattern matching, animated runes, score and streak badges.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "coin-of-fate",
+   "title": "Coin of Fate",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "chance",
+   "player_loop": "Choose heads, tails or a tactical three-flip pattern.",
+   "automation": "Animated coin spins, deterministic settlement and simple tournament scores.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "pit-boss-wager",
+   "title": "Pit Boss Wager",
+   "category": "Dice & wagers",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "prediction",
+   "player_loop": "Predict results of an NPC skill contest without influencing the match.",
+   "automation": "Simulate bout with visible odds, payout and spectator reactions.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "waterdeep-hold-em",
+   "title": "Waterdeep Hold'em",
+   "category": "Cards & casino",
+   "provenance": "historical_table_rules",
+   "phase": "1",
+   "engine": "poker_dice",
+   "player_loop": "Play two private dice and three shared dice; check, call, raise or fold.",
+   "automation": "Keep private hands private, evaluate poker hands, run betting and payouts.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 3
+  },
+  {
+   "id": "black-dragon",
+   "title": "Black Dragon",
+   "category": "Cards & casino",
+   "provenance": "historical_table_rules",
+   "phase": "1",
+   "engine": "blackjack",
+   "player_loop": "Choose hit, stand, double or split against a dealer on d12 card values.",
+   "automation": "Dealer AI, hand totals, bust/natural payouts and Five-Card Wyvern bonus.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "three-card-wyvern",
+   "title": "Three-Card Wyvern",
+   "category": "Cards & casino",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "cards",
+   "player_loop": "Bet, then keep or swap one of three cards to form ranked hands.",
+   "automation": "Deck, card flips, hand strength and payout settlement.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "dragon-s-trick",
+   "title": "Dragon's Trick",
+   "category": "Cards & casino",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "cards",
+   "player_loop": "Bid how many tricks your hand will take and choose leading suits.",
+   "automation": "Deal, trump resolution, legal card enforcement and round scoring.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 3
+  },
+  {
+   "id": "bard-s-bluff",
+   "title": "Bard's Bluff",
+   "category": "Cards & casino",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "cards",
+   "player_loop": "Play facedown cards and decide whether to call another player's claim.",
+   "automation": "Secret hand UI, challenges, discard resolution and bluffing NPCs.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 3
+  },
+  {
+   "id": "devil-s-contract",
+   "title": "Devil's Contract",
+   "category": "Cards & casino",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "cards",
+   "player_loop": "Draft one benefit and one hidden liability from a contract deck.",
+   "automation": "Contract reveal, scoring, penalties and animated signing.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "thieves-tower",
+   "title": "Thieves' Tower",
+   "category": "Cards & casino",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "cards",
+   "player_loop": "Lay route cards to climb a dangerous tower while sabotaging rivals.",
+   "automation": "Card placement, hazard map, progress and trap resolutions.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "moonlit-solitaire",
+   "title": "Moonlit Solitaire",
+   "category": "Cards & casino",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "cards",
+   "player_loop": "Clear a fantasy solitaire layout with one-use magic moves.",
+   "automation": "Legal cards, undo, hints, scoring and solo completion animation.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "deck-of-illusions-duel",
+   "title": "Deck of Illusions Duel",
+   "category": "Cards & casino",
+   "provenance": "new_proposal",
+   "phase": "3",
+   "engine": "cards",
+   "player_loop": "Play illusion cards to bluff which creature is genuine each round.",
+   "automation": "Hidden cards, reveal and matching rules, NPC deception probabilities.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "fortune-s-tarot",
+   "title": "Fortune's Tarot",
+   "category": "Cards & casino",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "deduction",
+   "player_loop": "Order omen cards and deduce a hidden three-card fate pattern.",
+   "automation": "Shuffle seed, clue generation, verifier and narrated reveal.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "wobblin-goblin-drinking-contest",
+   "title": "Wobblin' Goblin Drinking Contest",
+   "category": "Tavern & inn",
+   "provenance": "historical_concept",
+   "phase": "1",
+   "engine": "stamina",
+   "player_loop": "Choose careful sip, bravado or skip; remain standing as rounds grow harder.",
+   "automation": "Escalating endurance, wobble effect, audience banter, safe non-alcohol skin.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "wobblin-goblin-monster-wrestling",
+   "title": "Wobblin' Goblin Monster Wrestling",
+   "category": "Tavern & inn",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "grapple",
+   "player_loop": "Choose grip, feint, push or reversal to beat a fantastical opponent.",
+   "automation": "Grapple state, ring boundaries, reaction prompts and pin animations.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "arm-wrestling-at-the-bar",
+   "title": "Arm-Wrestling at the Bar",
+   "category": "Tavern & inn",
+   "provenance": "historical_concept",
+   "phase": "1",
+   "engine": "duel",
+   "player_loop": "Choose power, endurance or feint each exchange to move a pressure marker.",
+   "automation": "Resolve opposed tactics, animate arms, exhaustion and tournament bracket.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "darts-of-the-deep",
+   "title": "Darts of the Deep",
+   "category": "Tavern & inn",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "aiming",
+   "player_loop": "Drag an aim reticle, account for sway, and choose riskier double rings.",
+   "automation": "Animated darts, scored board, wind/sway difficulty and best-of-three.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "giant-s-skittles",
+   "title": "Giant's Skittles",
+   "category": "Tavern & inn",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "bowling",
+   "player_loop": "Adjust angle, power and spin to knock over nine wooden pins.",
+   "automation": "Animate projectile and pin physics; score frames and NPC throws.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "goblin-tankard-toss",
+   "title": "Goblin Tankard Toss",
+   "category": "Tavern & inn",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "aiming",
+   "player_loop": "Flick small tankards into distant moving target barrels.",
+   "automation": "Projectile arc, collision, combo score and reset targets.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "tavern-trivia",
+   "title": "Tavern Trivia",
+   "category": "Tavern & inn",
+   "provenance": "historical_concept",
+   "phase": "1",
+   "engine": "quiz",
+   "player_loop": "Answer tiered lore questions, wager bonus points and steal questions.",
+   "automation": "Question packs, timers, randomized choices and scoreboard.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "barrel-bash",
+   "title": "Barrel Bash",
+   "category": "Tavern & inn",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "physics",
+   "player_loop": "Bat a wobbling barrel toward targets while avoiding the barman's stock.",
+   "automation": "Momentum, collisions, breakage counter and timed scoring.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "bardic-karaoke",
+   "title": "Bardic Karaoke",
+   "category": "Tavern & inn",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "rhythm",
+   "player_loop": "Choose words or timing prompts to match original tavern melodies.",
+   "automation": "Beat indicators, timing windows, score and applause animation.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "sly-fox-s-three-cups",
+   "title": "Sly Fox's Three Cups",
+   "category": "Tavern & inn",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "memory",
+   "player_loop": "Track a marked stone while three cups swap increasingly quickly.",
+   "automation": "Animated shuffle, adaptive tempo, wager-free practice and reveal.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "battle-of-the-bards",
+   "title": "Battle of the Bards",
+   "category": "Performance & social",
+   "provenance": "historical_table_rules",
+   "phase": "2",
+   "engine": "performance",
+   "player_loop": "Choose song, flourish, crowd read, deception and final encore across rounds.",
+   "automation": "Rhythm/move prompts, crowd-meter reactions, judge scoring and NPC rivals.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "goblin-breakdancing-corporation",
+   "title": "Goblin Breakdancing Corporation",
+   "category": "Performance & social",
+   "provenance": "historical_table_rules",
+   "phase": "1",
+   "engine": "rhythm",
+   "player_loop": "Mirror steps, freestyle, then collaborate in a three-round dance battle.",
+   "automation": "Pose prompts, timing windows, escalating score and duet playback.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "ispin-s-impossible-tale",
+   "title": "Ispin's Impossible Tale",
+   "category": "Performance & social",
+   "provenance": "historical_table_rules",
+   "phase": "1",
+   "engine": "storytelling",
+   "player_loop": "Build a tale from prompt cards and choose twists to impress judges.",
+   "automation": "Narrative card deck, judge traits, applause and voting overlay.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "festival-slam-poetry",
+   "title": "Festival Slam Poetry",
+   "category": "Performance & social",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "performance",
+   "player_loop": "Pair rhyme and emotion cards then select delivery cadence.",
+   "automation": "Timed line assembly, audience cues and dynamic scoring.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "jester-s-roast",
+   "title": "Jester's Roast",
+   "category": "Performance & social",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "social",
+   "player_loop": "Choose witty retorts to match the audience's sense of humour.",
+   "automation": "NPC reactions, crowd preference, scoring and optional safety filters.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "masquerade-match",
+   "title": "Masquerade Match",
+   "category": "Performance & social",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "deduction",
+   "player_loop": "Ask one question per round to infer hidden masked identities.",
+   "automation": "Secret identity cards, clue tracking and revelation scene.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "tavern-rumour-auction",
+   "title": "Tavern Rumour Auction",
+   "category": "Performance & social",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "auction",
+   "player_loop": "Bid influence for rumours; decide which hints sound trustworthy.",
+   "automation": "Hidden truth deck, sealed bids and ownership of clues.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "noble-s-dance",
+   "title": "Noble's Dance",
+   "category": "Performance & social",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "rhythm",
+   "player_loop": "Follow step diagrams and select partner cues under changing tempo.",
+   "automation": "Rhythm animation, partner sync, mistake recovery and dance-score display.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "trial-by-debate",
+   "title": "Trial by Debate",
+   "category": "Performance & social",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "social",
+   "player_loop": "Choose arguments, evidence and rebuttals before a jury.",
+   "automation": "Dialogue tree, credibility meter, NPC jurors and verdict.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "bardic-duet",
+   "title": "Bardic Duet",
+   "category": "Performance & social",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "coop_rhythm",
+   "player_loop": "Two players alternate melodies and harmony prompts to keep a song alive.",
+   "automation": "Synchronized notes, shared combo, difficulty ramp and applause.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "fighting-pit-tournament",
+   "title": "Fighting Pit Tournament",
+   "category": "Combat & arena",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "tactics",
+   "player_loop": "Choose attacks, guards, dodge or grapple over arena rounds.",
+   "automation": "Arena movement, attack telegraphs, stamina, damage and bracket.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "wizard-duel",
+   "title": "Wizard Duel",
+   "category": "Combat & arena",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "spell_duel",
+   "player_loop": "Choose elemental stance, counterspell timing and cast range.",
+   "automation": "Resolve priority/counters, animate spell clashes and duel score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "monster-wrestler-championship",
+   "title": "Monster Wrestler Championship",
+   "category": "Combat & arena",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "grapple",
+   "player_loop": "Mount, pin, release or use the ring while a beast fights back.",
+   "automation": "State machine for grapples, NPC attack patterns and victory checks.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "shield-wall",
+   "title": "Shield Wall",
+   "category": "Combat & arena",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "coop_tactics",
+   "player_loop": "Coordinate guard directions while attackers approach in waves.",
+   "automation": "Enemy pathing, shield arcs, collisions and survival score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "arrow-storm",
+   "title": "Arrow Storm",
+   "category": "Combat & arena",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "reaction",
+   "player_loop": "Dodge volleys and time return shots against moving targets.",
+   "automation": "Projectile trajectories, dodge zones, hit detection and waves.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "gladiator-s-gauntlet",
+   "title": "Gladiator's Gauntlet",
+   "category": "Combat & arena",
+   "provenance": "new_proposal",
+   "phase": "3",
+   "engine": "arena",
+   "player_loop": "Survive sequential hazards with one-use stunts and crowd favours.",
+   "automation": "Hazard scheduler, stamina, NPC attack AI and elimination.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "the-gloop",
+   "title": "The Gloop",
+   "category": "Combat & arena",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "rescue",
+   "player_loop": "Rescue a captive from a gelatinous obstacle without being absorbed.",
+   "automation": "Position, slow zones, grapple countdown and animated rescue.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "melee-training-dummy",
+   "title": "Melee Training Dummy",
+   "category": "Combat & arena",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "timing",
+   "player_loop": "Strike indicated openings, block telegraphed attacks and build combos.",
+   "automation": "Tutorial animation, timing input, difficulty levels and damage-free score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "arena-beast-rider",
+   "title": "Arena Beast-Rider",
+   "category": "Combat & arena",
+   "provenance": "historical_concept",
+   "phase": "3",
+   "engine": "mounted_tactics",
+   "player_loop": "Steer mount, time attacks and avoid marked danger arcs.",
+   "automation": "Mount movement, telegraphs, hit zones and NPC rival turns.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "wizard-kart-racing-sorcerous-circuit",
+   "title": "Wizard Kart Racing / Sorcerous Circuit",
+   "category": "Racing & mounts",
+   "provenance": "historical_table_rules",
+   "phase": "2",
+   "engine": "racing",
+   "player_loop": "Steer three laps; choose accelerate, defend, cast or hazard shortcut.",
+   "automation": "Lane/track movement, hazards, spell effects, d12 boosts and positions.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "dragon-jousting",
+   "title": "Dragon Jousting",
+   "category": "Racing & mounts",
+   "provenance": "historical_table_rules",
+   "phase": "2",
+   "engine": "jousting",
+   "player_loop": "Choose flight line, lance angle and shield/body target for three passes.",
+   "automation": "Mount path, hit zones, shield/body scores and knock-off animation.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "griffin-sky-rally",
+   "title": "Griffin Sky Rally",
+   "category": "Racing & mounts",
+   "provenance": "new_proposal",
+   "phase": "3",
+   "engine": "racing",
+   "player_loop": "Pilot through rings, thermals and storm clouds with limited stamina.",
+   "automation": "3D-like parallax rings, checkpoints, draft and aerial NPCs.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "broomstick-derby",
+   "title": "Broomstick Derby",
+   "category": "Racing & mounts",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "racing",
+   "player_loop": "Balance speed, altitude and corners through a city course.",
+   "automation": "Aerial lane positions, collision avoidance and wind effects.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "centaur-cross-country",
+   "title": "Centaur Cross-Country",
+   "category": "Racing & mounts",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "racing",
+   "player_loop": "Choose routes, leaps and stamina pace over uneven fields.",
+   "automation": "Terrain costs, automatic running, obstacles and lap times.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "minecart-mayhem",
+   "title": "Minecart Mayhem",
+   "category": "Racing & mounts",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "racing",
+   "player_loop": "Switch tracks, brake and duck supports in a dwarven mine.",
+   "automation": "Track graph, animated carts, hazards and crash recovery.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "infernal-quad-sprint",
+   "title": "Infernal Quad Sprint",
+   "category": "Racing & mounts",
+   "provenance": "historical_concept",
+   "phase": "3",
+   "engine": "racing",
+   "player_loop": "Drive soul-fuelled quad bikes around an infernal course.",
+   "automation": "Vehicle tokens, hazard events, fuel, overtakes and cinematic impacts.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "kingfisher-dash",
+   "title": "Kingfisher Dash",
+   "category": "Racing & mounts",
+   "provenance": "historical_table_rules",
+   "phase": "1",
+   "engine": "relay",
+   "player_loop": "Carry a fragile egg through crowds; choose pace and protect the egg.",
+   "automation": "Sprint phases, stumble animation, breakage tracker and placements.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "goblin-soapbox-grand-prix",
+   "title": "Goblin Soapbox Grand Prix",
+   "category": "Racing & mounts",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "racing",
+   "player_loop": "Choose cart parts and pilot gravity-fed turns without losing wheels.",
+   "automation": "Build modifiers, steering, breakage and rankings.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "wyvern-obstacle-course",
+   "title": "Wyvern Obstacle Course",
+   "category": "Racing & mounts",
+   "provenance": "new_proposal",
+   "phase": "3",
+   "engine": "mounted_racing",
+   "player_loop": "Command a wyvern over banners, rings and shifting ground hazards.",
+   "automation": "Mount pathing, jumping arcs, timing and checkpoint score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "magic-bowl",
+   "title": "Magic Bowl",
+   "category": "Fantasy sports",
+   "provenance": "new_proposal",
+   "phase": "3",
+   "engine": "team_sport",
+   "player_loop": "Command a 5v5 fantasy team to carry, throw, tackle or cast toward goals.",
+   "automation": "Turn-based pitch, ball physics, limited spells, NPC tactics and scoreclock.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "spellball",
+   "title": "Spellball",
+   "category": "Fantasy sports",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "team_sport",
+   "player_loop": "Pass an arcane ball while charging elemental goals.",
+   "automation": "Tile positions, pass intercepts, goal effects and team AI.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "runeball",
+   "title": "Runeball",
+   "category": "Fantasy sports",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "team_sport",
+   "player_loop": "Aim a glowing stone at rotating scoring rings and defend zones.",
+   "automation": "Target oscillation, projectiles, blocks and points.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "dragonball-aerial",
+   "title": "Dragonball Aerial",
+   "category": "Fantasy sports",
+   "provenance": "new_proposal",
+   "phase": "3",
+   "engine": "team_sport",
+   "player_loop": "Riders pass an orb between flying mounts under stamina constraints.",
+   "automation": "Flight lanes, interceptions, aerial trajectories and scoreboard.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "dwarven-stonecurling",
+   "title": "Dwarven Stonecurling",
+   "category": "Fantasy sports",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "curling",
+   "player_loop": "Set force and spin, then sweep to place stones near the rune.",
+   "automation": "Stone movement, collision, friction and end-by-end score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "goblin-goal-rush",
+   "title": "Goblin Goal Rush",
+   "category": "Fantasy sports",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "team_sport",
+   "player_loop": "Three-a-side chaotic football with traps and power-up zones.",
+   "automation": "Top-down passing, goalkeeper AI, traps and match clock.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "orcish-capture-standard",
+   "title": "Orcish Capture Standard",
+   "category": "Fantasy sports",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "team_sport",
+   "player_loop": "Move a four-person squad, steal the flag and guard a route home.",
+   "automation": "Grid routes, interception, respawn option and capture counting.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "enchanted-court-tennis",
+   "title": "Enchanted Court Tennis",
+   "category": "Fantasy sports",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "racket",
+   "player_loop": "Aim shot direction, force and spin while magical walls shift.",
+   "automation": "Ball trajectories, bounce, rally count and line judge.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "giants-boulderball",
+   "title": "Giants' Boulderball",
+   "category": "Fantasy sports",
+   "provenance": "new_proposal",
+   "phase": "3",
+   "engine": "team_sport",
+   "player_loop": "Control giants to shove huge balls into distant target arches.",
+   "automation": "Momentum, zone control, collision and team score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "faerie-pitch-putt",
+   "title": "Faerie Pitch & Putt",
+   "category": "Fantasy sports",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "golf",
+   "player_loop": "Select club, aim and power to navigate six enchanted holes.",
+   "automation": "Shot trajectory, terrain modifiers, putts and scorecard.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "kingfisher-fishing-championship",
+   "title": "Kingfisher Fishing Championship",
+   "category": "Festivals & carnivals",
+   "provenance": "historical_table_rules",
+   "phase": "2",
+   "engine": "fishing",
+   "player_loop": "Select bait and depth, hook fish, then balance tension while reeling.",
+   "automation": "Fish AI, bite chance, tension minigame, weight tally and prize.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "kattal-s-hammer",
+   "title": "Kattal's Hammer",
+   "category": "Festivals & carnivals",
+   "provenance": "historical_table_rules",
+   "phase": "1",
+   "engine": "strength",
+   "player_loop": "Set stance, strike timing and push for a bigger final impact.",
+   "automation": "Hammer swing, strength meter, three attempts and leaderboard.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "founder-s-fish-pie-contest",
+   "title": "Founder's Fish-Pie Contest",
+   "category": "Festivals & carnivals",
+   "provenance": "historical_table_rules",
+   "phase": "2",
+   "engine": "cooking",
+   "player_loop": "Select fish, seasoning and cook times against judging criteria.",
+   "automation": "Ingredient timer, flavour balance and judge score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "battle-of-high-hill-reenactment",
+   "title": "Battle of High Hill Reenactment",
+   "category": "Festivals & carnivals",
+   "provenance": "historical_table_rules",
+   "phase": "2",
+   "engine": "reenactment",
+   "player_loop": "Coordinate staged tactics and meet objectives before failures accumulate.",
+   "automation": "NPC waves, three-success/two-failure state and crowd outcome.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "horngrim-s-amazing-maze",
+   "title": "Horngrim's Amazing Maze",
+   "category": "Festivals & carnivals",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "maze",
+   "player_loop": "Navigate a fogged labyrinth and choose routes under time pressure.",
+   "automation": "Procedural maze, fog reveal, moving traps and finish timer.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "fizzlenub-s-feast",
+   "title": "Fizzlenub's Feast",
+   "category": "Festivals & carnivals",
+   "provenance": "historical_table_rules",
+   "phase": "1",
+   "engine": "food_challenge",
+   "player_loop": "Taste mystery dishes and decide to keep eating or stop.",
+   "automation": "d6 effects, reactions, reward reveals and optional food-safe skin.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "treant-moot",
+   "title": "Treant Moot",
+   "category": "Festivals & carnivals",
+   "provenance": "historical_table_rules",
+   "phase": "2",
+   "engine": "social_puzzle",
+   "player_loop": "Speak to ancient trees, assemble their needs and persuade a council.",
+   "automation": "Dialogue states, nature clues, voting and forest rewards.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "deranged-range",
+   "title": "Deranged Range",
+   "category": "Festivals & carnivals",
+   "provenance": "historical_concept",
+   "phase": "1",
+   "engine": "aiming",
+   "player_loop": "Choose target priority and aim at pop-up magical targets.",
+   "automation": "Moving targets, arrow paths, wind and score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "phoenix-nest-rescue",
+   "title": "Phoenix Nest Rescue",
+   "category": "Festivals & carnivals",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "obstacle",
+   "player_loop": "Traverse a timed obstacle course and carry a glowing egg to safety.",
+   "automation": "Checkpoints, heat tiles, rescue animation and team score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "mr-porcelain-doll-chase",
+   "title": "Mr. Porcelain Doll Chase",
+   "category": "Festivals & carnivals",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "chase",
+   "player_loop": "Predict a darting doll's path through carnival stalls.",
+   "automation": "AI waypoints, evasive jukes, line-of-sight and capture timing.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "firebeard-s-portable-forge",
+   "title": "Firebeard's Portable Forge",
+   "category": "Craft & skill contests",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "crafting",
+   "player_loop": "Balance furnace heat, hammer timing and tempering to make a blade.",
+   "automation": "Interactive heat gauge, strike targets, quality outcome and item reward.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "living-shrine-kitchen",
+   "title": "Living Shrine Kitchen",
+   "category": "Craft & skill contests",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "crafting",
+   "player_loop": "Combine harvested ingredients into broths and defensive salves.",
+   "automation": "Recipe discovery, mixing sequence, reactions and ingredient ledger.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "alchemist-s-crucible",
+   "title": "Alchemist's Crucible",
+   "category": "Craft & skill contests",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "crafting",
+   "player_loop": "Mix reagents in the correct order while pressure and heat change.",
+   "automation": "Reagent interactions, timing, discovery log and potion grade.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "enchanter-s-etching",
+   "title": "Enchanter's Etching",
+   "category": "Craft & skill contests",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "tracing",
+   "player_loop": "Trace glyph paths without touching unstable nodes.",
+   "automation": "Pointer path validation, sparks, time and engraving quality.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "tinker-s-lock-race",
+   "title": "Tinker's Lock Race",
+   "category": "Craft & skill contests",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "timing",
+   "player_loop": "Rotate pins and find the correct tension to open a lock quickly.",
+   "automation": "Lock geometry, tension feedback and speed ranking.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 2
+  },
+  {
+   "id": "herbalist-s-hunt",
+   "title": "Herbalist's Hunt",
+   "category": "Craft & skill contests",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "foraging",
+   "player_loop": "Identify plant silhouettes and choose safe parts for a concoction.",
+   "automation": "Procedural herb display, lore hints and sorting feedback.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "merchant-s-bargain",
+   "title": "Merchant's Bargain",
+   "category": "Craft & skill contests",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "social",
+   "player_loop": "Make offers, bluff or trade extras to satisfy an NPC's hidden priorities.",
+   "automation": "Bargaining AI, tolerance threshold and shop ledger.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "guild-auction",
+   "title": "Guild Auction",
+   "category": "Craft & skill contests",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "auction",
+   "player_loop": "Bid openly or secretly on unusual artifacts while tracking a purse.",
+   "automation": "Sealed bids, appraisal clues, settlement and reveal.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "siege-engineer-s-range",
+   "title": "Siege Engineer's Range",
+   "category": "Craft & skill contests",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "artillery",
+   "player_loop": "Tune arc, angle and force to hit targets using a fantasy ballista.",
+   "automation": "Projectile simulation, wind and moving target evaluation.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "potion-sorting-sprint",
+   "title": "Potion Sorting Sprint",
+   "category": "Craft & skill contests",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "sorting",
+   "player_loop": "Match bottles to shelf runes while avoiding unstable combinations.",
+   "automation": "Drag/drop, escalating pace, correct shelf and failure effects.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "forgotten-realms-emoji-door-generator",
+   "title": "Emoji Rune Door",
+   "category": "Riddles & logic",
+   "provenance": "historical_macro",
+   "phase": "1",
+   "engine": "emoji_puzzle",
+   "player_loop": "Arrange symbolic clue tiles into a valid answer chain.",
+   "automation": "GM/puzzle views, click/drag ordering, hints, validators and door reaction.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "tomb-of-the-restless-grave",
+   "title": "Tomb of the Restless Grave",
+   "category": "Riddles & logic",
+   "provenance": "historical_table_rules",
+   "phase": "1",
+   "engine": "riddle",
+   "player_loop": "Deduce the word REST from a tomb inscription to open an entrance.",
+   "automation": "Solution validator, staged emoji hints, stone sliding and guardian response.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 1
+  },
+  {
+   "id": "starforge-giant-lore-chain",
+   "title": "Starforge Giant Lore Chain",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "meta_puzzle",
+   "player_loop": "Solve linked giant riddles for relic locations and hidden Starforge lore.",
+   "automation": "Persist clue journal, dependency graph, reveal items and link rewards.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "night-serpent-emoji-ritual",
+   "title": "Night Serpent Emoji Ritual",
+   "category": "Riddles & logic",
+   "provenance": "historical_table_rules",
+   "phase": "2",
+   "engine": "emoji_puzzle",
+   "player_loop": "Decode serpent-night-door-sun symbols and sequence three ritual chains.",
+   "automation": "Tile arrangement, spirit effects and Fear/Despair/Light resolution.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "scribe-s-riddle-tablet",
+   "title": "Scribe's Riddle Tablet",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "1",
+   "engine": "sequence",
+   "player_loop": "Order Moon, Giant and Flower inscriptions correctly.",
+   "automation": "Tile drag/drop, clue reveal and animated tablet response.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "bone-choir",
+   "title": "Bone Choir",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "1",
+   "engine": "sequence",
+   "player_loop": "Hear a rhythmic chant and place Red-White-Red bone sigils.",
+   "automation": "Audio cues, sequence check and crypt opening effect.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "crystal-gate-tone-lock",
+   "title": "Crystal Gate Tone Lock",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "musical_puzzle",
+   "player_loop": "Reproduce musical pitches played by a crystal gateway.",
+   "automation": "Play tones, repeat sequence, error guidance and opening animation.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "tri-moon-lock",
+   "title": "Tri-Moon Lock",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "rotation",
+   "player_loop": "Rotate lunar dials to match a three-moon alignment.",
+   "automation": "Simulated orbit dials, partial matches and gate unlock.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "grammar-of-grief",
+   "title": "Grammar of Grief",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "1",
+   "engine": "word_puzzle",
+   "player_loop": "Complete three sentences from a haunted archive.",
+   "automation": "Accept semantic answer variants, highlight clues and unveil next page.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "ink-bound-door",
+   "title": "Ink-Bound Door",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "1",
+   "engine": "riddle",
+   "player_loop": "Solve a language riddle to open a sigil-covered door.",
+   "automation": "Text validation, animated ink flow and alternate clue route.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "the-three-hungers",
+   "title": "The Three Hungers",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "logic",
+   "player_loop": "Feed three mouths according to overlapping restrictions.",
+   "automation": "Choice board, constraints, reaction feedback and reset.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "weight-rhythm-echo-bridge",
+   "title": "Weight, Rhythm & Echo Bridge",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "cooperative_puzzle",
+   "player_loop": "Move across bridge squares according to weight, sound and rhythm.",
+   "automation": "Tile states, timing windows, animated steps and bridge collapse.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "the-sluice-sequence",
+   "title": "The Sluice Sequence",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "circuit_puzzle",
+   "player_loop": "Turn valves to direct water through safe channels.",
+   "automation": "Flow simulation, pipe rotation, pressure and flood consequences.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "rotating-gravity-room",
+   "title": "Rotating Gravity Room",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "3",
+   "engine": "spatial_puzzle",
+   "player_loop": "Rotate a chamber to guide tokens to safe exits.",
+   "automation": "Animated gravity vectors, falling paths and collision checks.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "three-oaths",
+   "title": "Three Oaths",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "logic",
+   "player_loop": "Match vows, speakers and consequences to open a seal.",
+   "automation": "Clue board, contradiction detection and seal state.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "keystone-lattice",
+   "title": "Keystone Lattice",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "circuit_puzzle",
+   "player_loop": "Route arcane energy between keystone nodes without overload.",
+   "automation": "Node graph, live light paths and overcharge feedback.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "riddle-book-procedural-challenges",
+   "title": "The Riddle Book",
+   "category": "Riddles & logic",
+   "provenance": "historical_concept",
+   "phase": "2",
+   "engine": "riddle",
+   "player_loop": "Select lore tier and solve generated original riddles with optional hints.",
+   "automation": "Template generation, answer synonym check, uniqueness log and hint ladder.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "wally-style-original-trap-builder",
+   "title": "Wardplate Trap: The Falling Sun",
+   "category": "Riddles & logic",
+   "provenance": "new_proposal",
+   "phase": "3",
+   "engine": "puzzle_editor",
+   "player_loop": "GM combines original clues, moving parts and fail-forward triggers.",
+   "automation": "Visual editor, solvability checks, animated mechanisms and export.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 4
+  },
+  {
+   "id": "arcane-sealbreaker",
+   "title": "Arcane Sealbreaker",
+   "category": "Magic & exploration",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "circuit_puzzle",
+   "player_loop": "Link rotating runes to dismantle a ward while avoiding alarm nodes.",
+   "automation": "Rune circuits, charge animation, alarm meter and success.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "familiar-racing",
+   "title": "Familiar Racing",
+   "category": "Magic & exploration",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "racing",
+   "player_loop": "Guide small magical companions through a moving obstacle course.",
+   "automation": "NPC pathing, obstacle movement and finish timing.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "illusion-spotter",
+   "title": "Illusion Spotter",
+   "category": "Magic & exploration",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "observation",
+   "player_loop": "Find subtle differences between near-identical enchanted rooms.",
+   "automation": "Swap scene details, hit targets, clue hints and score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "mimic-or-treasure",
+   "title": "Mimic or Treasure?",
+   "category": "Magic & exploration",
+   "provenance": "new_proposal",
+   "phase": "1",
+   "engine": "deduction",
+   "player_loop": "Test suspicious objects with a limited number of probes.",
+   "automation": "Hidden object attributes, physical responses and reveal.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "golem-s-path",
+   "title": "Golem's Path",
+   "category": "Magic & exploration",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "programming",
+   "player_loop": "Place command runes to guide a golem across hazards.",
+   "automation": "Step-by-step token path, collisions, loops and goal check.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "shadow-heist",
+   "title": "Shadow Heist",
+   "category": "Magic & exploration",
+   "provenance": "new_proposal",
+   "phase": "3",
+   "engine": "stealth",
+   "player_loop": "Move a thief through patrol routes and collect target objects.",
+   "automation": "Guard AI, vision cones, alarms and pathfinding.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "coded_alpha",
+   "release_stage": 5,
+   "implementation_stage": "5",
+   "integration_notes": "Alpha 5 shared 2D arena reducer, tactical NPC AI, authored dialogue, match replay and GM-led brackets. Live Foundry/Forge QA pending."
+  },
+  {
+   "id": "rune-fishing-beneath-the-void",
+   "title": "Rune Fishing Beneath the Void",
+   "category": "Magic & exploration",
+   "provenance": "new_proposal",
+   "phase": "3",
+   "engine": "fishing",
+   "player_loop": "Search strange waters for relics while avoiding hidden creatures.",
+   "automation": "Sonar-like clues, hook controls, encounter pool and loot.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "dungeoneer-s-trap-sprint",
+   "title": "Dungeoneer's Trap Sprint",
+   "category": "Magic & exploration",
+   "provenance": "new_proposal",
+   "phase": "2",
+   "engine": "reaction",
+   "player_loop": "Select movement, leap or duck actions to traverse timed traps.",
+   "automation": "Scrolling hazards, timing and replay score.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "astral-whale-memory-weave",
+   "title": "Astral Whale Memory Weave",
+   "category": "Magic & exploration",
+   "provenance": "historical_concept",
+   "phase": "3",
+   "engine": "memory_puzzle",
+   "player_loop": "Reconnect shattered memories through constellations and images.",
+   "automation": "Narrative memory tiles, sequence validation and cinematic reveal.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  },
+  {
+   "id": "dimensional-gate-alignment",
+   "title": "Dimensional Gate Alignment",
+   "category": "Magic & exploration",
+   "provenance": "historical_concept",
+   "phase": "3",
+   "engine": "rotation",
+   "player_loop": "Turn four interlocking planar gates to align a desired route.",
+   "automation": "Rotation engine, portal animation, misalignment effects and route record.",
+   "modes": [
+    "solo-vs-npc",
+    "player-vs-player",
+    "gm-controls-npc",
+    "npc-autoplay",
+    "spectator"
+   ],
+   "implementation_status": "planned",
+   "release_stage": null
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+/* Fantasy Arcade Stage 5 — original tactical arena visuals; accessible grid controls. */
+.pfa-arena-stage {--pfa-cell:clamp(30px,5.5vw,57px);color:#f6e7cf;container-type:inline-size}
+.pfa-arena-banner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:12px 16px;background:linear-gradient(120deg,#55412d,#2c2435);border:1px solid #bea36c;border-radius:10px;font-weight:700;margin:12px 0}
+.pfa-arena-banner strong{font-size:12px;color:#ffe7aa}
+.pfa-arena-portraits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}
+.pfa-arena-portrait{display:flex;flex-direction:column;gap:6px;border:1px solid #8a6d5f;border-radius:9px;padding:12px;background:#302938;min-width:0}
+.pfa-arena-portrait.mine{border-color:#c9b174;box-shadow:inset 0 0 0 1px #c5b07750}
+.pfa-arena-portrait b{font-size:14px}.pfa-arena-portrait small{font-size:11px;color:#dcd0c9}
+.pfa-arena-meter{width:100%;height:12px;accent-color:#8cba9c}
+.pfa-arena-info{padding:10px 13px;background:#262635;border-left:4px solid #c2a46d;margin:13px 0;font-size:12px;min-height:42px}
+.pfa-arena-grid-shell{position:relative;display:grid;justify-content:center;overflow-x:auto;padding:10px;background:radial-gradient(ellipse at 50% 30%,#4a3244,#1d1b26);border:5px ridge #8f7056;border-radius:12px;box-shadow:inset 0 0 30px #0c081e}
+.pfa-arena-grid{display:grid;grid-template-columns:repeat(var(--cols),minmax(0,var(--pfa-cell)));gap:2px}
+.pfa-arcade button.pfa-arena-cell{position:relative;display:grid;place-items:center;width:var(--pfa-cell);height:var(--pfa-cell);min-width:0!important;min-height:0!important;padding:0!important;margin:0!important;background:#61504f!important;border:1px solid #8d7966!important;border-radius:3px!important;color:#f9e8b5!important;font-size:17px!important;cursor:default}
+.pfa-arcade button.pfa-arena-cell:nth-child(even){background:#685851!important}
+.pfa-arcade button.pfa-arena-cell.pillar{background:repeating-linear-gradient(45deg,#383440 0px,#383440 6px,#5c5d61 6px,#5c5d61 12px)!important;color:#d2d2c7!important}
+.pfa-arcade button.pfa-arena-cell.cover{background:#52604e!important}.pfa-arcade button.pfa-arena-cell.spotlight{background:#7a6348!important}
+.pfa-arcade button.pfa-arena-cell.hazard{background:#8a473f!important}.pfa-arcade button.pfa-arena-cell.slime{background:#51716a!important}
+.pfa-arcade button.pfa-arena-cell.target{border:3px solid #ffe48b!important;box-shadow:inset 0 0 11px #f6eaa5,0 0 7px #ffe69d66!important;cursor:pointer!important}
+.pfa-arcade button.pfa-arena-cell.target:hover{background:#8e7a5d!important}.pfa-arcade button.pfa-arena-cell:disabled{opacity:1!important}
+.pfa-arena-cell .pfa-arena-token,.pfa-arena-cell .pfa-arena-threat{display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.05;filter:drop-shadow(0 1px 3px #000)}
+.pfa-arena-cell .pfa-arena-token{font-size:22px}.pfa-arena-cell .pfa-arena-token i,.pfa-arena-cell .pfa-arena-threat i{font-style:normal;font-size:9px;font-weight:800;background:#25232a;border-radius:5px;padding:2px 4px}
+.pfa-arena-cell.side-a .pfa-arena-token{filter:drop-shadow(0 0 3px #70c8c0)}.pfa-arena-cell.side-b .pfa-arena-token{filter:drop-shadow(0 0 3px #efb372)}
+.pfa-arena-flight{position:absolute;pointer-events:none;top:calc(10px + var(--sy) * (var(--pfa-cell) + 2px));left:calc(50% - var(--cols) * (var(--pfa-cell) + 2px) / 2 + var(--sx) * (var(--pfa-cell) + 2px));font-size:25px;z-index:9;animation:pfa-arena-dash .65s ease-in-out both}
+@keyframes pfa-arena-dash{from{transform:translate(0,0) scale(1.15);opacity:.95}to{transform:translate(calc((var(--tx) - var(--sx)) * (var(--pfa-cell) + 2px)),calc((var(--ty) - var(--sy)) * (var(--pfa-cell) + 2px))) scale(.85);opacity:.2}}
+.pfa-arena-commentary{border:1px solid #756179;border-radius:10px;background:#302636;margin:13px 0;padding:14px 16px;min-height:94px}
+.pfa-arena-commentary b{color:#f7d498}.pfa-arena-commentary p{font:italic 18px/1.4 Georgia,serif;margin:8px 0}.pfa-arena-commentary small{color:#c9bacc;font-size:12px}
+.pfa-arena-abilities{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:6px;margin:12px 0}
+.pfa-arcade .pfa-arena-ability{white-space:normal;min-height:42px!important;text-align:left!important;font-size:12px!important;padding:8px!important}
+.pfa-arcade .pfa-arena-ability.selected{border-color:#ffe39e!important;box-shadow:inset 0 0 0 1px #ffe39e88!important}
+.pfa-arena-setup{border:1px solid #826a57;border-radius:10px;padding:12px;margin:12px 0;background:#2d2733}
+.pfa-arena-setup-row{margin-bottom:10px;padding:8px;border-bottom:1px solid #554c52}.pfa-arena-setup-row>div{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+.pfa-arena-setup select{width:100%;background:#222231;color:#ffe7c6;border:1px solid #887168;border-radius:6px;padding:8px}
+.pfa-arena-setup label{display:block;font-size:12px;margin:8px 0}
+.pfa-arena-log ol{max-height:200px;overflow-y:auto;padding-left:22px;font-size:12px;color:#e2d0c0}
+.pfa-arena-log li{padding:4px 0}.pfa-arena-log li small{color:#ecc99a;margin-right:5px}
+@container(max-width:550px){.pfa-arena-abilities{grid-template-columns:repeat(2,minmax(0,1fr))}.pfa-arena-portraits{grid-template-columns:1fr}.pfa-arena-stage{--pfa-cell:clamp(28px,7vw,42px)}}
+@media(max-width:650px){.pfa-arena-setup-row>div{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.pfa-arena-flight{animation:none!important;display:none!important}.pfa-arena-cell{transition:none!important}}
+
+/* Stage 5: cinematic ranged trajectories and impact bursts; visual only. */
+.pfa-arena-projectile{position:absolute;z-index:11;pointer-events:none;top:calc(10px + var(--sy) * (var(--pfa-cell) + 2px) + var(--pfa-cell)/3);left:calc(50% - var(--cols) * (var(--pfa-cell) + 2px) / 2 + var(--sx) * (var(--pfa-cell) + 2px) + var(--pfa-cell)/3);filter:drop-shadow(0 0 9px #f9d68e);font-size:22px;animation:pfa-arena-arrow .55s ease-in forwards}
+.pfa-arena-projectile.arcane{color:#9cdbff;filter:drop-shadow(0 0 11px #a0dfff)}
+.pfa-arena-projectile.arrow{color:#ffd38c}
+@keyframes pfa-arena-arrow{0%{transform:translate(0,0) scale(.65);opacity:0}18%{opacity:1}95%{opacity:1}100%{transform:translate(calc((var(--tx) - var(--sx)) * (var(--pfa-cell) + 2px)),calc((var(--ty) - var(--sy)) * (var(--pfa-cell) + 2px))) scale(1.25);opacity:0}}
+.pfa-arena-impact{position:absolute;z-index:10;pointer-events:none;top:calc(10px + var(--iy) * (var(--pfa-cell) + 2px) + var(--pfa-cell) * .18);left:calc(50% - var(--cols) * (var(--pfa-cell) + 2px) / 2 + var(--ix) * (var(--pfa-cell) + 2px) + var(--pfa-cell) * .18);width:calc(var(--pfa-cell) * .68);height:calc(var(--pfa-cell) * .68);border:3px solid #ffe0a0;border-radius:100%;box-shadow:0 0 7px #ffad64;animation:pfa-arena-impact .6s ease-out forwards}
+.pfa-arena-impact.arcane{border-color:#a3e9ff;box-shadow:0 0 12px #a3e9ff}
+@keyframes pfa-arena-impact{0%{transform:scale(.1);opacity:0}35%{transform:scale(.9);opacity:1}100%{transform:scale(1.75);opacity:0}}
+@media(prefers-reduced-motion:reduce){.pfa-arena-projectile,.pfa-arena-impact{display:none!important;animation:none!important}}

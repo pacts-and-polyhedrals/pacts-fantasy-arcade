@@ -1,0 +1,63 @@
+{
+  "id": "pacts-fantasy-arcade",
+  "title": "Pacts & Polyhedrals | Fantasy Arcade",
+  "description": "System-agnostic Fantasy Arcade for Foundry VTT v14: 73 playable tavern games, casino tables, board games, co-operative puzzles and tactical arena contests, each with original cover art, a guided lesson and complete rules in the bundled Rulebook journal. GM-approved read-only character links for Imagi-Nations, D&D 5e, Pathfinder 2e and Daggerheart. Fictional points only.",
+  "authors": [
+    {
+      "name": "Asmo, Pacts & Polyhedrals (Ben Vale)",
+      "url": "https://www.patreon.com/pactsandpolyhedrals"
+    }
+  ],
+  "version": "0.5.2-alpha.5.2",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14",
+    "maximum": "14"
+  },
+  "url": "https://github.com/pacts-and-polyhedrals/pacts-fantasy-arcade",
+  "manifest": "https://github.com/pacts-and-polyhedrals/pacts-fantasy-arcade/releases/latest/download/module.json",
+  "download": "https://github.com/pacts-and-polyhedrals/pacts-fantasy-arcade/releases/download/v0.5.2-alpha.5.2/pacts-fantasy-arcade.zip",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
+  "changelog": "CHANGELOG.md",
+  "socket": true,
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "styles": [
+    "styles/arcade.css",
+    "styles/arena.css"
+  ],
+  "packs": [
+    {
+      "name": "arcade-rulebook",
+      "label": "Fantasy Arcade Rulebook",
+      "path": "packs/arcade-rulebook",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Pacts & Polyhedrals",
+      "sorting": "a",
+      "color": "#7a1020",
+      "packs": [
+        "arcade-rulebook"
+      ]
+    }
+  ],
+  "media": [
+    {
+      "type": "cover",
+      "url": "modules/pacts-fantasy-arcade/assets/art/banner.webp"
+    }
+  ],
+  "flags": {
+    "alpha": true
+  }
+}

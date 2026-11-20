@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {initArenaGame} from '../scripts/core/arena-engine.mjs';
+import {renderArenaGame} from '../scripts/ui/arena-view.mjs';
+const seats=[{id:'alice',name:'Aria Firestring',kind:'person',ownerId:'alice'},{id:'gm',name:'Velvet Thorne',kind:'gm-npc',ownerId:'gm'}];
+const state=initArenaGame('battle-of-the-bards',seats,()=>.5);
+const session={id:'demo',gameId:'battle-of-the-bards',status:'playing',seats,board:state,config:{difficulty:3},notes:[],hostId:'alice'};
+const view=renderArenaGame(session,{canPlay:true,seatId:'alice',arenaAbility:'verse',arenaDelivery:'heroic',gm:true,user:{id:'alice'},replayIndex:-1,reducedMotion:true});
+const out=process.argv[2]||'/mnt/data/fantasy-minigames/alpha5/preview-bards.html';
+const base=path.resolve(import.meta.dirname,'..');
+fs.writeFileSync(out,`<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Fantasy Arcade Stage 5 Preview</title><link rel="stylesheet" href="file://${base}/styles/arcade.css"><link rel="stylesheet" href="file://${base}/styles/arena.css"><style>body{background:#16131c;color:#f4e9da;margin:0;padding:12px;font:14px system-ui}.pfa-arcade{max-width:1050px;margin:auto}.pfa-panel{max-width:850px;margin:auto;background:#241e2a;border-radius:10px;padding:15px}.pfa-arena-stage{--pfa-cell:51px;max-width:810px;margin:auto}</style></head><body><main class="pfa-arcade"><section class="pfa-panel"><h1>Battle of the Bards · Arena QA</h1>${view}</section></main></body></html>`);
+console.log(out);

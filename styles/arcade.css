@@ -1,0 +1,244 @@
+/* Pacts Fantasy Arcade: intentionally self-contained under the pfa- namespace. */
+#pfa-launcher{position:fixed;bottom:20px;right:22px;z-index:104;border:1px solid #e2bd70;border-radius:16px;background:linear-gradient(135deg,#38223c,#212330);color:#f9e5ad;font-size:14px;font-weight:700;letter-spacing:.02em;box-shadow:0 5px 22px #0009;padding:12px 17px;cursor:pointer}
+#pfa-launcher:hover,#pfa-launcher:focus-visible{filter:brightness(1.2);outline:2px solid #dfb968;outline-offset:3px}
+.pfa-application{--pfa-ink:#f2e6cf;--pfa-muted:#b4abb0;--pfa-panel:#22202d;--pfa-plate:#2d2835;--pfa-border:#5b4751;--pfa-gold:#f1c47d;--pfa-rose:#b56e82;min-width:620px}
+.pfa-application .window-content{padding:0!important;overflow:hidden!important;background:#171923!important;color:var(--pfa-ink)!important}
+.pfa-arcade{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.01em;height:100%;display:flex;flex-direction:column;background:radial-gradient(ellipse at 90% -30%,#5d3550 0%,transparent 52%),#171923;color:var(--pfa-ink);font-size:14px;min-height:420px}
+.pfa-arcade *{box-sizing:border-box}
+.pfa-arcade h2,.pfa-arcade h3,.pfa-arcade h4,.pfa-arcade p{margin:0 0 10px}
+.pfa-arcade h2{font-family:Georgia,serif;font-size:24px;color:#f5d394;line-height:1.24}
+.pfa-arcade h3{font-family:Georgia,serif;font-size:17px;color:#f4d6ac}
+.pfa-arcade h4{font-size:13px;color:#d1b09c}
+.pfa-arcade small{font-size:11px;color:var(--pfa-muted)}
+.pfa-arcade button,.pfa-arcade select,.pfa-arcade input{font-family:inherit}
+.pfa-arcade button:focus-visible,.pfa-arcade [role="button"]:focus-visible,.pfa-arcade input:focus-visible,.pfa-arcade select:focus-visible{outline:2px solid #f6d594;outline-offset:2px}
+.pfa-hero{display:flex;align-items:center;justify-content:space-between;padding:14px 20px 10px;border-bottom:1px solid var(--pfa-border);background:linear-gradient(95deg,#38263a 2%,#211c30 70%,#28303a);flex-shrink:0}
+.pfa-hero h2{margin:2px 0;font-size:25px}.pfa-hero h2 small{font-family:system-ui;font-size:11px;font-weight:500;margin-left:12px}
+.pfa-hero p{font-size:11px;color:#dfc6ae;margin:2px 0}
+.pfa-eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:10px;font-weight:800;color:#b8a7a4}
+.pfa-hero-seal{font-size:42px;text-shadow:0 0 16px #dc985c50}
+.pfa-layout{display:grid;grid-template-columns:280px minmax(0,1fr);min-height:0;flex:1}
+.pfa-sidebar{padding:15px 12px 18px;background:linear-gradient(#25212d,#211f2b);border-right:1px solid #55404f;min-height:0;overflow-y:auto;scrollbar-color:#755e6e transparent}
+.pfa-sidebar h3{margin:4px 7px 9px;font-size:15px}
+.pfa-sidebar input[type="search"],.pfa-arcade input[type="text"],.pfa-arcade select{width:100%;background:#131722;color:#fcebd3;border:1px solid #68586b;border-radius:7px;padding:9px 11px;min-height:36px}
+.pfa-sidebar input[type="search"]{margin-bottom:8px}
+.pfa-toggle{display:flex;gap:7px;align-items:center;font-size:11px;color:#c2b7bc;margin:3px 3px 12px;cursor:pointer}
+.pfa-toggle input{accent-color:#e6ba79}
+.pfa-games{display:flex;flex-direction:column;gap:4px;max-height:330px;overflow-y:auto;padding:0 2px 12px;scrollbar-color:#685167 transparent}
+.pfa-game-entry{display:grid;grid-template-columns:26px minmax(0,1fr) 48px;gap:6px;align-items:center;text-align:left;width:100%;background:#282435;border:1px solid transparent;border-radius:9px;color:#eee1d3;padding:7px 8px;cursor:pointer;min-height:47px}
+.pfa-game-entry:hover,.pfa-game-entry.active{background:#3c3140;border-color:#c5a576}
+.pfa-game-entry>b{font-size:11px}.pfa-game-entry span:nth-child(2){overflow:hidden}.pfa-game-entry span b{display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;font-size:12px}.pfa-game-entry span small{display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.pfa-game-entry em{font-style:normal;font-size:9px;letter-spacing:.05em;text-align:right}.pfa-game-entry em.available{color:#a6dabc}.pfa-game-entry em.planned{color:#afa0ab}
+.pfa-tables{margin:7px 0}.pfa-table-entry{display:block;text-align:left;width:100%;padding:8px;border-radius:8px;border:1px solid #544455;background:#282431;color:#f1d5bf;cursor:pointer;font-size:12px;margin-bottom:5px}.pfa-table-entry:hover,.pfa-table-entry.active{border-color:#f2c47f}
+.pfa-main{padding:22px 22px 36px;overflow-y:auto;min-height:0;scrollbar-color:#6d5560 transparent}
+.pfa-session-header,.pfa-library-header{display:flex;align-items:flex-start;gap:18px;justify-content:space-between;margin-bottom:18px}.pfa-session-header h2,.pfa-library-header h2{margin:11px 0 8px}.pfa-library-header p{max-width:560px;line-height:1.5;color:#d5c9c7}.pfa-big-icon{font-size:70px;filter:drop-shadow(0 3px 14px #ffc77555);line-height:1}
+.pfa-panel,.pfa-leaderboard{border:1px solid #594957;background:linear-gradient(120deg,#292633 0%,#221e2d 100%);border-radius:13px;padding:17px;margin-bottom:15px;box-shadow:inset 0 1px #ffffff0c}
+.pfa-panel p{line-height:1.55;color:#d8cdd1}.pfa-muted{color:var(--pfa-muted)!important;font-size:12px}
+.pfa-arcade .pfa-btn{border:1px solid #81677c;background:linear-gradient(#453646,#342936);color:#fbe8d5;border-radius:7px;min-height:37px;min-width:56px;font-weight:700;padding:7px 11px;font-size:12px;cursor:pointer;transition:transform .12s ease,border-color .15s ease,filter .15s ease;box-shadow:inset 0 1px #ffffff15}
+.pfa-arcade .pfa-btn:hover:not(:disabled){border-color:#f4cf96;filter:brightness(1.17);transform:translateY(-1px)}
+.pfa-arcade .pfa-btn:disabled{opacity:.40;cursor:not-allowed;box-shadow:none}
+.pfa-arcade .pfa-btn.pfa-primary{background:linear-gradient(#ba935b,#8c6340);border-color:#e7c789;color:#181824}
+.pfa-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:11px 0}.pfa-actions select{max-width:165px}
+.pfa-leaderboard{margin-bottom:12px;padding:12px 15px}.pfa-leaderboard h3{margin-bottom:8px}.pfa-leader{display:flex;align-items:center;gap:10px;flex-wrap:wrap;border-top:1px solid #ffffff12;padding:8px 0}.pfa-leader>span{flex:1;min-width:170px}.pfa-leader strong{color:#f2d095;font-size:12px}.pfa-leader .pfa-btn{min-height:27px;font-size:10px;padding:4px 7px}
+.pfa-pill{font-size:10px;border:1px solid #b78f57;color:#ffd28c;text-transform:uppercase;letter-spacing:.1em;padding:7px 10px;border-radius:16px}
+.pfa-play-header{display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid #685260;padding-bottom:9px;margin-bottom:14px}.pfa-play-header h3{margin:0}
+.pfa-game-content{padding:7px 0 4px}.pfa-game-content>p{margin:11px 0}
+.pfa-center{text-align:center}.pfa-gigantic{font-size:66px;line-height:1.5;min-height:82px}.pfa-gigantic small{font-size:17px}
+.pfa-dice{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:16px 0}.pfa-arcade .pfa-die{display:inline-flex;align-items:center;justify-content:center;min-width:55px;min-height:58px;padding:6px;border:1px solid #957f66;border-radius:10px;background:linear-gradient(140deg,#fff2dc,#e8d3af);color:#352a32;font-size:38px;box-shadow:0 4px 9px #0004}.pfa-die.held,.pfa-symbol.held{box-shadow:0 0 0 3px #e7b96a,0 4px 14px #e7b96a55!important}
+.pfa-scoreline{font-size:16px;text-align:center;color:#e8c28c;padding:9px 0}.pfa-scorecards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin-top:16px}.pfa-score-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 9px;border:1px solid #493b52;border-radius:7px;background:#211e28}.pfa-score-row>span{font-size:11px}.pfa-score-row .pfa-btn{min-height:28px;padding:5px 8px;font-size:10px}.pfa-score-row strong{color:#abdfb3}
+.pfa-slots{display:flex;justify-content:center;gap:7px;margin:12px 0}.pfa-reel{display:flex;justify-content:center;align-items:center;width:min(25%,110px);height:112px;border:5px double #bd9b5f;border-radius:10px;background:radial-gradient(#fff6d8,#c6ae88);font-size:43px;color:#382737;overflow:hidden;box-shadow:inset 0 3px 15px #29222d40}.pfa-arcade .pfa-reel .pfa-btn,.pfa-symbol{font-size:43px;background:transparent;border:0;color:#3c2947;min-width:60px;min-height:60px;padding:0}
+.pfa-riddle{font-family:Georgia,serif;font-size:16px;line-height:1.8;text-align:center;border-left:3px solid #bf9a70;padding:13px;background:#1a1a25;color:#ffe2b8;margin:13px 0 18px}
+.pfa-meter{height:28px;border:1px solid #ad997e;border-radius:18px;margin:15px 0;position:relative;background:linear-gradient(90deg,#644957,#ad8b69,#dec991,#ad8b69,#644957)}.pfa-target{position:absolute;top:-6px;height:38px;width:7px;background:#5bf9c6;box-shadow:0 0 13px #3fe5ae;border-radius:8px}.pfa-meterneedle{position:absolute;top:-6px;height:38px;width:4px;background:#c3294e;box-shadow:0 0 8px #0009}.pfa-arcade input[type="range"]{width:100%;accent-color:#edbd7e;margin:8px 0 12px}
+.pfa-grip{display:flex;gap:12px;align-items:center;font-size:25px}.pfa-griptrack{position:relative;flex:1;height:24px;border:1px solid #b88c73;background:linear-gradient(90deg,#bd4e4e,#6a4948,#44ac7e);border-radius:20px}.pfa-gripmarker{display:block;position:absolute;top:-7px;width:10px;height:36px;background:#f4e5d2;border-radius:6px;box-shadow:0 0 6px #1c152e}
+.pfa-dart-stage{display:flex;justify-content:center}.pfa-dartboard{position:relative;width:min(70%,340px);aspect-ratio:1;border-radius:50%;border:11px solid #af8657;background:repeating-conic-gradient(from -9deg,#1d2424 0deg 18deg,#bdc4b1 18deg 36deg);box-shadow:inset 0 0 0 10px #30313a,inset 0 0 0 16px #b63d3b,inset 0 0 0 36px #352e3b,inset 0 0 0 45px #396c43,inset 0 0 0 68px #353c37,inset 0 0 0 77px #d3bcb6,0 8px 28px #0008;cursor:crosshair}.pfa-dartboard::after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:11%;height:11%;background:#ad1e31;border:5px solid #e7d8a1;border-radius:50%;pointer-events:none}.pfa-reticle{position:absolute;transform:translate(-50%,-50%);font-size:27px;color:#ffc95e;text-shadow:0 0 3px #050304;z-index:2;pointer-events:none}.pfa-dartmark{position:absolute;transform:translate(-50%,-50%);font-size:14px;color:#85f1ff;text-shadow:0 0 3px #000;pointer-events:none}
+.pfa-cup-stage{position:relative;width:min(95%,435px);height:120px;margin:14px auto 18px;border-bottom:5px solid #ac7756;background:linear-gradient(transparent 75%,#55404c 76%);display:flex}.pfa-cup{width:33.333%;display:flex;justify-content:center;align-items:center;flex-direction:column;position:relative;font-size:56px;transition:transform .36s ease-in-out;z-index:1}.pfa-cup small{font-size:13px;font-weight:bold;color:#debd89}.pfa-cup-caption{text-align:center;font-size:12px;color:#cbb7bf}
+.pfa-quiz-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:13px 0}.pfa-quiz-grid .pfa-btn{min-height:58px;white-space:normal;text-align:left}
+.pfa-rune-words{display:flex;gap:8px;justify-content:center;margin:15px 0}.pfa-rune{width:55px;height:60px;background:#403345;border:1px solid #e0bd83;border-radius:9px;font-size:32px;display:grid;place-items:center}.pfa-rune.placeholder{color:#968999;border-style:dashed}.pfa-rune-btn{font-size:22px!important;min-width:54px!important}
+.pfa-cardroom{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin:12px 0}.pfa-cardroom>div{min-width:170px;text-align:center}.pfa-card-number{font-size:30px;background:#f6e9d8;border:1px solid #a67d52;color:#342b39;border-radius:9px;min-width:46px;min-height:58px;display:grid;place-items:center;font-weight:800}.pfa-cards{display:flex;justify-content:center;gap:7px;margin:10px 0 20px}.pfa-card,.pfa-card-back{display:flex;width:65px;height:94px;border:2px solid #d1b48b;border-radius:8px;background:linear-gradient(#f6ebdf,#dfc4a2);color:#4b253c;padding:7px;flex-direction:column;justify-content:space-between;font-size:16px;box-shadow:0 5px 12px #0006}.pfa-card strong{align-self:center;font-size:30px}.pfa-card-back{align-items:center;justify-content:center;color:#f7db92;background:#382d48;font-size:28px}
+.pfa-lesson{background:#1e2430;border-left:3px solid #ba9479;padding:12px;border-radius:0 8px 8px 0}.pfa-lesson-actor{display:flex;gap:9px;align-items:center;color:#e9c896}.pfa-lesson-actor small{margin-left:auto}.pfa-lesson p{padding:7px 0 4px}
+.pfa-victory,.pfa-notice{padding:12px;border-radius:8px;margin:12px 0;background:#34303d;border:1px solid #7c6271}.pfa-victory{background:#253b35;border-color:#7bba91;color:#d5ffe0}.pfa-notice{color:#ebcbb2}
+.pfa-checkerboard{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));width:min(100%,480px);aspect-ratio:1;border:5px ridge #a87f4e;margin:15px auto;box-shadow:0 12px 25px #0007}.pfa-cell{display:grid;place-items:center;border:none!important;border-radius:0!important;min-width:0!important;min-height:0!important;cursor:pointer;padding:0!important;position:relative;background:#e0c6a0!important}.pfa-cell.dark{background:#59404a!important}.pfa-cell.light{pointer-events:none}.pfa-cell.movable::after{content:"";position:absolute;inset:4px;border:1px dashed #fff2c0;border-radius:5px;pointer-events:none}.pfa-cell.target{background:#55684b!important}.pfa-cell.selected{box-shadow:inset 0 0 0 4px #f2cc67}.pfa-checker{width:72%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;z-index:1;font-size:23px;border:4px solid #e6cda8;box-shadow:0 4px 8px #0009}.pfa-checker.gold{background:#ca9f58;color:#fff0aa}.pfa-checker.scarlet{background:#a82f4d;color:#ffd1b5}.pfa-board-summary{text-align:center;color:#e8c694;font-size:16px}
+.pfa-footer{text-align:center;padding:8px 12px;font-size:10px;background:#221b2c;color:#9f8b98;border-top:1px solid #554455;flex-shrink:0}
+.pfa-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+@media (max-width:820px){.pfa-layout{grid-template-columns:200px minmax(0,1fr)}.pfa-main{padding:13px}.pfa-sidebar{padding:10px 6px}.pfa-scorecards,.pfa-quiz-grid{grid-template-columns:1fr}.pfa-hero h2{font-size:19px}}
+@media (prefers-reduced-motion:reduce){.pfa-arcade *,#pfa-launcher{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+.pfa-demo-scene{position:relative;display:flex;gap:20px;justify-content:center;align-items:center;height:75px;margin:8px 0;background:radial-gradient(#604454,#242337 65%);border:1px solid #685264;border-radius:8px;overflow:hidden}
+.pfa-demo-object{font-size:26px;display:inline-block;transform:translateY(0);opacity:.8}.pfa-demo-caption{position:absolute;bottom:4px;right:8px;font-size:9px;color:#c6abb2}
+.pfa-demo-scene.playing .pfa-demo-object:nth-child(1){animation:pfa-demo-1 .9s both}
+.pfa-demo-scene.playing .pfa-demo-object:nth-child(2){animation:pfa-demo-2 .9s both}
+.pfa-demo-scene.playing .pfa-demo-object:nth-child(3){animation:pfa-demo-3 .9s both}
+@keyframes pfa-demo-1{0%{transform:translate(-38px,0) rotate(-25deg);opacity:.3}65%{transform:translate(18px,-18px) rotate(200deg);opacity:1}100%{transform:translate(0,0) rotate(360deg);opacity:1}}
+@keyframes pfa-demo-2{0%{transform:scale(.2);opacity:0}70%{transform:scale(1.4);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes pfa-demo-3{0%{transform:translate(35px,-15px) rotate(30deg);opacity:.2}70%{transform:translate(-12px,8px) rotate(-18deg);opacity:1}100%{transform:none;opacity:1}}
+.pfa-meterneedle.pfa-swinging{animation:pfa-meter-sweep 1.4s linear infinite alternate}
+@keyframes pfa-meter-sweep{from{left:0%}to{left:100%}}
+/* Stage 2 · Strategy, skill and social minigame surfaces */
+.pfa-statbar{text-align:center;font-size:26px;letter-spacing:7px;color:#e9b75f;margin:14px 0}
+.pfa-pin-field{display:grid;grid-template-columns:repeat(3,54px);gap:10px;justify-content:center;align-items:center;margin:16px auto;background:linear-gradient(180deg,#3b3437,#63505a);padding:20px;border:3px solid #b88756;border-radius:18px;width:max-content;max-width:100%}
+.pfa-pin-field span{display:grid;place-items:center;font-size:40px;color:#f3d99f;text-shadow:0 4px 5px #060309}.pfa-pin-field span.down{color:#776d73;opacity:.55}
+.pfa-flight-stage{height:95px;display:flex;justify-content:space-around;align-items:flex-end;gap:8px;border-bottom:5px ridge #9e784a;margin:18px 0;padding:5px 12px;background:linear-gradient(180deg,#29333f,#494157)}
+.pfa-flight-stage span{font-size:26px}.pfa-flight-stage span:not(.pfa-flight-icon){font-size:14px;color:#efc896}.pfa-flight-icon{display:inline-block;animation:pfa-toss-idle 2s ease-in-out infinite alternate}
+@keyframes pfa-toss-idle{to{transform:translateY(-15px) rotate(12deg)}}
+.pfa-pack-studio{max-width:850px;margin:auto}.pfa-pack-studio h2{margin-bottom:10px}.pfa-pack-studio .pfa-panel{margin-top:18px;padding:13px 18px}
+.pfa-pack-studio label{font-size:12px;font-weight:700;color:#e1be8e;display:block;margin-top:14px}.pfa-pack-studio input,.pfa-pack-studio textarea,.pfa-arcade select{background:#1a1e2b!important;color:#ffeed5!important;border:1px solid #a28a6f!important;border-radius:7px;padding:8px;max-width:100%}
+.pfa-pack-studio input{width:100%}.pfa-pack-studio textarea{width:100%;font:13px/1.45 ui-monospace,Consolas,monospace;resize:vertical;min-height:220px}
+.pfa-pack-studio .pfa-leader{font-size:12px}.pfa-history{font-size:11px}.pfa-history>div{padding:8px 3px;border-bottom:1px solid #ffffff17}.pfa-history small{color:#d6b58b;display:block}
+.pfa-moon-pyramid{display:flex;flex-direction:column;gap:4px;align-items:center;margin:15px auto 18px;max-width:600px}
+.pfa-moon-row{display:flex;gap:5px;justify-content:center;width:100%}.pfa-arcade .pfa-moon-card{min-width:49px!important;min-height:58px!important;width:49px;border-radius:5px!important;background:linear-gradient(145deg,#f7e9d2,#ddc39d)!important;color:#3e2f4a!important;font-size:12px;font-weight:800;border:2px solid #c4a777!important;padding:4px!important;box-shadow:0 3px 5px #0009}
+.pfa-arcade .pfa-moon-card.exposed{border-color:#9fe3af!important;box-shadow:inset 0 0 0 2px #6b9d75,0 3px 6px #0008}
+.pfa-arcade .pfa-moon-card.selected{outline:3px solid #e4be65!important}.pfa-arcade .pfa-moon-card:disabled{opacity:.82!important;filter:saturate(.67)}.pfa-moon-blank{min-width:49px;width:49px;height:58px;display:inline-block}
+.pfa-moon-bottom{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;align-items:center;padding:10px 0}.pfa-moon-bottom .pfa-moon-card{width:auto!important}
+.pfa-lock-grid{display:flex;justify-content:center;flex-wrap:wrap;gap:9px;margin:16px 0}.pfa-lock-dial{border:3px double #af8e5d;border-radius:8px;background:#39323d;display:flex;align-items:center;flex-direction:column;gap:8px;padding:11px;min-width:70px}.pfa-lock-dial small{font-size:10px;color:#c6b3ab}.pfa-lock-dial .pfa-btn{font-size:25px!important;min-width:54px}
+.pfa-story-card{border:1px solid #a18364;background:linear-gradient(#342b3d,#242131);padding:20px;border-radius:7px}.pfa-story-card h3{color:#ebd099}.pfa-story-card p{font:18px/1.5 Georgia,serif}.pfa-story-card small{color:#d7ac87}
+.pfa-dance-sequence{display:flex;justify-content:center;gap:12px;margin:16px 0}.pfa-dance-sequence span{font-size:39px;background:#423448;padding:12px;border:1px solid #b89370;border-radius:9px;animation:pfa-dance-pulse .9s ease-in-out infinite alternate}.pfa-dance-sequence span:nth-child(2){animation-delay:.2s}.pfa-dance-sequence span:nth-child(3){animation-delay:.4s}.pfa-dance-sequence span:nth-child(4){animation-delay:.6s}
+@keyframes pfa-dance-pulse{to{transform:translateY(-7px) scale(1.08)}}
+.pfa-bone-grid{display:grid;grid-template-columns:repeat(4,minmax(50px,80px));justify-content:center;gap:8px;margin:18px auto}.pfa-arcade .pfa-bone-grid .pfa-btn{font-size:34px!important;min-height:66px!important;border:2px solid #9c7d63!important;background:linear-gradient(140deg,#574455,#322838)!important}.pfa-arcade .pfa-bone-grid .pfa-btn.matched{border-color:#8adaae!important;background:#31564b!important}.pfa-arcade .pfa-bone-grid .pfa-btn.uncovered{border-color:#edc977!important;background:#614b49!important}
+.pfa-domino-chain{min-height:80px;display:flex;gap:2px;align-items:center;justify-content:flex-start;max-width:100%;overflow-x:auto;background:#211e28;padding:12px;border-radius:7px;border:1px solid #635565}.pfa-domino-hand{display:flex;align-items:stretch;flex-wrap:wrap;gap:7px;padding:10px 0}.pfa-domino-item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;background:#312a39;border-radius:5px;border:1px solid #665262;padding:4px}.pfa-domino-item .pfa-actions{margin:3px 0}.pfa-domino-item .pfa-btn{min-height:25px;padding:2px 7px;font-size:14px}.pfa-domino{display:flex;align-items:center;gap:0;background:#ede1c8;color:#38303a;border:2px solid #c4aa8a;border-radius:5px;flex:0 0 auto;height:44px;box-shadow:0 3px 5px #0008;font-size:17px;font-weight:800}.pfa-domino i{font-style:normal;padding:10px 7px}.pfa-domino i+i{border-left:2px solid #5b4b43}
+.pfa-bluff-bid{font:16px Georgia,serif;text-align:center;padding:13px;border:1px solid #715c64;border-radius:8px;margin:10px 0;background:#27222e}.pfa-bluff-input{display:flex;justify-content:center;gap:28px;padding:10px}.pfa-bluff-input>div{display:flex;gap:8px;align-items:center}.pfa-bluff-input label{font-size:12px;color:#eec28c}.pfa-bluff-input b{font-size:23px;min-width:37px;text-align:center;color:#fff1df}
+.pfa-game-content label{display:block;margin-top:12px;margin-bottom:4px;color:#dfc19b;font-size:12px}
+.pfa-arcade button:focus-visible,.pfa-arcade input:focus-visible,.pfa-arcade textarea:focus-visible,.pfa-arcade select:focus-visible{outline:3px solid #f3d99f!important;outline-offset:2px}
+@media(max-width:650px){.pfa-moon-row{gap:2px}.pfa-arcade .pfa-moon-card,.pfa-moon-blank{min-width:32px!important;width:32px!important;height:46px!important;min-height:46px!important;font-size:9px}.pfa-bone-grid{gap:5px}.pfa-arcade .pfa-bone-grid .pfa-btn{min-height:49px!important;font-size:22px!important}.pfa-bluff-input{gap:9px;flex-wrap:wrap}.pfa-bluff-input>div{gap:4px}.pfa-domino{font-size:12px;height:34px}}
+@media(prefers-reduced-motion:reduce){.pfa-dance-sequence span,.pfa-flight-icon{animation:none!important}}
+/* Stage 3: original casino and tactical board games. */
+.pfa-adv-top,.pfa-adv-score{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:12px 0;padding:11px 13px;border-radius:9px;background:#211e2a;border:1px solid #665265;color:#ead3b8;font-size:12px}
+.pfa-adv-top b{color:#ffe5a5}.pfa-adv-score span{display:inline-flex;align-items:center;gap:6px;padding:3px 6px;background:#353041;border-radius:6px}
+.pfa-adv-hand{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0}.pfa-adv-card{display:inline-flex;flex-direction:column;align-items:center;justify-content:space-between;min-width:54px;width:54px;height:75px;padding:7px;border:2px solid #c1a87e;border-radius:9px;background:linear-gradient(165deg,#ffeed4,#d7c39c);color:#292433;box-shadow:0 5px 9px #0d061b72;font-size:14px;font-weight:800;transition:transform 140ms ease,box-shadow 140ms ease}
+.pfa-adv-card.red{color:#b3334c}.pfa-adv-card strong{font-size:25px;line-height:1}.pfa-adv-card.back{background:repeating-linear-gradient(45deg,#343045,#343045 7px,#6d3c60 7px,#6d3c60 14px);color:#fff0a2;font-size:22px}
+.pfa-arcade button.pfa-adv-card.pick{cursor:pointer;padding:7px;border:2px solid #b89668;background:linear-gradient(165deg,#fff2dd,#d5b67d);color:#262035;min-height:75px;min-width:54px;border-radius:9px}
+.pfa-arcade button.pfa-adv-card.pick:hover,.pfa-arcade button.pfa-adv-card.chosen{transform:translateY(-4px);border-color:#6ec6a2;box-shadow:0 0 0 3px #6ec6a250,0 6px 12px #0008}
+.pfa-arcade button.pfa-adv-card.pick:disabled{opacity:.55;cursor:default;transform:none}
+.pfa-adv-center{display:flex;align-items:center;flex-wrap:wrap;gap:10px;background:#1a1b27;border:1px dashed #6f5a66;border-radius:10px;padding:12px;min-height:85px;margin:12px 0}.pfa-adv-center>span{display:inline-flex;flex-direction:column;align-items:center;gap:6px;font-size:11px}
+.pfa-adv-reveal{padding:12px;border:1px solid #7c9a72;border-radius:9px;background:#26372e}.pfa-adv-replay{max-height:210px;overflow:auto;margin-top:9px;font-size:11px;padding:8px;border-radius:6px;background:#1e1e29}.pfa-adv-replay p{margin:4px 0}
+.pfa-adv-lane{display:flex;gap:10px;align-items:center;padding:12px;border-bottom:1px solid #715768;background:#282531}.pfa-adv-lane b{min-width:90px;color:#e9c488}.pfa-adv-lane span{font-size:12px}
+.pfa-adv-realm{display:grid;grid-template-columns:repeat(4,minmax(45px,90px));gap:6px;margin:18px auto;width:max-content;max-width:100%;padding:10px;border:4px ridge #967249;background:#343038}
+.pfa-arcade .pfa-adv-realm .pfa-btn{min-width:46px!important;min-height:63px!important;padding:3px!important;font-size:24px!important;background:#293144!important;border:1px solid #ad8961!important}
+.pfa-arcade .pfa-adv-realm .pfa-btn.occupied{background:#5c4a4a!important;color:#ffe2b0!important}
+.pfa-wyvern .pfa-wyvern-board{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));width:min(100%,840px);border:4px ridge #ad8157;background:#372d3a;overflow:hidden;margin:13px auto 16px}
+.pfa-arcade .pfa-wyvern-cell{position:relative;display:grid;place-items:center;aspect-ratio:1;min-width:0;min-height:0;border:0!important;padding:0!important;border-radius:0!important;background:#dfc69c!important;color:#2b2d38!important;cursor:pointer}
+.pfa-arcade .pfa-wyvern-cell.dark{background:#7d6679!important}.pfa-arcade .pfa-wyvern-cell.target{background:#95bd85!important;box-shadow:inset 0 0 0 2px #42694b!important}
+.pfa-arcade .pfa-wyvern-cell.selected{box-shadow:inset 0 0 0 3px #f8e08f!important}
+.pfa-arcade .pfa-wyvern-cell:disabled{cursor:default;opacity:1!important}.pfa-arcade .pfa-wyvern-cell .pfa-wyvern-piece{display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:22px;text-shadow:0 2px 1px #0009;line-height:1.1;filter:drop-shadow(0 1px 2px #0009)}
+.pfa-arcade .pfa-wyvern-cell .pfa-wyvern-piece small{font-size:8px;text-transform:uppercase;font-weight:900;letter-spacing:-.03em;color:#e6d3bb;background:#2c2834aa;border-radius:3px;padding:0 2px}
+.pfa-arcade .pfa-wyvern-cell.gold .pfa-wyvern-piece{filter:drop-shadow(0 0 2px #efca50);color:#fff1aa}.pfa-arcade .pfa-wyvern-cell.scarlet .pfa-wyvern-piece{filter:drop-shadow(0 0 2px #be3644);color:#fec2a7}
+.pfa-arcade .pfa-wyvern-cell i{font-size:17px;color:#2e714e}.pfa-arcade .pfa-wyvern-cell:hover:not(:disabled){box-shadow:inset 0 0 0 3px #f7dc80!important}
+.pfa-tourney-create label{display:block;margin:10px 0 4px;font-weight:700;color:#f3d3a0}.pfa-tourney-create input{width:100%;background:#211b2c;border:1px solid #8b6c7a;border-radius:7px;color:#fff0db;padding:10px}
+.pfa-tourney-roster{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.pfa-tourney-rounds{display:flex;gap:15px;overflow-x:auto;align-items:stretch;margin:15px 0}.pfa-tourney-round{min-width:220px;flex:1}.pfa-tourney-match{border:1px solid #775c6c;border-radius:9px;background:#25202e;margin:10px 0;padding:10px}.pfa-tourney-match>div:not(.pfa-actions){padding:7px 9px;margin:5px 0;border-radius:5px;background:#362c3a;border-left:3px solid #a88662;font-weight:700}.pfa-tourney-match .pfa-btn{font-size:10px;padding:4px 7px;min-width:0}
+@media (max-width:750px){.pfa-arcade .pfa-wyvern-cell .pfa-wyvern-piece{font-size:17px}.pfa-arcade .pfa-wyvern-cell .pfa-wyvern-piece small{font-size:6px}.pfa-tourney-round{min-width:185px}}
+@media (prefers-reduced-motion:reduce){.pfa-adv-card{transition:none!important}}
+
+/* Stage 3: historical public state playback; no private cards are serialized. */
+.pfa-replay-nav{border:1px solid rgba(224,188,118,.44);padding:12px 14px;margin:16px 0;border-radius:12px;background:rgba(35,29,29,.25);display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.pfa-replay-nav .pfa-actions{display:flex;gap:7px;flex-wrap:wrap;margin:0}
+.pfa-replay-snapshot{margin:12px 0;padding:14px 16px;border:1px dashed rgba(224,188,118,.4);border-radius:12px}
+.pfa-replay-tile{display:flex;justify-content:center;align-items:center;min-height:35px;border:1px solid rgba(224,188,118,.26);border-radius:4px}
+
+.pfa-practice{margin:18px 0 2px;border:1px solid rgba(224,188,118,.46);border-radius:10px;padding:14px 18px}.pfa-practice legend{font-weight:700;padding:0 8px}.pfa-practice .pfa-notice,.pfa-practice .pfa-victory{margin:10px 0}
+
+/* Stage 4 — Puzzle Forge: responsive tactile puzzle surfaces and GM scene authoring. */
+.pfa-puzzle-game{--pfa-puzzle-metal:#b8955f;--pfa-puzzle-light:#f9e6bd;--pfa-puzzle-dim:#302a39;color:#e7dac9}
+.pfa-puzzle-progress{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.pfa-puzzle-progress span{background:#302c3a;border:1px solid #736047;border-radius:999px;padding:6px 10px;color:#f4d5aa;font:600 11px/1.2 system-ui,sans-serif;letter-spacing:.02em}
+.pfa-puzzle-heading{display:flex;align-items:flex-start;gap:13px;padding:16px 18px;border:1px solid #8a704b;border-radius:12px;background:linear-gradient(140deg,#3a3040,#252333);margin:13px 0}
+.pfa-puzzle-heading .pfa-pill{flex:0 0 auto;font-size:9px;margin-top:2px}
+.pfa-puzzle-heading h3{color:#f5d99e;margin:0 0 6px;font:700 20px/1.25 Georgia,serif}
+.pfa-puzzle-heading p{line-height:1.55;margin:0;color:#e3d3c3}
+.pfa-puzzle-game input[type="text"],.pfa-puzzle-studio-section input,.pfa-puzzle-studio-section select,.pfa-puzzle-assignments select{width:100%;border:1px solid #a18364;border-radius:7px;background:#201c28;color:#ffeed0;padding:9px 11px;min-height:37px}
+.pfa-puzzle-game .pfa-actions{display:flex;flex-wrap:wrap;gap:8px;margin:11px 0}
+.pfa-puzzle-slots,.pfa-puzzle-palette{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:14px 0}
+.pfa-puzzle-slots span{display:grid;place-items:center;min-width:44px;min-height:45px;padding:7px;border:2px dashed #8d7a5d;border-radius:8px;background:#282330;color:#e3c79c;font-size:11px;text-align:center}
+.pfa-puzzle-slots span.filled{background:#4a3d39;border-style:solid;border-color:#c6a875;color:#fff4dc}
+.pfa-arcade .pfa-puzzle-choice{border-color:#ae916b!important;white-space:normal;max-width:100%;text-align:center;padding:8px 13px!important;min-height:40px}
+.pfa-puzzle-grid{display:grid;gap:6px;margin:16px auto;max-width:100%;justify-content:center}
+.pfa-puzzle-dials{grid-template-columns:repeat(auto-fit,minmax(118px,1fr))}
+.pfa-puzzle-dials>div{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:144px;background:radial-gradient(circle at center,#514458,#28222f);border:2px ridge #af915b;border-radius:11px;padding:12px}
+.pfa-puzzle-dials small{color:#edcc9b;font:600 11px system-ui;text-align:center}
+.pfa-arcade .pfa-puzzle-dial{min-width:76px;min-height:48px;border-radius:100px!important;font:700 15px Georgia,serif}
+.pfa-puzzle-assignments{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin:14px 0}
+.pfa-puzzle-assignments label{display:block;background:#292430;border:1px solid #776347;padding:10px;border-radius:8px;font-weight:700}
+.pfa-puzzle-assignments select{margin-top:7px;font-weight:400}
+.pfa-puzzle-choice-stage{padding:13px 16px;background:#302a37;border-left:3px solid #b9955e;border-radius:7px;margin:12px 0}
+.pfa-puzzle-choice-stage h4{margin:0 0 7px;color:#f5d99e}
+.pfa-puzzle-tones{display:grid;grid-template-columns:repeat(4,minmax(52px,1fr));gap:9px;margin:14px 0}
+.pfa-arcade .pfa-puzzle-tone{min-height:84px!important;min-width:0!important;background:linear-gradient(#645776,#352b45)!important;border:2px solid #ad9acb!important;border-radius:12px!important;box-shadow:0 6px 10px #0e0c1599;font:700 16px Georgia,serif;transition:transform .14s ease-out,filter .14s ease-out}
+.pfa-arcade .pfa-puzzle-tone:hover:not(:disabled){transform:translateY(-5px);filter:brightness(1.12)}
+.pfa-puzzle-score{padding:12px 15px;background:#262132;border-radius:9px;border:1px dashed #9c7ca8;margin:12px 0}.pfa-puzzle-score strong{display:inline-block;padding:8px;background:#443957;border:1px solid #9884b4;border-radius:8px;margin:3px}
+.pfa-puzzle-pipes,.pfa-puzzle-lights,.pfa-puzzle-slide{grid-template-columns:repeat(3,minmax(44px,108px));width:min(100%,370px);background:#251e27;padding:12px;border:4px ridge #977954;border-radius:9px}
+.pfa-arcade .pfa-puzzle-pipe{min-height:76px!important;border-radius:5px!important;border:1px solid #8c764f!important;background:radial-gradient(#574b48,#2e2931)!important;color:#f8d7a2!important;font:900 42px/1 system-ui!important;transition:transform .18s ease,background .2s ease}
+.pfa-arcade .pfa-puzzle-pipe:hover:not(:disabled){background:#655342!important;transform:scale(1.05)}
+.pfa-arcade .pfa-lattice-stone{min-height:78px!important;border:2px solid #6e676e!important;background:#35333d!important;color:#d3c8c7!important;font-weight:900;box-shadow:inset 0 0 15px #1113}
+.pfa-arcade .pfa-lattice-stone.lit{background:radial-gradient(circle,#c6b877,#695b38)!important;color:#1e1c29!important;border-color:#f7d78d!important;box-shadow:0 0 20px #f9d77e40,inset 0 0 15px #ffe9a7aa}
+.pfa-arcade .pfa-slide-plate{min-height:78px!important;border-radius:7px!important;background:linear-gradient(#d3b886,#8c734e)!important;border:3px solid #5c4a39!important;color:#211d28!important;font:700 28px Georgia,serif!important;box-shadow:inset 0 3px 8px #fff2,0 4px 7px #0005}
+.pfa-arcade .pfa-slide-plate.blank{background:#201b24!important;border:1px dashed #75654f!important;box-shadow:none}.pfa-arcade .pfa-slide-plate:not(.blank):disabled{opacity:.7!important}
+.pfa-puzzle-gravity{grid-template-columns:repeat(5,minmax(35px,62px));width:min(100%,390px);background:#241f2d;border:3px ridge #927859;padding:9px;border-radius:10px}
+.pfa-gravity-cell{aspect-ratio:1;display:grid;place-items:center;background:#4d4857;border:1px solid #6f6067;border-radius:6px;color:#e6d7b7;font:600 10px system-ui}
+.pfa-gravity-cell.wall{background:repeating-linear-gradient(45deg,#443333,#443333 5px,#5d4b4c 5px,#5d4b4c 11px);font-size:0}.pfa-gravity-cell.goal{background:#36564a;border:2px solid #8dc5a4}
+.pfa-gravity-crystal{display:grid;place-items:center;width:66%;height:66%;background:#d0aefe;border:2px solid #fff7cc;color:#4c235a;transform:rotate(45deg);box-shadow:0 0 17px #d3a8ec99;border-radius:4px;animation:pfa-crystal-glow 1.3s ease-in-out infinite alternate}
+@keyframes pfa-crystal-glow{to{filter:brightness(1.25);box-shadow:0 0 28px #d3a8eccf}}
+.pfa-puzzle-hints,.pfa-puzzle-history{border:1px solid #72624d;border-radius:9px;padding:14px;margin:18px 0;background:#272431}
+.pfa-puzzle-hints h4,.pfa-puzzle-history h4{margin:0 0 9px;color:#ecca94}
+.pfa-puzzle-hints p{border-left:3px solid #a8824e;padding:6px 10px;background:#34303b;margin:7px 0}
+.pfa-puzzle-history details{border-bottom:1px dashed #66566a;padding:7px 1px}.pfa-puzzle-history summary{cursor:pointer;color:#f0d5ab;font-weight:700}.pfa-puzzle-history p{line-height:1.5}
+.pfa-puzzle-game .pfa-notice{line-height:1.5}.pfa-puzzle-studio-section{border:1px solid #77614f;background:linear-gradient(120deg,#282334,#292631);border-radius:11px;padding:16px 19px;margin:14px 0 19px}
+.pfa-puzzle-studio-section>h3{font:700 20px Georgia,serif;color:#f3d6a1;margin:0 0 10px}.pfa-puzzle-studio-section h4{color:#e9c892}
+.pfa-puzzle-studio-section>p{line-height:1.5;max-width:74ch}
+.pfa-puzzle-forge .pfa-form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:10px;margin:13px 0 20px}
+.pfa-puzzle-forge .pfa-form-grid label{font-weight:700;color:#ead0aa;font-size:12px}.pfa-puzzle-forge .pfa-form-grid input,.pfa-puzzle-forge .pfa-form-grid select{display:block;margin-top:7px}
+.pfa-puzzle-bindings{background:#211e2a;padding:11px;border-radius:9px;border:1px solid #584d50;margin-top:18px}
+.pfa-binding-row{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:10px;border-bottom:1px solid #594d4a}.pfa-binding-row p{font-size:11px;color:#ddc6a5}.pfa-binding-row .pfa-actions{display:flex;gap:5px;flex-wrap:wrap}
+@media(max-width:670px){.pfa-puzzle-pipes,.pfa-puzzle-lights,.pfa-puzzle-slide{width:min(100%,290px);gap:4px;padding:7px}.pfa-arcade .pfa-puzzle-pipe,.pfa-arcade .pfa-slide-plate,.pfa-arcade .pfa-lattice-stone{min-height:61px!important}.pfa-puzzle-heading{flex-direction:column}.pfa-puzzle-studio-section{padding:12px}.pfa-puzzle-tones{gap:5px}.pfa-arcade .pfa-puzzle-tone{min-height:65px!important}}
+@media(prefers-reduced-motion:reduce){.pfa-gravity-crystal{animation:none}.pfa-arcade .pfa-puzzle-tone,.pfa-arcade .pfa-puzzle-pipe{transition:none!important}}
+/* System-aware world integration: read-only, GM-approved Actor/Scene references. */
+.pfa-world-bridge{margin:1rem 0;padding:.9rem;border:1px solid var(--color-border-light-tertiary,#75624f);border-radius:10px;background:rgba(16,19,27,.22)}
+.pfa-world-bridge summary{font-weight:700;cursor:pointer;padding:.25rem}
+.pfa-world-bridge select{width:100%;max-width:100%;margin:.3rem 0 .55rem}
+.pfa-world-seat{padding:.8rem;border:1px solid rgba(150,130,100,.36);border-radius:8px;margin:.55rem 0;display:flex;flex-direction:column;gap:.25rem}
+.pfa-world-seat p{margin:.25rem 0}.pfa-world-linked{color:#98e4b4}
+.pfa-world-group{display:flex;flex-direction:column;gap:.35rem;margin:.6rem 0;padding:.6rem;background:rgba(50,48,60,.2);border-radius:8px}
+.pfa-world-group small{opacity:.8}.pfa-world-bridge .pfa-actions{display:flex;flex-wrap:wrap;gap:.45rem}
+@media(max-width:720px){.pfa-world-bridge{padding:.5rem}.pfa-world-seat{padding:.45rem}}
+
+/* ───────── 0.5.2 · bundled typography & artwork ───────── */
+@font-face{font-family:"PFA Cinzel";src:url("../assets/fonts/Cinzel-VF.woff2") format("woff2");font-weight:400 900;font-display:swap}
+@font-face{font-family:"PFA Cinzel Decorative";src:url("../assets/fonts/CinzelDecorative-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"PFA Garamond";src:url("../assets/fonts/EBGaramond-VF.woff2") format("woff2");font-weight:400 800;font-display:swap}
+@font-face{font-family:"PFA Garamond";src:url("../assets/fonts/EBGaramond-Italic-VF.woff2") format("woff2");font-weight:400 800;font-style:italic;font-display:swap}
+.pfa-arcade h2,.pfa-arcade h3{font-family:"PFA Cinzel",Georgia,serif;letter-spacing:.02em}
+.pfa-arcade p,.pfa-arcade li,.pfa-arcade blockquote{font-family:"PFA Garamond",Georgia,serif;font-size:15px}
+.pfa-hero{position:relative;overflow:hidden;min-height:92px}
+.pfa-hero>*{position:relative;z-index:1}
+.pfa-hero .pfa-hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 46%;opacity:.38;z-index:0;filter:saturate(1.1)}
+.pfa-hero h2{font-family:"PFA Cinzel Decorative","PFA Cinzel",serif;font-size:28px;color:#f5d394;text-shadow:0 2px 6px #000}
+.pfa-hero h2 small{font-family:"PFA Cinzel",serif;letter-spacing:.08em}
+.pfa-entry-art{width:40px;height:40px;display:grid;place-items:center;font-size:20px;border-radius:8px;overflow:hidden;border:1px solid #c5a57666;background:#1a1420}
+.pfa-entry-art img{width:100%;height:100%;object-fit:cover;display:block}
+.pfa-game-entry{grid-template-columns:40px minmax(0,1fr) 48px}
+.pfa-cover{position:relative;margin:0 0 14px;border-radius:12px;overflow:hidden;border:1px solid #c5a57699;box-shadow:0 10px 30px #0009;background:#120c10}
+.pfa-cover img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.pfa-cover figcaption{position:absolute;left:0;right:0;top:0;padding:10px 16px 26px;background:linear-gradient(#000c,#0000)}
+.pfa-cover figcaption p{margin:2px 0 0;color:#f3e3bd;text-shadow:0 1px 3px #000;max-width:72ch}
+.pfa-session-header.with-art{position:relative;overflow:hidden;border-radius:12px;padding:14px 16px;min-height:110px;border:1px solid #c5a57666}
+.pfa-session-header.with-art>*{position:relative;z-index:1}
+.pfa-session-header .pfa-header-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:.42;z-index:0}
+.pfa-session-header.with-art::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0d0a10f2 0%,#0d0a10b0 55%,#0d0a1030 100%);z-index:0}
+.pfa-session-header.with-art h2,.pfa-session-header.with-art p{text-shadow:0 1px 3px #000}
+.pfa-rulebook{border:1px solid #c5a57666;border-radius:10px;background:#16121bcc;margin-top:12px}
+.pfa-rulebook>summary{cursor:pointer;padding:10px 14px;font-family:"PFA Cinzel",serif;font-weight:700;color:#f5d394;letter-spacing:.03em}
+.pfa-rulebook[open]>summary{border-bottom:1px solid #c5a57644}
+.pfa-rules-body{padding:6px 16px 4px;max-height:520px;overflow:auto}
+.pfa-rules-body h3{font-size:15px;margin:14px 0 6px;color:#e8b14a;border-bottom:1px solid #e8b14a33;padding-bottom:3px}
+.pfa-rules-body ul,.pfa-rules-body ol{margin:0 0 8px 20px;padding:0}
+.pfa-rules-body li{margin:3px 0;line-height:1.45}
+.pfa-rules-tagline{color:#f3c98a;font-size:16px}
+.pfa-rulebook>.pfa-btn{margin:6px 16px 14px}
+.pfa-kit-img{width:100%;height:100%;object-fit:contain;display:block;pointer-events:none}
+.pfa-arena-token,.pfa-arena-threat{display:grid;place-items:center}
+.pfa-arena-token .pfa-kit-img,.pfa-arena-threat .pfa-kit-img{width:86%;height:86%;filter:drop-shadow(0 2px 3px #000a)}
+.pfa-arena-portrait b .pfa-kit-img{display:inline-block;width:26px;height:26px;vertical-align:middle;margin-right:4px}
+.pfa-arena-cell.volley{background-image:repeating-linear-gradient(135deg,#ff3b1f33 0 6px,transparent 6px 14px)!important;box-shadow:inset 0 0 0 1px #ff6a2a88}
+.pfa-wyvern-piece img{width:78%;height:78%;object-fit:contain;display:block;margin:auto;filter:drop-shadow(0 2px 2px #000b);pointer-events:none}
+.pfa-wyvern-piece{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;height:100%}
+.pfa-wyvern-piece small{line-height:1;font-size:9px;opacity:.8}
+.pfa-called-rank b{font-size:18px;color:#f5d394}
+@media (prefers-reduced-motion:reduce){.pfa-cover img,.pfa-hero-art{transition:none}}
+.pfa-cover img{max-height:300px}
+.pfa-hero .pfa-hero-art{opacity:.55}

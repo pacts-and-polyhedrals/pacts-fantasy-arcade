@@ -1,0 +1,3599 @@
+{
+ "_id": "pfaArcadeRules01",
+ "_key": "!journal!pfaArcadeRules01",
+ "name": "Fantasy Arcade Rulebook",
+ "pages": [
+  {
+   "_id": "dRu65GZXNODnWNfa",
+   "_key": "!journal.pages!pfaArcadeRules01.dRu65GZXNODnWNfa",
+   "name": "Welcome to the Fantasy Arcade",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 1
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p><img src=\"modules/pacts-fantasy-arcade/assets/art/banner.webp\" alt=\"Fantasy Arcade\" width=\"640\"/></p><p>The Fantasy Arcade is a system-agnostic collection of 73 playable tavern games, casino tables, puzzles, performances and tactical arena contests for Foundry VTT. Every game runs on the GM’s client, uses <b>imaginary points only</b> and never changes your characters’ sheets, gold or items.</p><h3>Opening the arcade</h3><ul><li>Click the <b>Fantasy Arcade</b> button in the lower-left corner of the screen, or run <code>game.pactsFantasyArcade.open()</code>.</li><li>A GM must be connected: the GM’s client is the table’s referee.</li></ul><h3>Starting a table</h3><ol><li>Pick a game in the library. Each game page shows its art, a guided lesson and these rules.</li><li>Press <b>Create a multiplayer table</b>. Other players see it under <em>Active tables</em> and can <b>Join</b>.</li><li>The GM can add <b>AI opponents</b> (they play themselves) or <b>GM-controlled NPCs</b> (the GM plays them). The GM can switch an NPC between the two at any time.</li><li>Press <b>Start match</b>. Two-player shared games automatically add an AI rival if you start alone.</li></ol><h3>Kinds of table</h3><ul><li><b>Independent challenges</b> — everyone plays their own copy and compares scores (most dice, tavern and festival games).</li><li><b>Shared tables</b> — turn-by-turn games on one board (cards, board games, arenas).</li><li><b>Co-operative puzzles</b> — the whole party moves the same mechanism; players may join mid-puzzle.</li></ul><h3>Contents</h3><p><b>Dice & Wagers:</b> @UUID[.BMMNVcncjaak7y9Y]{Coin of Fate} · @UUID[.qTVQLchN6htFV2gv]{Wyrm’s Eye} · @UUID[.edkk1hFIe5XdMWVO]{Serpent’s Seven} · @UUID[.JEluzr9ytW2ADky0]{Lucky Kobold} · @UUID[.zE2rjjUAqq11UCiT]{King’s High Roll} · @UUID[.oz5eF6dp7xQsU14V]{Devil’s Knuckles} · @UUID[.ZZNI28fOYSjDvCoh]{Three-Dragon Slots} · @UUID[.pwNm8rMxK8mrZqyN]{Seven Skulls} · @UUID[.wJEiz1WP1vkNYG9i]{Crown & Bones} · @UUID[.lDxQvV8m2EmuDvCC]{Giant’s Grip} · @UUID[.zazRMuU0i2NmotS6]{Cauldron Craps} · @UUID[.PPwgUJAbP4wPsF2n]{Witches’ Triad} · @UUID[.GmB57GbyZPUDBjzZ]{Goblin’s Bluff}</p><p><b>Cards & Casino:</b> @UUID[.Ee6L5eFbVFip3EdA]{Black Dragon} · @UUID[.IYXzrDGDvjZtlMTW]{Three-Card Wyvern} · @UUID[.rIMOhIWGv6rrXwLO]{Waterdeep Hold’em} · @UUID[.HFHBQ0v9G866bqKi]{Three Wyrms Ante} · @UUID[.gV6W7n977z3Xumkz]{Dragon’s Trick} · @UUID[.qZvZVM4iYjq2ufLT]{Bard’s Bluff} · @UUID[.k7JlYTlScbeLwrA0]{Moonlit Solitaire}</p><p><b>Board & Strategy:</b> @UUID[.b8otFXNDaQXGMzQR]{Runestone Checkers} · @UUID[.vIioJTQYju1Cn6tf]{Dwarven Dominoes} · @UUID[.MpX35MpKMlEQ4Kaw]{Goblin’s Bones} · @UUID[.NyQGODifBMMXLdLo]{King’s Gambit} · @UUID[.hHmjA7BRzcySI6oc]{Elemental Conquest} · @UUID[.KiqpQYSigb6nhvUY]{Royal Hunt} · @UUID[.l7KEzQsjiqEBDnCA]{Wyvern Chess}</p><p><b>Tavern & Inn:</b> @UUID[.BqD7x8YtTuaNemD9]{Arm-Wrestling at the Bar} · @UUID[.05WP0q0InPUA0Vjw]{Darts of the Deep} · @UUID[.WxN1hchO2rZgkkft]{Giant’s Skittles} · @UUID[.qJDAlfnswB412pQ2]{Goblin Tankard Toss} · @UUID[.oCotRXjMGxNfW8EF]{Barrel Bash} · @UUID[.cqit1CvpwpZXg1iq]{Sly Fox’s Three Cups} · @UUID[.DIs0GTqHSKtaI10u]{Tavern Trivia} · @UUID[.2a7LbQFjqHlLXf93]{Wobblin’ Goblin Drinking Contest}</p><p><b>Festivals & Crafts:</b> @UUID[.LbjfyAS4MCbgre11]{Kattal’s Hammer} · @UUID[.WL4LT5l7L9fiM3CJ]{Fizzlenub’s Feast} · @UUID[.a5HNKHZPF9Bn9UQH]{Tinker’s Lock Race} · @UUID[.i8Wdt0M1dXoFv9zT]{Potion Sorting Sprint}</p><p><b>Riddles & Logic:</b> @UUID[.jW43pmk4lO7KaHwb]{Tomb of the Restless Grave} · @UUID[.UfYWnN2OADKvaopV]{Emoji Rune Door} · @UUID[.7XD6BtiyTCoEBYHi]{Starforge Giant Lore Chain} · @UUID[.CsIxemr8cl8MUyhM]{Night Serpent Ritual} · @UUID[.1sXzDFdDBAqmo369]{Scribe’s Riddle Tablet} · @UUID[.jckpcPDYdYnKwFyS]{Bone Choir} · @UUID[.CEJbR4okhHoDp29o]{Crystal Gate Tone Lock} · @UUID[.8oD9JHr1ZXUO4ihY]{Tri-Moon Lock} · @UUID[.G6LIvAwtN1oku7p2]{Grammar of Grief} · @UUID[.5wUob49xOsUKy36D]{Ink-Bound Door} · @UUID[.4HYb7nIKBRksJurA]{The Three Hungers} · @UUID[.s4JlS8to9txlWICf]{Weight, Rhythm & Echo Bridge} · @UUID[.6bNdqH27Dl9cXcfU]{The Sluice Sequence} · @UUID[.WmNCPkajSBJqoEpq]{Rotating Gravity Room} · @UUID[.DjxhLGA0Y4YYLsKZ]{Three Oaths} · @UUID[.eu4UVpDo4fZ8WtxP]{Keystone Lattice} · @UUID[.4pZnbkldDPjPQXbF]{The Riddle Book} · @UUID[.4IT52aAyWDDo1O5Y]{Wardplate Trap: The Falling Sun}</p><p><b>Performance & Social:</b> @UUID[.Btr6GpH37WnsF38O]{Ispin’s Impossible Tale} · @UUID[.JmywIQMDgieIj6Ts]{Goblin Breakdancing Corporation} · @UUID[.QEqrVjO4A3b8qpnl]{Battle of the Bards} · @UUID[.n61DqlJVKguGeLXi]{Festival Slam Poetry} · @UUID[.9JiQ5KxVYeGikyZU]{Trial by Debate} · @UUID[.7ItB4ZEXGQZ2LkGJ]{Bardic Duet}</p><p><b>Combat & Arena:</b> @UUID[.JD6eJNtOFIq9EKwI]{Fighting Pit Tournament} · @UUID[.hV56YNc4D2AZVHxY]{Wizard Duel} · @UUID[.MwXZ1egbhZY6tmJo]{Monster Wrestler Championship} · @UUID[.feB8PEHreWAjrmiq]{Shield Wall} · @UUID[.qOxfUlY9RX9PBjUQ]{Arrow Storm} · @UUID[.HymGq9Ns1KzUpgaY]{Gladiator’s Gauntlet} · @UUID[.Aif3QXTDhnlhTbjh]{The Gloop} · @UUID[.nbwJonPvfAshLQYF]{Melee Training Dummy} · @UUID[.z5evvUWxHIUmV6AB]{Arena Beast-Rider} · @UUID[.RjzYIYVFQkR1mVDL]{Shadow Heist}</p>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 200000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "chapter-welcome"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "JbMHTYPR5k3QXzkx",
+   "_key": "!journal.pages!pfaArcadeRules01.JbMHTYPR5k3QXzkx",
+   "name": "GM Tools: Packs, Tournaments & Scenes",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 1
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<h3>GM Pack Studio</h3><p>Create world-saved content packs: Trivia (4–80 questions), Story scenes for Ispin’s Impossible Tale (4–80), Rune doors (4–80), a Three-Dragon Slots configuration, and linked Puzzle books (1–24 nodes). Select a pack in the library before creating its table.</p><h3>Puzzle Forge</h3><p>Generate reproducible riddle books by seed and difficulty, then bind any puzzle to a scene <b>Region or Tile</b>. When a token enters the trigger the puzzle opens for that player; solving it can <b>reveal or hide a Tile</b> or <b>open or close a door Wall</b>. Only declarative effects are possible — no scripts are stored in packs.</p><h3>Tournament Hall</h3><p>Run 2-, 4- or 8-competitor single-elimination brackets for the card and board games and the 1v1 arena contests. Each pairing launches a real table; decisive results advance automatically, and the GM may adjudicate draws (recorded in the audit log).</p><h3>Character links</h3><p>In a lobby the GM may link a seat to a world Actor (Imagi-Nations, D&D 5e, Pathfinder 2e or Daggerheart). Links are read-only: luck games ignore them; three physical contests (Arm-Wrestling, Kattal’s Hammer, Darts) accept a modest +0 to +2 assistance, and arena games choose a fitting kit. Nothing on the sheet is ever changed.</p>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 300000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "chapter-gm-tools"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "Eu06EzUKxfGHQUDh",
+   "_key": "!journal.pages!pfaArcadeRules01.Eu06EzUKxfGHQUDh",
+   "name": "Arena Basics",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 1
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p>All fourteen arena and performance games share one tactical engine on a 9×7 grid.</p><ul><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Damage = the ability’s base + half your Power (rounded down) + 0–2 + any Aim bonus. The target subtracts its Guard, Dodge bonus, +2 if standing in cover and +2 if hidden (maximum 10 total); an exposed target takes +2. Each hit strips 2 Guard.</li><li><b>Terrain:</b> pillars block movement and line of sight · cover gives +2 defence · spotlights add +3 to performances · slime drains stamina · hazards and pit traps deal damage.</li><li><b>Line of sight</b> is required for spells, ranged attacks and performances.</li><li><b>NPC difficulty</b> (set by the GM in the lobby): 1 Casual, 2 Skilled, 3 Tactical lookahead.</li><li>The GM can <b>pause</b> an arena, take over an NPC mid-bout, or hand it back to the AI.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 400000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "chapter-arena-basics"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "iLV7Y7L4fNcNzVke",
+   "_key": "!journal.pages!pfaArcadeRules01.iLV7Y7L4fNcNzVke",
+   "name": "Fair Play & Credits",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 1
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p>All stakes are fictional points; the arcade must never be used for real money or valuable property. Foundry module sockets are not a secure channel, so play with people you trust.</p><p><b>Wyvern Chess</b> is a modified, unofficial Foundry adaptation of Wyvern Chess by DM Asmo / Pacts & Polyhedrals, used under the Wyvern Chess Community License (see <code>licenses/WYVERN-CHESS-LICENSE.md</code>).</p><p>Fantasy Arcade © 2026 Asmo, Pacts & Polyhedrals (Ben Vale). Thanks to the playtesters and the Pacts & Polyhedrals, Blown Away and Imagi-Nations Discord communities.</p>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 500000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "chapter-fair-play"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "8KzAN9VnLvn5nQWH",
+   "_key": "!journal.pages!pfaArcadeRules01.8KzAN9VnLvn5nQWH",
+   "name": "— Dice & Wagers —",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 1
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p><em>13 games.</em></p><ul><li>@UUID[.BMMNVcncjaak7y9Y]{Coin of Fate} — Call it in the air.</li><li>@UUID[.qTVQLchN6htFV2gv]{Wyrm’s Eye} — Higher, lower… or dare the dragon’s eye?</li><li>@UUID[.edkk1hFIe5XdMWVO]{Serpent’s Seven} — Push your luck — but beware the twin fangs.</li><li>@UUID[.JEluzr9ytW2ADky0]{Lucky Kobold} — Name the omen; let the kobold roll.</li><li>@UUID[.zE2rjjUAqq11UCiT]{King’s High Roll} — Three dice, one reroll, beat the dealer.</li><li>@UUID[.oz5eF6dp7xQsU14V]{Devil’s Knuckles} — Four dice, one reroll, build a pattern.</li><li>@UUID[.ZZNI28fOYSjDvCoh]{Three-Dragon Slots} — Spin, hold, respin.</li><li>@UUID[.pwNm8rMxK8mrZqyN]{Seven Skulls} — Seven bones, three throws, don’t show three skulls.</li><li>@UUID[.wJEiz1WP1vkNYG9i]{Crown & Bones} — Thirteen rows, five dice, three rolls.</li><li>@UUID[.lDxQvV8m2EmuDvCC]{Giant’s Grip} — Haul the chain — but not too far.</li><li>@UUID[.zazRMuU0i2NmotS6]{Cauldron Craps} — Establish the point, then chase it before a seven.</li><li>@UUID[.PPwgUJAbP4wPsF2n]{Witches’ Triad} — Name a rune, roll three bones.</li><li>@UUID[.GmB57GbyZPUDBjzZ]{Goblin’s Bluff} — Hidden cups, rising bids, someone is lying.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 600000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "category-Dice & Wagers"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "BMMNVcncjaak7y9Y",
+   "_key": "!journal.pages!pfaArcadeRules01.BMMNVcncjaak7y9Y",
+   "name": "Coin of Fate",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/coin-of-fate.webp\" alt=\"Coin of Fate cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Call it in the air.</em></p><p>A pure guessing game with an enchanted coin: the crowned face is Heads, the dragon face is Tails.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 3–15 flips (GM chooses: 3, 5, 9 or 15)</li><li><b>Goal:</b> Score the most points by correctly predicting each flip.</li></ul><h3>Setup</h3><ul><li>Choose the variant when creating the table: Classic or Streak.</li><li>Choose the number of rounds: 3, 5, 9 or 15.</li></ul><h3>On your turn</h3><ol><li>Call Heads or Tails.</li><li>The coin flips (a true 50/50) and the result is shown.</li></ol><h3>Scoring</h3><ul><li>Classic: +1 point for each correct call.</li><li>Streak: a correct call scores your current streak (1, then 2, then 3…). A miss resets the streak to 0.</li></ul><h3>End of the game</h3><p>After the chosen number of flips. Highest total wins.</p><h3>Tips</h3><ul><li>There is no pattern to read — every flip is independent.</li><li>Streak mode rewards nerve: long runs snowball quickly.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 700000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "coin-of-fate"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "qTVQLchN6htFV2gv",
+   "_key": "!journal.pages!pfaArcadeRules01.qTVQLchN6htFV2gv",
+   "name": "Wyrm’s Eye",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/wyrm-s-eye.webp\" alt=\"Wyrm’s Eye cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Higher, lower… or dare the dragon’s eye?</em></p><p>A d12 “eye” is showing. Predict whether the next d12 will be higher, lower or exactly equal, and decide when to bank your streak.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> Up to 8 calls</li><li><b>Goal:</b> Bank the largest streak before a wrong call wipes it out.</li></ul><h3>Setup</h3><ul><li>One d12 is rolled face up.</li></ul><h3>On your turn</h3><ol><li>Call Higher, Lower or Equal — or Bank your current streak.</li><li>A new d12 is rolled and becomes the face for the next call.</li></ol><h3>Scoring</h3><ul><li>Correct Higher/Lower: streak +1.</li><li>Correct Equal: streak +4 (a 1-in-12 shot).</li><li>Bank: your streak becomes your score and the game ends.</li></ul><h3>End of the game</h3><p>A wrong call ends the game with 0 banked. After 8 correct calls your streak is banked automatically.</p><h3>Tips</h3><ul><li>Extremes are your friend: on a 2, Higher wins 10 times in 12.</li><li>On a 6 or 7 the odds are nearly even — a good moment to bank.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 800000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "wyrm-s-eye"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "edkk1hFIe5XdMWVO",
+   "_key": "!journal.pages!pfaArcadeRules01.edkk1hFIe5XdMWVO",
+   "name": "Serpent’s Seven",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/serpent-s-seven.webp\" alt=\"Serpent’s Seven cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Push your luck — but beware the twin fangs.</em></p><p>Roll two six-sided dice again and again to build a pile of points at risk, then bank before the serpent bites.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 rounds</li><li><b>Goal:</b> Bank the highest total across five rounds.</li></ul><h3>Setup</h3><ul><li>Your at-risk pile starts each round at 0.</li></ul><h3>On your turn</h3><ol><li>Roll: add both dice to the at-risk pile.</li><li>If the two dice match (any doubles) the serpent bites: the at-risk pile is lost and the round ends.</li><li>Bank at any time to add the pile to your score and end the round.</li></ol><h3>Scoring</h3><ul><li>Banked points only. Nothing is scored for an unbanked pile.</li></ul><h3>End of the game</h3><p>After five rounds (banked or bitten). Highest total wins.</p><h3>Tips</h3><ul><li>Doubles come up 1 roll in 6. Most experts bank somewhere between 14 and 20.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 900000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "serpent-s-seven"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "JEluzr9ytW2ADky0",
+   "_key": "!journal.pages!pfaArcadeRules01.JEluzr9ytW2ADky0",
+   "name": "Lucky Kobold",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/lucky-kobold.webp\" alt=\"Lucky Kobold cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Name the omen; let the kobold roll.</em></p><p>Each round you declare an omen, then a kobold seer rolls a d4, a d8 and a d12.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 rounds</li><li><b>Goal:</b> Score the most points by choosing omens that come true.</li></ul><h3>Setup</h3><ul><li>Nothing to prepare.</li></ul><h3>On your turn</h3><ol><li>Choose one omen:</li><li>• Ascending — d4 &lt; d8 &lt; d12 (about 37%).</li><li>• Same parity — all three dice odd, or all even (25%).</li><li>• Low — total of 11 or less (about 34%).</li><li>• High — total of 16 or more (about 34%).</li><li>The kobold rolls all three dice.</li></ol><h3>Scoring</h3><ul><li>Same parity pays 3 points. Every other omen pays 2 points.</li></ul><h3>End of the game</h3><p>After five omens.</p><h3>Tips</h3><ul><li>All four omens are close in expected value; Ascending is the steadiest, Same parity the swingiest.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 1000000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "lucky-kobold"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "zE2rjjUAqq11UCiT",
+   "_key": "!journal.pages!pfaArcadeRules01.zE2rjjUAqq11UCiT",
+   "name": "King’s High Roll",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/king-s-high-roll.webp\" alt=\"King’s High Roll cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Three dice, one reroll, beat the dealer.</em></p><p>Roll three dice, keep the ones you like, reroll the rest once, then compare totals with Grukk the goblin dealer.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 rounds</li><li><b>Goal:</b> Win the most showdowns against the dealer.</li></ul><h3>Setup</h3><ul><li>Each round starts with no dice.</li></ul><h3>On your turn</h3><ol><li>Roll three dice.</li><li>Click dice to hold them (held dice glow).</li><li>Settle: every unheld die is rerolled once, then the dealer rolls three fresh dice.</li></ol><h3>Scoring</h3><ul><li>Beat the dealer’s total: +2.</li><li>Tie: +1.</li><li>Lose: 0.</li></ul><h3>End of the game</h3><p>After five showdowns.</p><h3>Tips</h3><ul><li>Holding 4s, 5s and 6s and rerolling the rest is a strong default.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 1100000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "king-s-high-roll"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "oz5eF6dp7xQsU14V",
+   "_key": "!journal.pages!pfaArcadeRules01.oz5eF6dp7xQsU14V",
+   "name": "Devil’s Knuckles",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/devil-s-knuckles.webp\" alt=\"Devil’s Knuckles cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Four dice, one reroll, build a pattern.</em></p><p>A four-dice pattern game: roll, optionally reroll unheld dice once, then bank the pattern.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 rounds</li><li><b>Goal:</b> Bank the most valuable patterns.</li></ul><h3>Setup</h3><ul><li>Each round starts with no dice.</li></ul><h3>On your turn</h3><ol><li>First roll: four dice.</li><li>Hold any dice, then optionally reroll the rest once.</li><li>Bank the result.</li></ol><h3>Scoring</h3><ul><li>Pattern bonus + the sum of all four dice.</li><li>Four of a kind +40 · Three of a kind +24 · Two pair +18 · One pair +10 · No pattern +0.</li></ul><h3>End of the game</h3><p>After five banked rounds.</p><h3>Tips</h3><ul><li>A pair of sixes already banks 10 + the dice; chasing quads is worth it only from a triple.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 1200000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "devil-s-knuckles"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "ZZNI28fOYSjDvCoh",
+   "_key": "!journal.pages!pfaArcadeRules01.ZZNI28fOYSjDvCoh",
+   "name": "Three-Dragon Slots",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/three-dragon-slots.webp\" alt=\"Three-Dragon Slots cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Spin, hold, respin.</em></p><p>Three enchanted reels, each with six symbols. Hold the symbols you like and respin the rest once.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 spins</li><li><b>Goal:</b> Collect the largest payout.</li></ul><h3>Setup</h3><ul><li>The GM may assign a custom Slots pack with six symbols and its own payout table.</li></ul><h3>On your turn</h3><ol><li>Spin all three reels.</li><li>Click any symbol to hold it, then respin the unheld reels once — or bank immediately.</li><li>Bank the result.</li></ol><h3>Scoring</h3><ul><li>Default payouts: three matching symbols 12 · any two matching 2 · the special sequence of the first three symbols (in any order) 5 · anything else 0.</li><li>Custom packs may change all three payouts.</li></ul><h3>End of the game</h3><p>After five banked spins.</p><h3>Tips</h3><ul><li>With a pair showing, hold it and respin the third reel: a 1-in-6 shot at the triple.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 1300000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "three-dragon-slots"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "pwNm8rMxK8mrZqyN",
+   "_key": "!journal.pages!pfaArcadeRules01.pwNm8rMxK8mrZqyN",
+   "name": "Seven Skulls",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/seven-skulls.webp\" alt=\"Seven Skulls cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Seven bones, three throws, don’t show three skulls.</em></p><p>Throw seven skull dice up to three times, holding the good ones. The skull face (⚀) is deadly.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 rounds</li><li><b>Goal:</b> Bank the highest-value hauls without busting.</li></ul><h3>Setup</h3><ul><li>Each round starts with no dice.</li></ul><h3>On your turn</h3><ol><li>Toss all seven dice.</li><li>Hold any dice and throw the rest again — up to three throws in total.</li><li>Bank whenever you like.</li></ol><h3>Scoring</h3><ul><li>If three or more skulls show when you bank, the round scores 0.</li><li>Otherwise score the total of every non-skull die, +10 bonus if no skulls show at all.</li></ul><h3>End of the game</h3><p>After five banked rounds.</p><h3>Tips</h3><ul><li>Held skulls still count against you — only reroll a skull if you can afford the risk.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 1400000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "seven-skulls"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "wJEiz1WP1vkNYG9i",
+   "_key": "!journal.pages!pfaArcadeRules01.wJEiz1WP1vkNYG9i",
+   "name": "Crown & Bones",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/crown-bones.webp\" alt=\"Crown &amp; Bones cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Thirteen rows, five dice, three rolls.</em></p><p>A complete scorecard dice game. Each round you get up to three rolls of five dice, then must fill one unused scorecard row.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 13 rounds</li><li><b>Goal:</b> Finish all thirteen rows with the highest total.</li></ul><h3>Setup</h3><ul><li>An empty 13-row scorecard.</li></ul><h3>On your turn</h3><ol><li>Roll five dice. Hold any dice and reroll the rest, up to three rolls per round.</li><li>Choose an unused row. The button shows what the row would score.</li></ol><h3>Scoring</h3><ul><li>Ones–Sixes: the sum of dice showing that number.</li><li>Three of a kind / Four of a kind: sum of all dice if you have at least that many matching.</li><li>Full house (three + two): 25.</li><li>Small straight (four in a row): 30.</li><li>Large straight (five in a row): 40.</li><li>Five of a kind: 50.</li><li>Chance: sum of all dice.</li><li>A row that does not qualify scores 0 — sometimes you must sacrifice one.</li></ul><h3>End of the game</h3><p>After the thirteenth row is filled.</p><h3>Tips</h3><ul><li>Keep Chance for emergencies.</li><li>Five of a kind is worth chasing from four of a kind with rolls to spare.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 1500000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "crown-bones"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "lDxQvV8m2EmuDvCC",
+   "_key": "!journal.pages!pfaArcadeRules01.lDxQvV8m2EmuDvCC",
+   "name": "Giant’s Grip",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/giant-s-grip.webp\" alt=\"Giant’s Grip cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Haul the chain — but not too far.</em></p><p>Tug a giant’s weighted chain. Each successful pull builds tension and points, but every pull is harder than the last.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 4 hauls</li><li><b>Goal:</b> Bank the biggest hauls.</li></ul><h3>Setup</h3><ul><li>Tension and haul start at 0 each round.</li></ul><h3>On your turn</h3><ol><li>Haul: roll a d6. You need 2 + tension or more (2+, 3+, 4+, then 5+ at most).</li><li>Success: add 2 + tension to the unbanked haul, then tension rises by 1.</li><li>Failure: the chain slips — the unbanked haul is lost and the round ends.</li><li>Secure the rope at any time after a successful pull to bank the haul.</li></ol><h3>Scoring</h3><ul><li>Banked haul only. Sample run: 2, then 3, then 4 = 9 banked after three pulls.</li></ul><h3>End of the game</h3><p>After four rounds (banked or slipped).</p><h3>Tips</h3><ul><li>Two or three pulls is the sweet spot; the fourth pull fails a third of the time.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 1600000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "giant-s-grip"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "zazRMuU0i2NmotS6",
+   "_key": "!journal.pages!pfaArcadeRules01.zazRMuU0i2NmotS6",
+   "name": "Cauldron Craps",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/cauldron-craps.webp\" alt=\"Cauldron Craps cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Establish the point, then chase it before a seven.</em></p><p>A fantasy version of the classic two-dice point game.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 hands</li><li><b>Goal:</b> Win the most hands.</li></ul><h3>Setup</h3><ul><li>Each hand begins on the come-out roll.</li></ul><h3>On your turn</h3><ol><li>Come-out roll: 7 or 11 wins the hand immediately; 2, 3 or 12 loses it immediately.</li><li>Any other total (4, 5, 6, 8, 9, 10) becomes your point.</li><li>Keep rolling: rolling the point again wins; rolling a 7 first loses. Other totals do nothing.</li></ol><h3>Scoring</h3><ul><li>Each won hand: +3.</li></ul><h3>End of the game</h3><p>After five decided hands.</p><h3>Tips</h3><ul><li>6 and 8 are the easiest points to make; 4 and 10 the hardest.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 1700000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "cauldron-craps"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "PPwgUJAbP4wPsF2n",
+   "_key": "!journal.pages!pfaArcadeRules01.PPwgUJAbP4wPsF2n",
+   "name": "Witches’ Triad",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/witches-triad.webp\" alt=\"Witches’ Triad cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Name a rune, roll three bones.</em></p><p>Pick a rune value from 1 to 6, then three dice are cast.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 6 rounds</li><li><b>Goal:</b> Collect the most matching runes.</li></ul><h3>Setup</h3><ul><li>Nothing to prepare.</li></ul><h3>On your turn</h3><ol><li>Choose a rune value 1–6.</li><li>Three dice are rolled.</li></ol><h3>Scoring</h3><ul><li>+2 per die showing your rune.</li><li>+4 triad bonus if all three dice match each other (any value).</li></ul><h3>End of the game</h3><p>After six rounds.</p><h3>Tips</h3><ul><li>Every rune is equally likely — choose your lucky number.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 1800000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "witches-triad"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "GmB57GbyZPUDBjzZ",
+   "_key": "!journal.pages!pfaArcadeRules01.GmB57GbyZPUDBjzZ",
+   "name": "Goblin’s Bluff",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/goblin-s-bluff.webp\" alt=\"Goblin’s Bluff cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Hidden cups, rising bids, someone is lying.</em></p><p>Each goblin hides five dice under a cup. Players bid on how many dice of a face exist across all cups, and anyone may call the bluff.</p><h3>At a glance</h3><ul><li><b>Players:</b> 2–6 players at one shared table (AI goblins fill empty seats).</li><li><b>Length:</b> Until one goblin keeps dice, or 18 challenges</li><li><b>Goal:</b> Be the last goblin with dice — or hold the most dice when the 18-challenge limit is reached.</li></ul><h3>Setup</h3><ul><li>Everyone starts with five dice, rolled in secret. You only ever see your own cup.</li></ul><h3>On your turn</h3><ol><li>Bid: claim “at least N dice showing face F” across every cup. Each bid must raise the previous one — more dice, or the same quantity with a higher face.</li><li>Challenge: instead of bidding, call the previous bid a lie.</li><li>On a challenge every cup is revealed and the matching dice are counted.</li></ol><h3>Scoring</h3><ul><li>If the bid was true (enough dice), the challenger loses one die.</li><li>If the bid was false, the bidder loses one die.</li><li>A goblin with no dice is eliminated. After each challenge, press Next to re-roll every cup.</li></ul><h3>End of the game</h3><p>When one goblin has dice left, or after 18 challenges (most dice wins; ties are draws).</p><h3>Tips</h3><ul><li>Expect about one-sixth of the unseen dice to show any given face — plus what you can see in your own cup.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 1900000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "goblin-s-bluff"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "KBs3c71mqLlhRmOx",
+   "_key": "!journal.pages!pfaArcadeRules01.KBs3c71mqLlhRmOx",
+   "name": "— Cards & Casino —",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 1
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p><em>7 games.</em></p><ul><li>@UUID[.Ee6L5eFbVFip3EdA]{Black Dragon} — Twenty-one, dragon-style.</li><li>@UUID[.IYXzrDGDvjZtlMTW]{Three-Card Wyvern} — Three cards, one swap, beat the goblin dealer.</li><li>@UUID[.rIMOhIWGv6rrXwLO]{Waterdeep Hold’em} — Two private cards, five shared, fictional chips only.</li><li>@UUID[.HFHBQ0v9G866bqKi]{Three Wyrms Ante} — Lead an element, steal the trick.</li><li>@UUID[.gV6W7n977z3Xumkz]{Dragon’s Trick} — Follow suit — unless a dragon says otherwise.</li><li>@UUID[.qZvZVM4iYjq2ufLT]{Bard’s Bluff} — Claim the called rank — truthfully or not.</li><li>@UUID[.k7JlYTlScbeLwrA0]{Moonlit Solitaire} — Pairs of thirteen under the moon.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 2000000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "category-Cards & Casino"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "Ee6L5eFbVFip3EdA",
+   "_key": "!journal.pages!pfaArcadeRules01.Ee6L5eFbVFip3EdA",
+   "name": "Black Dragon",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/black-dragon.webp\" alt=\"Black Dragon cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Twenty-one, dragon-style.</em></p><p>A twenty-one game played with mystical cards valued 1–12 against the dealer.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 hands</li><li><b>Goal:</b> Finish each hand closer to 21 than the dealer without going over.</li></ul><h3>Setup</h3><ul><li>You and the dealer each receive two cards. Only the dealer’s first card is visible.</li></ul><h3>On your turn</h3><ol><li>Hit: take another card. Reaching 21 or more ends your turn automatically.</li><li>Stand: stop drawing.</li><li>Double (first two cards only): take exactly one more card and double the stakes for this hand.</li><li>A card showing 1 counts as 11 whenever that would not take you over 21.</li><li>The dealer then draws until reaching at least 17.</li></ol><h3>Scoring</h3><ul><li>Win: +2 (+4 doubled). Tie at 21 or under: +1 (+2 doubled). Bust or lose: 0.</li></ul><h3>End of the game</h3><p>After five hands.</p><h3>Tips</h3><ul><li>Stand on 17+; hit 11 or less; double on 10–11 when the dealer shows a low card.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 2100000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "black-dragon"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "IYXzrDGDvjZtlMTW",
+   "_key": "!journal.pages!pfaArcadeRules01.IYXzrDGDvjZtlMTW",
+   "name": "Three-Card Wyvern",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/three-card-wyvern.webp\" alt=\"Three-Card Wyvern cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Three cards, one swap, beat the goblin dealer.</em></p><p>A short poker game using a 20-card wyvern deck: ranks 1–5 in four suits (Sun, Moon, Leaf, Flame).</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 hands</li><li><b>Goal:</b> Hold a better three-card hand than the dealer.</li></ul><h3>Setup</h3><ul><li>You and the dealer receive three cards each. The dealer’s cards stay hidden.</li></ul><h3>On your turn</h3><ol><li>Swap one card for the top of the deck, or Keep all three.</li><li>Both hands are revealed and compared.</li></ol><h3>Scoring</h3><ul><li>Hand ranking (best first): Straight flush · Three of a kind · Flush · Straight · Pair · High card. Ties within a rank go to the higher pair, then the higher card total.</li><li>Win +2 · Tie +1 · Lose 0.</li></ul><h3>End of the game</h3><p>After five hands.</p><h3>Tips</h3><ul><li>In this small deck a pair is common (about 42%) — flushes are genuinely rare.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 2200000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "three-card-wyvern"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "rIMOhIWGv6rrXwLO",
+   "_key": "!journal.pages!pfaArcadeRules01.rIMOhIWGv6rrXwLO",
+   "name": "Waterdeep Hold’em",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/waterdeep-hold-em.webp\" alt=\"Waterdeep Hold’em cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Two private cards, five shared, fictional chips only.</em></p><p>A complete Texas-style hold’em with fixed, bounded wagers of fictional points.</p><h3>At a glance</h3><ul><li><b>Players:</b> 2–4 players at one shared table.</li><li><b>Length:</b> 3 hands</li><li><b>Goal:</b> Win the most fictional points across three hands.</li></ul><h3>Setup</h3><ul><li>Every player antes 2 into the pot and receives an allowance of 18 chips for the hand.</li><li>Each player is dealt two private cards from a standard 52-card deck.</li></ul><h3>On your turn</h3><ol><li>Four betting streets: pre-flop, flop (3 shared cards), turn (1 card), river (1 card).</li><li>On your turn: Check (when nothing is owed), Call (match the current bet), Raise (+2 above the current bet; at most two raises per street) or Fold.</li><li>A street ends when every player still in has acted and matched the bet.</li><li>If everyone else folds, the last player takes the pot at once.</li></ol><h3>Scoring</h3><ul><li>Showdown: the best five-card poker hand made from your two cards and the five shared cards wins the pot; split pots are shared evenly.</li><li>Ranking: Straight flush · Four of a kind · Full house · Flush · Straight · Three of a kind · Two pair · Pair · High card. Aces play high or in a 5-high straight.</li><li>Folded hands are never revealed.</li></ul><h3>End of the game</h3><p>After three hands. Press Next to deal the following hand. Fictional points only — never real money.</p><h3>Tips</h3><ul><li>Position matters: acting last on a street lets you see everyone else’s choice first.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 2300000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "waterdeep-hold-em"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "HFHBQ0v9G866bqKi",
+   "_key": "!journal.pages!pfaArcadeRules01.HFHBQ0v9G866bqKi",
+   "name": "Three Wyrms Ante",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/three-wyrms-ante.webp\" alt=\"Three Wyrms Ante cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Lead an element, steal the trick.</em></p><p>An original trick-taking game with a 40-card elemental deck (Fire, Water, Nature, Storm; ranks 1–10).</p><h3>At a glance</h3><ul><li><b>Players:</b> 2–4 players at one shared table.</li><li><b>Length:</b> 3 rounds × 3 tricks</li><li><b>Goal:</b> Win the most tricks.</li></ul><h3>Setup</h3><ul><li>Each player is dealt five cards per round.</li></ul><h3>On your turn</h3><ol><li>The leader plays any card; that card’s element becomes the lead element.</li><li>Each other player plays any card — there is no need to follow the element.</li><li>Card strength = rank, +2 if it matches the lead element. The strongest card wins; on a tie the earlier card wins.</li><li>Press Next to clear the trick; the winner leads the next one.</li></ol><h3>Scoring</h3><ul><li>Each trick won: +2.</li></ul><h3>End of the game</h3><p>Three tricks per round, three rounds (nine tricks).</p><h3>Tips</h3><ul><li>A 9 off-element beats an on-element 6 (9 vs 8): high cards travel well.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 2400000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "three-wyrms-ante"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "gV6W7n977z3Xumkz",
+   "_key": "!journal.pages!pfaArcadeRules01.gV6W7n977z3Xumkz",
+   "name": "Dragon’s Trick",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/dragon-s-trick.webp\" alt=\"Dragon’s Trick cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Follow suit — unless a dragon says otherwise.</em></p><p>A classic must-follow trick-taker with a rotating trump element (48 cards: four elements, ranks 1–12).</p><h3>At a glance</h3><ul><li><b>Players:</b> 2–4 players at one shared table.</li><li><b>Length:</b> 3 rounds × 4 tricks</li><li><b>Goal:</b> Win the most tricks.</li></ul><h3>Setup</h3><ul><li>Each player is dealt four cards per round. Trump rotates each round: Fire, then Water, then Nature.</li></ul><h3>On your turn</h3><ol><li>The leader plays any card.</li><li>Others must follow the lead element if they can; otherwise they may play anything — including trump.</li><li>The highest trump wins; if no trump was played, the highest card of the lead element wins.</li><li>Press Next to clear the trick; the winner leads the next one.</li></ol><h3>Scoring</h3><ul><li>Each trick won: +1.</li></ul><h3>End of the game</h3><p>Four tricks per round, three rounds.</p><h3>Tips</h3><ul><li>Run out of an element early so you can trump it later.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 2500000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "dragon-s-trick"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "qZvZVM4iYjq2ufLT",
+   "_key": "!journal.pages!pfaArcadeRules01.qZvZVM4iYjq2ufLT",
+   "name": "Bard’s Bluff",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/bard-s-bluff.webp\" alt=\"Bard’s Bluff cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Claim the called rank — truthfully or not.</em></p><p>A deduction-and-nerve card game. The deck holds six copies of each rank 1–6. The stage “calls” a rank that climbs after every claim, so sooner or later everyone must bluff.</p><h3>At a glance</h3><ul><li><b>Players:</b> 2–4 players at one shared table.</li><li><b>Length:</b> 3 hands</li><li><b>Goal:</b> Score the most points by landing claims and catching liars.</li></ul><h3>Setup</h3><ul><li>Each bard is dealt four cards per hand. The called rank starts at 1.</li></ul><h3>On your turn</h3><ol><li>On your turn, lay one card face down and declare that it is the called rank.</li><li>The next bard either Accepts or Challenges.</li><li>The called rank then climbs by one (6 wraps back to 1) and the responder becomes the next bard to play, if they still hold cards.</li></ol><h3>Scoring</h3><ul><li>Accepted: the bard scores 1 (whether truthful or not).</li><li>Challenged and truthful: the bard scores 2.</li><li>Challenged and false: the challenger scores 2 and the bard loses 1 (minimum 0).</li><li>Challenged cards are revealed into the discard pile, which everyone can study.</li></ul><h3>End of the game</h3><p>A hand ends when all cards are played; press Next. Three hands.</p><h3>Tips</h3><ul><li>Count: six copies of each rank exist. If you hold three of the called rank, a rival claiming it is less likely to be honest.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 2600000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "bard-s-bluff"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "k7JlYTlScbeLwrA0",
+   "_key": "!journal.pages!pfaArcadeRules01.k7JlYTlScbeLwrA0",
+   "name": "Moonlit Solitaire",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/moonlit-solitaire.webp\" alt=\"Moonlit Solitaire cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Pairs of thirteen under the moon.</em></p><p>A 28-card pyramid solitaire (seven rows) with a draw stock.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> Until cleared, stuck, or 160 actions</li><li><b>Goal:</b> Remove as many pyramid cards as possible.</li></ul><h3>Setup</h3><ul><li>28 cards form a seven-row pyramid; the remaining 24 form the stock.</li></ul><h3>On your turn</h3><ol><li>A pyramid card is exposed when both cards directly beneath it have been removed. The bottom row starts exposed.</li><li>Select two exposed cards whose ranks add to 13 to remove them (Jack 11, Queen 12, Ace 1).</li><li>Kings (13) are removed alone with a single click.</li><li>Draw turns the next stock card face up onto the waste; the top waste card may be paired with an exposed pyramid card.</li><li>Click a selected card again to clear your selection.</li><li>Press Finish when you can do no more.</li></ol><h3>Scoring</h3><ul><li>+1 per card removed (+1 for a King, +2 for a pair).</li></ul><h3>End of the game</h3><p>When the pyramid is cleared, you press Finish, or after 160 actions.</p><h3>Tips</h3><ul><li>Prioritise pairs that uncover cards higher in the pyramid over pairs from the waste.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 2700000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "moonlit-solitaire"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "35M7OiQK5E5U59nJ",
+   "_key": "!journal.pages!pfaArcadeRules01.35M7OiQK5E5U59nJ",
+   "name": "— Board & Strategy —",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 1
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p><em>7 games.</em></p><ul><li>@UUID[.b8otFXNDaQXGMzQR]{Runestone Checkers} — Classic draughts with rune-stones.</li><li>@UUID[.vIioJTQYju1Cn6tf]{Dwarven Dominoes} — Match the chain, empty your hand.</li><li>@UUID[.MpX35MpKMlEQ4Kaw]{Goblin’s Bones} — Remember the bones.</li><li>@UUID[.NyQGODifBMMXLdLo]{King’s Gambit} — Three lanes, ten cards, one realm.</li><li>@UUID[.hHmjA7BRzcySI6oc]{Elemental Conquest} — Claim the realm, tile by tile.</li><li>@UUID[.KiqpQYSigb6nhvUY]{Royal Hunt} — Choose the ground, judge the beast.</li><li>@UUID[.l7KEzQsjiqEBDnCA]{Wyvern Chess} — Three boards. Fifteen pieces. One king.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 2800000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "category-Board & Strategy"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "b8otFXNDaQXGMzQR",
+   "_key": "!journal.pages!pfaArcadeRules01.b8otFXNDaQXGMzQR",
+   "name": "Runestone Checkers",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/runestone-checkers.webp\" alt=\"Runestone Checkers cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Classic draughts with rune-stones.</em></p><p>Standard 8×8 checkers with compulsory captures and multi-jumps.</p><h3>At a glance</h3><ul><li><b>Players:</b> 2 seats (Gold vs Scarlet). An AI fills an empty seat.</li><li><b>Length:</b> Until a side cannot move (draw at 240 moves)</li><li><b>Goal:</b> Capture or block every enemy stone.</li></ul><h3>Setup</h3><ul><li>Each side has twelve stones on the dark squares of its first three rows. Gold moves first.</li></ul><h3>On your turn</h3><ol><li>Click one of your highlighted stones, then a highlighted destination.</li><li>Stones move diagonally forward one square; Kings move diagonally in any direction.</li><li>Captures are compulsory: jump an adjacent enemy into the empty square beyond it.</li><li>If the capturing stone can capture again, it must continue the chain.</li><li>A stone reaching the far row is crowned King; crowning ends the move.</li></ol><h3>Scoring</h3><ul><li>Win / loss / draw only.</li></ul><h3>End of the game</h3><p>You win when your opponent has no legal move. 240 total moves without a result is a draw.</p><h3>Tips</h3><ul><li>Keep your back row intact as long as possible to delay enemy kings.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 2900000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "runestone-checkers"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "vIioJTQYju1Cn6tf",
+   "_key": "!journal.pages!pfaArcadeRules01.vIioJTQYju1Cn6tf",
+   "name": "Dwarven Dominoes",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/dwarven-dominoes.webp\" alt=\"Dwarven Dominoes cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Match the chain, empty your hand.</em></p><p>Block-and-draw dominoes with a full double-six set (28 tiles).</p><h3>At a glance</h3><ul><li><b>Players:</b> 2–4 players at one shared table.</li><li><b>Length:</b> One hand</li><li><b>Goal:</b> Be first to play every tile in your hand.</li></ul><h3>Setup</h3><ul><li>Two players draw seven tiles each; three or four players draw five. The rest form the stock.</li></ul><h3>On your turn</h3><ol><li>Play a tile at either end of the chain so the touching numbers match. The first tile may be anything.</li><li>If you cannot play, draw from the stock (one tile at a time) until you can.</li><li>If you cannot play and the stock is empty, pass.</li></ol><h3>Scoring</h3><ul><li>Win / loss / draw.</li></ul><h3>End of the game</h3><p>Emptying your hand wins. If every player passes in a row, the chain is blocked: fewest pips in hand wins (equal lowest is a draw).</p><h3>Tips</h3><ul><li>Play your heavy doubles early — they are hard to place and count against you in a block.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 3000000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "dwarven-dominoes"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "MpX35MpKMlEQ4Kaw",
+   "_key": "!journal.pages!pfaArcadeRules01.MpX35MpKMlEQ4Kaw",
+   "name": "Goblin’s Bones",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/goblin-s-bones.webp\" alt=\"Goblin’s Bones cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Remember the bones.</em></p><p>A memory game of sixteen face-down bone tiles hiding eight matching pairs.</p><h3>At a glance</h3><ul><li><b>Players:</b> 2–4 players at one shared table.</li><li><b>Length:</b> Until all eight pairs are found</li><li><b>Goal:</b> Claim the most pairs.</li></ul><h3>Setup</h3><ul><li>Sixteen tiles are shuffled face down.</li></ul><h3>On your turn</h3><ol><li>Flip two tiles.</li><li>A match stays face up and scores; it is still your turn — flip again.</li><li>A mismatch stays visible until someone presses Next; then the turn passes.</li></ol><h3>Scoring</h3><ul><li>+1 per matched pair.</li></ul><h3>End of the game</h3><p>When all pairs are found. Most pairs wins; a tie for the lead is a draw.</p><h3>Tips</h3><ul><li>Watch every flip — your rivals’ mistakes are your map.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 3100000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "goblin-s-bones"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "NyQGODifBMMXLdLo",
+   "_key": "!journal.pages!pfaArcadeRules01.NyQGODifBMMXLdLo",
+   "name": "King’s Gambit",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/king-s-gambit.webp\" alt=\"King’s Gambit cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Three lanes, ten cards, one realm.</em></p><p>A lane-majority card battle. Each general holds five army cards (elemental ranks 1–9).</p><h3>At a glance</h3><ul><li><b>Players:</b> Exactly 2 players.</li><li><b>Length:</b> 10 deployments</li><li><b>Goal:</b> Win more of the three battle lanes than your rival.</li></ul><h3>Setup</h3><ul><li>Each player is dealt five cards. The lanes are the Gate, the Keep and the Spire.</li></ul><h3>On your turn</h3><ol><li>Players alternate. On your turn, select a card and a lane, then deploy it face up.</li></ol><h3>Scoring</h3><ul><li>After all ten cards are deployed, each lane is totalled separately.</li><li>The stronger side in a lane scores 3; a tied lane gives each side 1.</li></ul><h3>End of the game</h3><p>Highest total after all three lanes resolve; equal totals draw.</p><h3>Tips</h3><ul><li>You only need two lanes. Sometimes the right play is to abandon one entirely.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 3200000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "king-s-gambit"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "hHmjA7BRzcySI6oc",
+   "_key": "!journal.pages!pfaArcadeRules01.hHmjA7BRzcySI6oc",
+   "name": "Elemental Conquest",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/elemental-conquest.webp\" alt=\"Elemental Conquest cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Claim the realm, tile by tile.</em></p><p>Place elemental tiles on a shared 4×4 realm, scoring for strength, matching neighbours and elemental majorities.</p><h3>At a glance</h3><ul><li><b>Players:</b> 2–4 players at one shared table.</li><li><b>Length:</b> 16 placements</li><li><b>Goal:</b> Score the most territory points.</li></ul><h3>Setup</h3><ul><li>A 64-tile bag: two copies of every Fire, Water, Nature and Storm tile ranked 1–8. Each player holds three tiles.</li></ul><h3>On your turn</h3><ol><li>Select a tile from your hand, then click an empty square.</li><li>Score its rank plus 2 for every orthogonally adjacent tile of the same element (anyone’s).</li><li>Draw a replacement tile.</li></ol><h3>Scoring</h3><ul><li>Placement points as above.</li><li>When the board is full, whoever owns the most tiles of each element gains +2 (ties give nothing).</li></ul><h3>End of the game</h3><p>When all 16 squares are claimed.</p><h3>Tips</h3><ul><li>Leaving a square next to two Fire tiles is a gift to whoever holds Fire next.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 3300000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "elemental-conquest"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "KiqpQYSigb6nhvUY",
+   "_key": "!journal.pages!pfaArcadeRules01.KiqpQYSigb6nhvUY",
+   "name": "Royal Hunt",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/royal-hunt.webp\" alt=\"Royal Hunt cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Choose the ground, judge the beast.</em></p><p>A push-your-luck hunting contest balancing risk, reward and stamina.</p><h3>At a glance</h3><ul><li><b>Players:</b> 2–4 players at one shared table.</li><li><b>Length:</b> 3 expeditions each</li><li><b>Goal:</b> Bring home the most valuable quarry.</li></ul><h3>Setup</h3><ul><li>Every hunter starts with 6 stamina.</li></ul><h3>On your turn</h3><ol><li>Track: choose the Forest (danger 2, reward 1), Highlands (4, 3) or Ruins (5, 5). A beast appears with danger and reward each raised by 0–2.</li><li>Decide: Withdraw (recover 2 stamina — the expedition still counts), approach Cautiously (1 stamina) or charge Boldly (2 stamina).</li><li>Your roll is d6, +2 if cautious, +1 if you still have 3+ stamina after paying. Cautious needs danger + 1; Bold needs the danger value.</li></ol><h3>Scoring</h3><ul><li>Capture: score the beast’s reward (+3 extra for a Bold charge).</li><li>Escape: lose 1 more stamina.</li></ul><h3>End of the game</h3><p>After every hunter completes three expeditions.</p><h3>Tips</h3><ul><li>A cautious approach into the Ruins with full stamina is a strong mid-game play.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 3400000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "royal-hunt"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "l7KEzQsjiqEBDnCA",
+   "_key": "!journal.pages!pfaArcadeRules01.l7KEzQsjiqEBDnCA",
+   "name": "Wyvern Chess",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/wyvern-chess.webp\" alt=\"Wyvern Chess cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Three boards. Fifteen pieces. One king.</em></p><p>A native port of DM Asmo’s Wyvern Chess: three stacked 12×8 boards — Sky (3), Land (2) and Underworld (1). Modified, unofficial Foundry adaptation; used under the Wyvern Chess Community License.</p><h3>At a glance</h3><ul><li><b>Players:</b> Exactly 2 players (Gold vs Scarlet). An AI fills an empty seat.</li><li><b>Length:</b> Until checkmate or stalemate (draw at 300 moves)</li><li><b>Goal:</b> Checkmate the enemy King.</li></ul><h3>Setup</h3><ul><li>Sky: Sylphs, two Griffons and a Dragon. Land: the main army with a row of Warriors. Underworld: Dwarves, two Basilisks and an Elemental. Gold moves first.</li></ul><h3>On your turn</h3><ol><li>Pick a board tab, click a friendly piece, then a highlighted destination (which may be on another board).</li><li>Sylph — Sky: moves diagonally forward, captures straight forward or straight down; on Land may return up or to any home square.</li><li>Griffon — Sky: leaps (3,2); also moves diagonally down to Land, and back up from Land.</li><li>Dragon — never leaves the Sky: bishop moves plus one step orthogonally; can strike a Land piece directly beneath or orthogonally adjacent below without moving.</li><li>Warrior — Land pawn: one step forward, captures diagonally forward, promotes to Hero on the far rank.</li><li>Oliphant (rook), Thief (bishop) and Unicorn (knight) — Land only.</li><li>Hero — diagonal one or two (jumping) on Land, or diagonally to Sky/Underworld; returns diagonally.</li><li>Cleric — one step in any direction, or straight up/down one board.</li><li>Mage — queen on Land; straight up or down one or two boards.</li><li>Paladin — king step on any board, knight on Land, and three-dimensional knight leaps between boards.</li><li>King — king step on Land; may step straight up or down and must return straight to Land.</li><li>Dwarf — Underworld/Land: forward or sideways, captures diagonally forward; captures straight up from the Underworld and may drop straight down from Land.</li><li>Basilisk — Underworld: forward or diagonally forward, retreats straight back. Any enemy on Land directly above a Basilisk is frozen and cannot move.</li><li>Elemental — Underworld: one or two steps orthogonally, one diagonally, or up to an orthogonally adjacent Land square; returns the same way.</li></ol><h3>Scoring</h3><ul><li>Moves that leave your King in check are illegal. Checkmate wins; a side with no legal move and not in check is stalemated (draw).</li></ul><h3>End of the game</h3><p>Checkmate, stalemate, or 300 total moves (draw).</p><h3>Tips</h3><ul><li>Basilisks are jailers: freeze the enemy defender, then strike.</li><li>Use the replay buttons to study any position from the game.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 3500000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "wyvern-chess"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "TU1g3sZyt265oxbM",
+   "_key": "!journal.pages!pfaArcadeRules01.TU1g3sZyt265oxbM",
+   "name": "— Tavern & Inn —",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 1
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p><em>8 games.</em></p><ul><li>@UUID[.BqD7x8YtTuaNemD9]{Arm-Wrestling at the Bar} — Power, brace or feint.</li><li>@UUID[.05WP0q0InPUA0Vjw]{Darts of the Deep} — Mind the sea wind.</li><li>@UUID[.WxN1hchO2rZgkkft]{Giant’s Skittles} — Nine pins, one boulder.</li><li>@UUID[.qJDAlfnswB412pQ2]{Goblin Tankard Toss} — Angle, strength, and a little luck.</li><li>@UUID[.oCotRXjMGxNfW8EF]{Barrel Bash} — Pick your lane and pray.</li><li>@UUID[.cqit1CvpwpZXg1iq]{Sly Fox’s Three Cups} — Follow the gem.</li><li>@UUID[.DIs0GTqHSKtaI10u]{Tavern Trivia} — Eight questions, no timer.</li><li>@UUID[.2a7LbQFjqHlLXf93]{Wobblin’ Goblin Drinking Contest} — A theatrical, entirely fictional brew-tasting.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 3600000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "category-Tavern & Inn"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "BqD7x8YtTuaNemD9",
+   "_key": "!journal.pages!pfaArcadeRules01.BqD7x8YtTuaNemD9",
+   "name": "Arm-Wrestling at the Bar",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/arm-wrestling-at-the-bar.webp\" alt=\"Arm-Wrestling at the Bar cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Power, brace or feint.</em></p><p>A tactical arm-wrestling bout. You and your rival choose a tactic at the same moment — a fantasy rock-paper-scissors with stamina.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> Up to 9 exchanges</li><li><b>Goal:</b> Slam your rival’s knuckles to the bar (three notches your way).</li></ul><h3>Setup</h3><ul><li>The grip starts in the centre. You and the rival each have 5 stamina (a linked character may add up to +2).</li></ul><h3>On your turn</h3><ol><li>Choose Power, Brace or Feint. The rival chooses simultaneously.</li><li>Power beats Feint (+2 for you), Brace beats Power (+1), Feint beats Brace (+1). Losing an exchange costs 1 notch.</li><li>Same tactic: Brace/Brace and Feint/Feint hold; Power/Power favours whoever has more stamina.</li><li>Power costs 1 stamina; Brace recovers 1 (maximum 9). Power with 0 stamina fails and costs a notch. An exhausted rival cannot choose Power.</li></ol><h3>Scoring</h3><ul><li>Pin: 3 points + 1 per 3 stamina you have left (maximum +2).</li><li>Time (after nine exchanges): score your grip position (0–2).</li><li>Pinned: 0.</li></ul><h3>End of the game</h3><p>A pin either way, or nine exchanges.</p><h3>Linked characters</h3><p>Linked strong characters gain up to +2 starting stamina.</p><h3>Tips</h3><ul><li>Watch the rival’s stamina: when it is low they cannot Power, so Feint is safe… unless they Brace.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 3700000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "arm-wrestling-at-the-bar"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "05WP0q0InPUA0Vjw",
+   "_key": "!journal.pages!pfaArcadeRules01.05WP0q0InPUA0Vjw",
+   "name": "Darts of the Deep",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/darts-of-the-deep.webp\" alt=\"Darts of the Deep cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Mind the sea wind.</em></p><p>Real aim on a 20-wedge dartboard, with wind drift and throw strength.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 6 darts</li><li><b>Goal:</b> Score the most points with six darts.</li></ul><h3>Setup</h3><ul><li>A wind value (shown) pushes every dart sideways for this match.</li></ul><h3>On your turn</h3><ol><li>Click the board to place your aiming reticle.</li><li>Set strength (20–100%). Weak throws scatter more.</li><li>Throw: the dart drifts with the wind plus a small random wobble.</li></ol><h3>Scoring</h3><ul><li>Bullseye 50 · outer bull 25 · treble ring ×3 · outer double ring ×2 · elsewhere the wedge value · off the board 0.</li></ul><h3>End of the game</h3><p>After six darts.</p><h3>Linked characters</h3><p>Linked dexterous characters reduce wobble by up to 30%.</p><h3>Tips</h3><ul><li>Aim upwind of your target by roughly the wind value.</li><li>The treble 20 (60) beats the bullseye if you can find it.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 3800000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "darts-of-the-deep"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "WxN1hchO2rZgkkft",
+   "_key": "!journal.pages!pfaArcadeRules01.WxN1hchO2rZgkkft",
+   "name": "Giant’s Skittles",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/giant-s-skittles.webp\" alt=\"Giant’s Skittles cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Nine pins, one boulder.</em></p><p>Bowl an enchanted stone ball at nine skittles arranged in a diamond.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 3 frames</li><li><b>Goal:</b> Topple the most pins.</li></ul><h3>Setup</h3><ul><li>Nine pins stand in four rows; the back row is narrower.</li></ul><h3>On your turn</h3><ol><li>Set your aim (horizontal slider) and power.</li><li>More power sweeps a wider path but wobbles more; gentle balls are accurate.</li><li>You have two balls per frame.</li></ol><h3>Scoring</h3><ul><li>+1 per pin. Strike (all nine with the first ball) +3. Spare (all nine with two balls) +1.</li></ul><h3>End of the game</h3><p>After three frames.</p><h3>Tips</h3><ul><li>Aim slightly off-centre on your second ball to catch the stragglers.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 3900000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "giant-s-skittles"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "qJDAlfnswB412pQ2",
+   "_key": "!journal.pages!pfaArcadeRules01.qJDAlfnswB412pQ2",
+   "name": "Goblin Tankard Toss",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/goblin-tankard-toss.webp\" alt=\"Goblin Tankard Toss cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Angle, strength, and a little luck.</em></p><p>Throw a tankard in an arc toward barrels at 16, 28 and 41 paces.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 tosses</li><li><b>Goal:</b> Land tankards in the farthest barrels you can reach.</li></ul><h3>Setup</h3><ul><li>Nothing to prepare.</li></ul><h3>On your turn</h3><ol><li>Choose an angle (10–80°) and power (20–100%). 45° carries farthest.</li><li>The tankard lands with a small random drift.</li></ol><h3>Scoring</h3><ul><li>Within 3 paces of a barrel: near 3 · middle 4 · far 5.</li><li>Within 6 paces of any barrel: 2. Within 10 paces: 1.</li></ul><h3>End of the game</h3><p>After five tosses.</p><h3>Tips</h3><ul><li>Distance ≈ half your power × sin(2 × angle): 45° at 82% power reaches the far barrel.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 4000000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "goblin-tankard-toss"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "oCotRXjMGxNfW8EF",
+   "_key": "!journal.pages!pfaArcadeRules01.oCotRXjMGxNfW8EF",
+   "name": "Barrel Bash",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/barrel-bash.webp\" alt=\"Barrel Bash cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Pick your lane and pray.</em></p><p>Send a barrel down one of three obstacle lanes, each with a visible crash risk.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 rolls</li><li><b>Goal:</b> Score the most by balancing safety against reward.</li></ul><h3>Setup</h3><ul><li>Each roll the three lanes are reshuffled with risks of 12%, 25% and 43%.</li></ul><h3>On your turn</h3><ol><li>Choose a lane. The barrel either clears the course or crashes.</li></ol><h3>Scoring</h3><ul><li>Clear the 12% lane: 2 · the 25% lane: 3 · the 43% lane: 4. A crash scores 0.</li></ul><h3>End of the game</h3><p>After five rolls.</p><h3>Tips</h3><ul><li>The middle and dangerous lanes have almost identical average value — choose your temperament.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 4100000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "barrel-bash"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "cqit1CvpwpZXg1iq",
+   "_key": "!journal.pages!pfaArcadeRules01.cqit1CvpwpZXg1iq",
+   "name": "Sly Fox’s Three Cups",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/sly-fox-s-three-cups.webp\" alt=\"Sly Fox’s Three Cups cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Follow the gem.</em></p><p>The classic shell game: a gem is placed under one cup, then five swaps are made.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 rounds</li><li><b>Goal:</b> Find the gem as often as possible.</li></ul><h3>Setup</h3><ul><li>The starting cup is announced each round.</li></ul><h3>On your turn</h3><ol><li>Press Watch swaps to see the five swaps animated (you may replay them).</li><li>Choose the cup you believe hides the gem.</li><li>Press Next round to continue.</li></ol><h3>Scoring</h3><ul><li>+1 per correct cup.</li></ul><h3>End of the game</h3><p>After five rounds.</p><h3>Tips</h3><ul><li>Track only the gem’s cup — ignore the other two.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 4200000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "sly-fox-s-three-cups"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "DIs0GTqHSKtaI10u",
+   "_key": "!journal.pages!pfaArcadeRules01.DIs0GTqHSKtaI10u",
+   "name": "Tavern Trivia",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/tavern-trivia.webp\" alt=\"Tavern Trivia cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Eight questions, no timer.</em></p><p>Multiple-choice fantasy trivia from the built-in deck or a GM trivia pack.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 8 questions (or fewer with a small pack)</li><li><b>Goal:</b> Answer the most questions correctly.</li></ul><h3>Setup</h3><ul><li>The GM may select a custom Trivia pack (4–80 questions) when creating the table.</li></ul><h3>On your turn</h3><ol><li>Read the question and choose one of four answers.</li></ol><h3>Scoring</h3><ul><li>+10 per correct answer; from the third correct answer in a row, each correct answer earns +2 more.</li></ul><h3>End of the game</h3><p>After eight questions.</p><h3>Tips</h3><ul><li>GMs: make a pack of campaign lore and reward players who paid attention.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 4300000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "tavern-trivia"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "2a7LbQFjqHlLXf93",
+   "_key": "!journal.pages!pfaArcadeRules01.2a7LbQFjqHlLXf93",
+   "name": "Wobblin’ Goblin Drinking Contest",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/wobblin-goblin-drinking-contest.webp\" alt=\"Wobblin’ Goblin Drinking Contest cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>A theatrical, entirely fictional brew-tasting.</em></p><p>A comedic contest of pacing. Each taste scores points but tips your balance. This is fiction, not advice about real drinking.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 rounds</li><li><b>Goal:</b> Score the most tasting points without toppling over.</li></ul><h3>Setup</h3><ul><li>Your balance meter starts at 0 of 9.</li></ul><h3>On your turn</h3><ol><li>Sip: +2 points, balance +1.</li><li>Sample: +4 points, balance +3.</li><li>Gulp: +7 points, balance +5.</li><li>Pause: 0 points, balance −4.</li></ol><h3>Scoring</h3><ul><li>If your balance reaches 9 you tumble: −2 points instead of scoring, and balance resets to 4.</li></ul><h3>End of the game</h3><p>After five rounds.</p><h3>Tips</h3><ul><li>Gulp, Pause, Gulp is safer than Gulp, Gulp.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 4400000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "wobblin-goblin-drinking-contest"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "axpqoHUPl3ZO8ErN",
+   "_key": "!journal.pages!pfaArcadeRules01.axpqoHUPl3ZO8ErN",
+   "name": "— Festivals & Crafts —",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 1
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p><em>4 games.</em></p><ul><li>@UUID[.LbjfyAS4MCbgre11]{Kattal’s Hammer} — Ring the bell!</li><li>@UUID[.WL4LT5l7L9fiM3CJ]{Fizzlenub’s Feast} — The right ingredient, the right heat.</li><li>@UUID[.a5HNKHZPF9Bn9UQH]{Tinker’s Lock Race} — Four tumblers, six runes, six tests.</li><li>@UUID[.i8Wdt0M1dXoFv9zT]{Potion Sorting Sprint} — Flora, mineral or fungus?</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 4500000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "category-Festivals & Crafts"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "LbjfyAS4MCbgre11",
+   "_key": "!journal.pages!pfaArcadeRules01.LbjfyAS4MCbgre11",
+   "name": "Kattal’s Hammer",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/kattal-s-hammer.webp\" alt=\"Kattal’s Hammer cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Ring the bell!</em></p><p>A fairground strength test. A needle sweeps the power meter; strike when it crosses the glowing sweet spot.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 3 blows</li><li><b>Goal:</b> Land the most precise blows.</li></ul><h3>Setup</h3><ul><li>A new sweet spot (45–84%) appears before each blow. Reduced-motion users get a precision slider instead.</li></ul><h3>On your turn</h3><ol><li>Press Strike as the needle crosses the target.</li></ol><h3>Scoring</h3><ul><li>50 points for a perfect hit, dropping by 2 for every percentage point you miss by (0 at 25 points away).</li></ul><h3>End of the game</h3><p>After three blows.</p><h3>Linked characters</h3><p>Linked strong characters widen the perfect zone by up to 4 points.</p><h3>Tips</h3><ul><li>The needle sweeps 0→100→0 every 2.8 seconds. Watch one full swing before you strike.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 4600000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "kattal-s-hammer"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "WL4LT5l7L9fiM3CJ",
+   "_key": "!journal.pages!pfaArcadeRules01.WL4LT5l7L9fiM3CJ",
+   "name": "Fizzlenub’s Feast",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/fizzlenub-s-feast.webp\" alt=\"Fizzlenub’s Feast cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>The right ingredient, the right heat.</em></p><p>Cook for a fussy NPC chef: each order names an ingredient and a heat band.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 orders</li><li><b>Goal:</b> Serve the most perfect dishes.</li></ul><h3>Setup</h3><ul><li>Each order names one of four ingredients and a heat band (low, medium or high).</li></ul><h3>On your turn</h3><ol><li>Pick an ingredient and set the cooking heat, then Serve.</li></ol><h3>Scoring</h3><ul><li>Correct ingredient: 6. Heat within 10 of the chef’s exact (secret) temperature: 4; within 20: 2.</li></ul><h3>End of the game</h3><p>After five orders.</p><h3>Tips</h3><ul><li>Low is about 18–38, medium 39–62, high 63–82. Aim for the middle of the band.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 4700000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "fizzlenub-s-feast"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "a5HNKHZPF9Bn9UQH",
+   "_key": "!journal.pages!pfaArcadeRules01.a5HNKHZPF9Bn9UQH",
+   "name": "Tinker’s Lock Race",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/tinker-s-lock-race.webp\" alt=\"Tinker’s Lock Race cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Four tumblers, six runes, six tests.</em></p><p>A code-breaking puzzle: the lock hides four different runes chosen from six.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> Up to 6 tests</li><li><b>Goal:</b> Open the lock in as few tests as possible.</li></ul><h3>Setup</h3><ul><li>All four tumblers start on the first rune.</li></ul><h3>On your turn</h3><ol><li>Click a tumbler to rotate it to the next rune.</li><li>Test: the lock reports green pins (right rune, right slot) and amber pins (right rune, wrong slot).</li></ol><h3>Scoring</h3><ul><li>12 points if opened on the first test, 2 fewer for each extra test (2 points on the sixth).</li></ul><h3>End of the game</h3><p>When the lock opens or after six failed tests.</p><h3>Tips</h3><ul><li>Every code uses four different runes, so a test with a repeated rune wastes information.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 4800000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "tinker-s-lock-race"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "i8Wdt0M1dXoFv9zT",
+   "_key": "!journal.pages!pfaArcadeRules01.i8Wdt0M1dXoFv9zT",
+   "name": "Potion Sorting Sprint",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/potion-sorting-sprint.webp\" alt=\"Potion Sorting Sprint cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Flora, mineral or fungus?</em></p><p>Sort eight magical reagents into the right apothecary cauldron.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 8 reagents</li><li><b>Goal:</b> Sort every reagent correctly.</li></ul><h3>Setup</h3><ul><li>Eight reagents arrive in a random order.</li></ul><h3>On your turn</h3><ol><li>Inspect the reagent and choose Flora, Mineral or Fungus.</li></ol><h3>Scoring</h3><ul><li>+5 per correct sort (40 maximum).</li></ul><h3>End of the game</h3><p>After all eight reagents.</p><h3>Tips</h3><ul><li>Petrified wood has turned to stone — it is a mineral.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 4900000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "potion-sorting-sprint"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "R01e9Qy0muU7beDq",
+   "_key": "!journal.pages!pfaArcadeRules01.R01e9Qy0muU7beDq",
+   "name": "— Riddles & Logic —",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 1
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p><em>18 games.</em></p><ul><li>@UUID[.jW43pmk4lO7KaHwb]{Tomb of the Restless Grave} — Give the sleeper what it lacks.</li><li>@UUID[.UfYWnN2OADKvaopV]{Emoji Rune Door} — Put the glyphs in their proper order.</li><li>@UUID[.7XD6BtiyTCoEBYHi]{Starforge Giant Lore Chain} — Five chambers, one legend.</li><li>@UUID[.CsIxemr8cl8MUyhM]{Night Serpent Ritual} — From dusk to dawn.</li><li>@UUID[.1sXzDFdDBAqmo369]{Scribe’s Riddle Tablet} — The tablet speaks in riddles.</li><li>@UUID[.jckpcPDYdYnKwFyS]{Bone Choir} — Listen, then sing it back.</li><li>@UUID[.CEJbR4okhHoDp29o]{Crystal Gate Tone Lock} — Six tones lift the gate.</li><li>@UUID[.8oD9JHr1ZXUO4ihY]{Tri-Moon Lock} — Align the three moons.</li><li>@UUID[.G6LIvAwtN1oku7p2]{Grammar of Grief} — Speak the lament in its proper order.</li><li>@UUID[.5wUob49xOsUKy36D]{Ink-Bound Door} — Decode the scribe’s cipher.</li><li>@UUID[.4HYb7nIKBRksJurA]{The Three Hungers} — Feed each guardian what it craves.</li><li>@UUID[.s4JlS8to9txlWICf]{Weight, Rhythm & Echo Bridge} — Three tests to cross.</li><li>@UUID[.6bNdqH27Dl9cXcfU]{The Sluice Sequence} — Route the water west to east.</li><li>@UUID[.WmNCPkajSBJqoEpq]{Rotating Gravity Room} — Tilt the world.</li><li>@UUID[.DjxhLGA0Y4YYLsKZ]{Three Oaths} — Honour, truth and mercy.</li><li>@UUID[.eu4UVpDo4fZ8WtxP]{Keystone Lattice} — Light all nine stones.</li><li>@UUID[.4pZnbkldDPjPQXbF]{The Riddle Book} — A chain of original riddles.</li><li>@UUID[.4IT52aAyWDDo1O5Y]{Wardplate Trap: The Falling Sun} — Slide the wardplates home.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 5000000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "category-Riddles & Logic"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "jW43pmk4lO7KaHwb",
+   "_key": "!journal.pages!pfaArcadeRules01.jW43pmk4lO7KaHwb",
+   "name": "Tomb of the Restless Grave",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/tomb-of-the-restless-grave.webp\" alt=\"Tomb of the Restless Grave cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Give the sleeper what it lacks.</em></p><p>A six-line cursed epitaph hides a single answer.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> Up to 4 attempts</li><li><b>Goal:</b> Speak the word that lays the dead to rest.</li></ul><h3>Setup</h3><ul><li>Read the epitaph carefully.</li></ul><h3>On your turn</h3><ol><li>Type your answer and speak it to the grave. Spelling and punctuation are forgiving.</li><li>You may reveal a whispered hint once.</li></ol><h3>Scoring</h3><ul><li>10 points on the first attempt, 2 fewer for each extra attempt and 2 fewer if the hint was used (minimum 1).</li></ul><h3>End of the game</h3><p>A correct answer, or four wrong attempts.</p><h3>Tips</h3><ul><li>Every line describes the same thing.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 5100000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "tomb-of-the-restless-grave"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "UfYWnN2OADKvaopV",
+   "_key": "!journal.pages!pfaArcadeRules01.UfYWnN2OADKvaopV",
+   "name": "Emoji Rune Door",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/forgotten-realms-emoji-door-generator.webp\" alt=\"Emoji Rune Door cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Put the glyphs in their proper order.</em></p><p>Each door shows a clue and four shuffled picture-runes. Arrange them in the order the clue describes.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 3 doors</li><li><b>Goal:</b> Open three rune doors.</li></ul><h3>Setup</h3><ul><li>Three doors are drawn at random from the built-in set or a GM Rune pack.</li></ul><h3>On your turn</h3><ol><li>Tap runes in order; Undo removes the last one.</li><li>Optionally reveal the door’s hint.</li><li>Submit when all four runes are placed.</li></ol><h3>Scoring</h3><ul><li>10 points per door (7 if you used the hint). A wrong order resets the runes and costs 1 point.</li></ul><h3>End of the game</h3><p>After three doors.</p><h3>Tips</h3><ul><li>Most clues describe a process from beginning to end — find the first step.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 5200000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "forgotten-realms-emoji-door-generator"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "7XD6BtiyTCoEBYHi",
+   "_key": "!journal.pages!pfaArcadeRules01.7XD6BtiyTCoEBYHi",
+   "name": "Starforge Giant Lore Chain",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/starforge-giant-lore-chain.webp\" alt=\"Starforge Giant Lore Chain cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Five chambers, one legend.</em></p><p>A linked investigation beneath a giant’s mountain forge. Each solved chamber unlocks a lore clue and the next chamber.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative: the whole party shares one mechanism. Players may join mid-puzzle.</li><li><b>Length:</b> 5 linked chambers</li><li><b>Goal:</b> Solve all five chambers to reveal the map of the three vaults.</li></ul><h3>Setup</h3><ul><li>The party begins in chamber I with a score of 100.</li></ul><h3>On your turn</h3><ol><li>I · Riddle — type the answer.</li><li>II · Logic — assign each relic to one keeper.</li><li>III · Sequence — tap the forging steps in order.</li><li>IV · Moon dials — rotate three dials to the described phases.</li><li>V · Sliding ward — slide eight plates into order (blank in the lower right).</li></ol><h3>Scoring</h3><ul><li>Party score starts at 100: each solved chamber +20, each mistake −3, each hint −2.</li></ul><h3>End of the game</h3><p>When the fifth chamber is solved.</p><h3>GM notes</h3><p>Bind this puzzle to a scene Region or Tile so walking into a room launches it, and reveal a Tile or open a door on success.</p><h3>Tips</h3><ul><li>Read every clue aloud — the clues are the reward and the story.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 5300000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "starforge-giant-lore-chain"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "CsIxemr8cl8MUyhM",
+   "_key": "!journal.pages!pfaArcadeRules01.CsIxemr8cl8MUyhM",
+   "name": "Night Serpent Ritual",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/night-serpent-emoji-ritual.webp\" alt=\"Night Serpent Ritual cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>From dusk to dawn.</em></p><p>Reconstruct the night-serpent rite by tapping symbols in the right order. Not every symbol belongs in the rite.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 1 chamber</li><li><b>Goal:</b> Tap the correct four-symbol sequence.</li></ul><h3>Setup</h3><ul><li>Six ritual symbols are offered.</li></ul><h3>On your turn</h3><ol><li>Tap symbols in order, Undo to remove the last, Submit when the sequence is full.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −3 per wrong submission, −2 per hint.</li></ul><h3>End of the game</h3><p>When the rite is completed.</p><h3>Tips</h3><ul><li>Two of the six symbols are decoys.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 5400000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "night-serpent-emoji-ritual"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "1sXzDFdDBAqmo369",
+   "_key": "!journal.pages!pfaArcadeRules01.1sXzDFdDBAqmo369",
+   "name": "Scribe’s Riddle Tablet",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/scribe-s-riddle-tablet.webp\" alt=\"Scribe’s Riddle Tablet cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>The tablet speaks in riddles.</em></p><p>Answer three original riddles at a talking stone tablet.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 3 riddles</li><li><b>Goal:</b> Solve every riddle.</li></ul><h3>Setup</h3><ul><li>Riddles appear one at a time.</li></ul><h3>On your turn</h3><ol><li>Type an answer and press Enter. Common variants (“a shadow”, “the echo”) are accepted.</li><li>Request up to three progressive hints per riddle.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 per riddle, −3 per wrong answer, −2 per hint.</li></ul><h3>End of the game</h3><p>When the last riddle is solved.</p><h3>Tips</h3><ul><li>Riddles describe one thing several ways — find what all the lines share.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 5500000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "scribe-s-riddle-tablet"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "jckpcPDYdYnKwFyS",
+   "_key": "!journal.pages!pfaArcadeRules01.jckpcPDYdYnKwFyS",
+   "name": "Bone Choir",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/bone-choir.webp\" alt=\"Bone Choir cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Listen, then sing it back.</em></p><p>A memory puzzle. Four bone bells play a four-note phrase; repeat it exactly.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 1 chamber</li><li><b>Goal:</b> Reproduce the four-note phrase.</li></ul><h3>Setup</h3><ul><li>Press Play demonstration to hear and see the phrase (as often as you like while observing).</li></ul><h3>On your turn</h3><ol><li>Press “I’m ready” to begin answering, then tap the bells in order.</li><li>A mistake resets the choir to observe mode.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −3 per failed attempt, −2 per hint.</li></ul><h3>End of the game</h3><p>When the phrase is reproduced.</p><h3>Tips</h3><ul><li>Bells are numbered I–IV from lowest to highest pitch.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 5600000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "bone-choir"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "CEJbR4okhHoDp29o",
+   "_key": "!journal.pages!pfaArcadeRules01.CEJbR4okhHoDp29o",
+   "name": "Crystal Gate Tone Lock",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/crystal-gate-tone-lock.webp\" alt=\"Crystal Gate Tone Lock cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Six tones lift the gate.</em></p><p>A harder six-note memory lock.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 1 chamber</li><li><b>Goal:</b> Reproduce the six-note phrase.</li></ul><h3>Setup</h3><ul><li>Play the demonstration as often as needed.</li></ul><h3>On your turn</h3><ol><li>Switch to answering and tap the crystals in order. A mistake resets to observe mode.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −3 per failed attempt, −2 per hint.</li></ul><h3>End of the game</h3><p>When the phrase is reproduced.</p><h3>Tips</h3><ul><li>Split the phrase into two groups of three.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 5700000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "crystal-gate-tone-lock"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "8oD9JHr1ZXUO4ihY",
+   "_key": "!journal.pages!pfaArcadeRules01.8oD9JHr1ZXUO4ihY",
+   "name": "Tri-Moon Lock",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/tri-moon-lock.webp\" alt=\"Tri-Moon Lock cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Align the three moons.</em></p><p>Three dials each cycle through New, Waxing, Half and Full.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 1 chamber</li><li><b>Goal:</b> Set each dial to the phase its inscription describes.</li></ul><h3>Setup</h3><ul><li>All dials start on New.</li></ul><h3>On your turn</h3><ol><li>Click a dial to advance its phase, then Test.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −3 per failed test, −2 per hint.</li></ul><h3>End of the game</h3><p>When all three phases are correct.</p><h3>Tips</h3><ul><li>Read each inscription separately: one dial, one clue.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 5800000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "tri-moon-lock"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "G6LIvAwtN1oku7p2",
+   "_key": "!journal.pages!pfaArcadeRules01.G6LIvAwtN1oku7p2",
+   "name": "Grammar of Grief",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/grammar-of-grief.webp\" alt=\"Grammar of Grief cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Speak the lament in its proper order.</em></p><p>Arrange five fragments of a mourning rite in the order the dead require.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 1 chamber</li><li><b>Goal:</b> Arrange all five fragments correctly.</li></ul><h3>Setup</h3><ul><li>Five sentence fragments are shown.</li></ul><h3>On your turn</h3><ol><li>Tap fragments in order (each once), Undo if needed, then Submit.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −3 per wrong submission, −2 per hint.</li></ul><h3>End of the game</h3><p>When the lament is complete.</p><h3>Tips</h3><ul><li>Grief moves from memory toward rest.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 5900000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "grammar-of-grief"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "5wUob49xOsUKy36D",
+   "_key": "!journal.pages!pfaArcadeRules01.5wUob49xOsUKy36D",
+   "name": "Ink-Bound Door",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/ink-bound-door.webp\" alt=\"Ink-Bound Door cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Decode the scribe’s cipher.</em></p><p>A mirror-alphabet cipher (A↔Z, B↔Y…) hides a four-letter word.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 1 chamber</li><li><b>Goal:</b> Decode the word and speak it.</li></ul><h3>Setup</h3><ul><li>The cipher text is written on the door.</li></ul><h3>On your turn</h3><ol><li>Type the decoded word and press Enter. Request hints if stuck.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −3 per wrong answer, −2 per hint.</li></ul><h3>End of the game</h3><p>When the word is spoken.</p><h3>Tips</h3><ul><li>Write the alphabet forward on one line and backward beneath it.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 6000000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "ink-bound-door"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "4HYb7nIKBRksJurA",
+   "_key": "!journal.pages!pfaArcadeRules01.4HYb7nIKBRksJurA",
+   "name": "The Three Hungers",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/the-three-hungers.webp\" alt=\"The Three Hungers cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Feed each guardian what it craves.</em></p><p>Three stone guardians each hunger for one of three offerings.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 1 chamber</li><li><b>Goal:</b> Give each guardian its proper offering (each offering used once).</li></ul><h3>Setup</h3><ul><li>Three guardians and three offerings.</li></ul><h3>On your turn</h3><ol><li>Use each guardian’s drop-down to assign an offering, then Confirm.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −3 per refusal, −2 per hint.</li></ul><h3>End of the game</h3><p>When all three guardians accept.</p><h3>Tips</h3><ul><li>Match each guardian’s nature to the substance it consumes.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 6100000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "the-three-hungers"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "s4JlS8to9txlWICf",
+   "_key": "!journal.pages!pfaArcadeRules01.s4JlS8to9txlWICf",
+   "name": "Weight, Rhythm & Echo Bridge",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/weight-rhythm-echo-bridge.webp\" alt=\"Weight, Rhythm &amp; Echo Bridge cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Three tests to cross.</em></p><p>A bridge tests a footstep, a rhythm and an answer to its echo.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 3 stages</li><li><b>Goal:</b> Pass all three stages.</li></ul><h3>Setup</h3><ul><li>Stages are presented in order.</li></ul><h3>On your turn</h3><ol><li>Choose one option per stage. A wrong choice can be retried.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −3 per wrong choice, −2 per hint.</li></ul><h3>End of the game</h3><p>When the final stage is passed.</p><h3>Tips</h3><ul><li>The echo repeats only the last word of any reply.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 6200000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "weight-rhythm-echo-bridge"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "6bNdqH27Dl9cXcfU",
+   "_key": "!journal.pages!pfaArcadeRules01.6bNdqH27Dl9cXcfU",
+   "name": "The Sluice Sequence",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/the-sluice-sequence.webp\" alt=\"The Sluice Sequence cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Route the water west to east.</em></p><p>A 3×3 grid of elbow and straight pipes must carry water from the west inlet (top-left) to the east outlet (bottom-right).</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 1 chamber</li><li><b>Goal:</b> Connect an unbroken channel from inlet to outlet.</li></ul><h3>Setup</h3><ul><li>Pipes start scrambled.</li></ul><h3>On your turn</h3><ol><li>Click a pipe to rotate it 90°. The puzzle solves the moment the route connects; you can also press Test.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −3 per failed test, −2 per hint.</li></ul><h3>End of the game</h3><p>When water flows through.</p><h3>Tips</h3><ul><li>Work outward from the inlet one pipe at a time.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 6300000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "the-sluice-sequence"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "WmNCPkajSBJqoEpq",
+   "_key": "!journal.pages!pfaArcadeRules01.WmNCPkajSBJqoEpq",
+   "name": "Rotating Gravity Room",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/rotating-gravity-room.webp\" alt=\"Rotating Gravity Room cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Tilt the world.</em></p><p>A crystal on a 5×5 floor slides in the direction of gravity until a wall or the edge stops it.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 1 chamber</li><li><b>Goal:</b> Bring the crystal to the exit.</li></ul><h3>Setup</h3><ul><li>The crystal starts in the lower-left; the exit is in the upper-right. Barriers are randomly placed (always solvable in 3–10 tilts).</li></ul><h3>On your turn</h3><ol><li>Choose North, East, South or West. The crystal slides as far as it can.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −2 per hint. Tilts are free — explore!</li></ul><h3>End of the game</h3><p>When the crystal reaches the exit.</p><h3>Tips</h3><ul><li>Use barriers as brakes.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 6400000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "rotating-gravity-room"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "DjxhLGA0Y4YYLsKZ",
+   "_key": "!journal.pages!pfaArcadeRules01.DjxhLGA0Y4YYLsKZ",
+   "name": "Three Oaths",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/three-oaths.webp\" alt=\"Three Oaths cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Honour, truth and mercy.</em></p><p>An oath chamber poses three questions of character.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 3 stages</li><li><b>Goal:</b> Answer all three questions as an oathkeeper would.</li></ul><h3>Setup</h3><ul><li>Questions are presented in order.</li></ul><h3>On your turn</h3><ol><li>Choose one answer per question; a wrong answer may be retried.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −3 per wrong answer, −2 per hint.</li></ul><h3>End of the game</h3><p>When the third oath is sworn.</p><h3>Tips</h3><ul><li>The chamber values the costly, honourable choice.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 6500000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "three-oaths"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "eu4UVpDo4fZ8WtxP",
+   "_key": "!journal.pages!pfaArcadeRules01.eu4UVpDo4fZ8WtxP",
+   "name": "Keystone Lattice",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/keystone-lattice.webp\" alt=\"Keystone Lattice cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Light all nine stones.</em></p><p>A 3×3 “lights out” lattice. Pressing a stone toggles it and its orthogonal neighbours.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 1 chamber</li><li><b>Goal:</b> Light every stone.</li></ul><h3>Setup</h3><ul><li>A random — always solvable — pattern of lit and dark stones.</li></ul><h3>On your turn</h3><ol><li>Press stones. The puzzle solves instantly when all nine are lit.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −2 per hint.</li></ul><h3>End of the game</h3><p>When all nine are lit.</p><h3>Tips</h3><ul><li>Pressing the same stone twice undoes it — order never matters, only which stones you press.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 6600000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "keystone-lattice"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "4pZnbkldDPjPQXbF",
+   "_key": "!journal.pages!pfaArcadeRules01.4pZnbkldDPjPQXbF",
+   "name": "The Riddle Book",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/riddle-book-procedural-challenges.webp\" alt=\"The Riddle Book cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>A chain of original riddles.</em></p><p>A book of riddles. The GM can generate new reproducible books in the Puzzle Forge by seed and difficulty.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 5 riddles (or a GM-generated book of 1–12)</li><li><b>Goal:</b> Solve every riddle in the book.</li></ul><h3>Setup</h3><ul><li>The GM may choose a generated Puzzle pack when creating the table.</li></ul><h3>On your turn</h3><ol><li>Type answers; request up to three hints per riddle.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 per riddle, −3 per wrong answer, −2 per hint.</li></ul><h3>End of the game</h3><p>When the last riddle is solved.</p><h3>Tips</h3><ul><li>Difficulty 1 books favour concrete objects; difficulty 3 favours abstract ideas.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 6700000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "riddle-book-procedural-challenges"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "4IT52aAyWDDo1O5Y",
+   "_key": "!journal.pages!pfaArcadeRules01.4IT52aAyWDDo1O5Y",
+   "name": "Wardplate Trap: The Falling Sun",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/wally-style-original-trap-builder.webp\" alt=\"Wardplate Trap: The Falling Sun cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Slide the wardplates home.</em></p><p>An eight-tile sliding puzzle disarms a radiant trap.</p><h3>At a glance</h3><ul><li><b>Players:</b> Co-operative puzzle.</li><li><b>Length:</b> 1 chamber</li><li><b>Goal:</b> Order the plates 1–8 with the blank in the lower-right corner.</li></ul><h3>Setup</h3><ul><li>The plates start scrambled (always solvable).</li></ul><h3>On your turn</h3><ol><li>Click a plate next to the empty slot to slide it.</li></ol><h3>Scoring</h3><ul><li>Party score 100: +20 on success, −2 per hint. Moves are free.</li></ul><h3>End of the game</h3><p>When the plates are in order.</p><h3>Tips</h3><ul><li>Solve the top row, then the middle, then rotate the last three.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 6800000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "wally-style-original-trap-builder"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "XYkBlyTHpCS19G8Y",
+   "_key": "!journal.pages!pfaArcadeRules01.XYkBlyTHpCS19G8Y",
+   "name": "— Performance & Social —",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 1
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p><em>6 games.</em></p><ul><li>@UUID[.Btr6GpH37WnsF38O]{Ispin’s Impossible Tale} — Tell the story the crowd wants.</li><li>@UUID[.JmywIQMDgieIj6Ts]{Goblin Breakdancing Corporation} — Watch the routine. Bust the moves.</li><li>@UUID[.QEqrVjO4A3b8qpnl]{Battle of the Bards} — Win the crowd.</li><li>@UUID[.n61DqlJVKguGeLXi]{Festival Slam Poetry} — Verse against verse.</li><li>@UUID[.9JiQ5KxVYeGikyZU]{Trial by Debate} — Sway the jury.</li><li>@UUID[.7ItB4ZEXGQZ2LkGJ]{Bardic Duet} — Two voices, one standing ovation.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 6900000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "category-Performance & Social"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "Btr6GpH37WnsF38O",
+   "_key": "!journal.pages!pfaArcadeRules01.Btr6GpH37WnsF38O",
+   "name": "Ispin’s Impossible Tale",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/ispin-s-impossible-tale.webp\" alt=\"Ispin’s Impossible Tale cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Tell the story the crowd wants.</em></p><p>Perform the tall tales of Ispin by choosing the plot twist the audience is craving.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 5 scenes</li><li><b>Goal:</b> Read each scene’s mood and pick the beat that fits.</li></ul><h3>Setup</h3><ul><li>Five scenes are drawn from the built-in tales or a GM Story pack.</li></ul><h3>On your turn</h3><ol><li>Read the setup, then pick one of three continuations.</li></ol><h3>Scoring</h3><ul><li>The crowd-pleasing choice: +3. Any other choice: +1 (they still listen politely).</li></ul><h3>End of the game</h3><p>After five scenes.</p><h3>Tips</h3><ul><li>The moods are wit, bravery and kindness — the right beat always embodies one.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 7000000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "ispin-s-impossible-tale"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "JmywIQMDgieIj6Ts",
+   "_key": "!journal.pages!pfaArcadeRules01.JmywIQMDgieIj6Ts",
+   "name": "Goblin Breakdancing Corporation",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/goblin-breakdancing-corporation.webp\" alt=\"Goblin Breakdancing Corporation cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Watch the routine. Bust the moves.</em></p><p>A memory performance: study a four-move routine, then reproduce it from memory.</p><h3>At a glance</h3><ul><li><b>Players:</b> Independent challenge: every seat plays its own copy, side by side, and the shared leaderboard compares final scores. Add AI rivals or GM-controlled NPCs for company.</li><li><b>Length:</b> 3 routines</li><li><b>Goal:</b> Match the choreographer’s routine.</li></ul><h3>Setup</h3><ul><li>A random four-move routine is shown while you watch.</li></ul><h3>On your turn</h3><ol><li>Press Start dancing — the routine disappears.</li><li>Tap the four moves in order (Undo allowed), then Submit.</li></ol><h3>Scoring</h3><ul><li>+2 per move in the right position, +4 bonus for a perfect routine (12 maximum per round).</li></ul><h3>End of the game</h3><p>After three routines.</p><h3>Tips</h3><ul><li>Say the routine out loud as you watch it.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 7100000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "goblin-breakdancing-corporation"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "QEqrVjO4A3b8qpnl",
+   "_key": "!journal.pages!pfaArcadeRules01.QEqrVjO4A3b8qpnl",
+   "name": "Battle of the Bards",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/battle-of-the-bards.webp\" alt=\"Battle of the Bards cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Win the crowd.</em></p><p>A competitive performance on a tactical stage with a fickle crowd.</p><h3>At a glance</h3><ul><li><b>Players:</b> Exactly 2 performers (a rival bard NPC fills an empty seat).</li><li><b>Length:</b> First to 42 favour, or 9 rounds</li><li><b>Goal:</b> Earn 42 audience favour first, or lead when the curtain falls.</li></ul><h3>Setup</h3><ul><li>Choose a Virtuoso, Slam Poet or Debater kit before the show.</li><li>Three spotlight squares sit at centre stage.</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Performance abilities (Winning verse, Witty retort, Grand finale…) need line of sight to your rival.</li><li>Choose a delivery — Heroic, Comic or Heartfelt — before performing.</li></ol><h3>Scoring</h3><ul><li>Favour = the ability’s value + 3 if you stand in a spotlight + 2 with momentum 2+ + 3 if your delivery matches the crowd’s current mood (−1 if not) − 3 for repeating your last piece + 0–2. Minimum 1.</li><li>The crowd’s mood rotates Heroic → Comic → Heartfelt each round.</li><li>Your performance unsettles the rival: −1 momentum and exposed.</li></ul><h3>End of the game</h3><p>First to 42 favour; otherwise most favour after 9 rounds.</p><h3>Tips</h3><ul><li>Never repeat the same piece twice in a row.</li><li>Plan to be in the spotlight on the turn you spend your Grand finale.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 7200000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "battle-of-the-bards"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "n61DqlJVKguGeLXi",
+   "_key": "!journal.pages!pfaArcadeRules01.n61DqlJVKguGeLXi",
+   "name": "Festival Slam Poetry",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/festival-slam-poetry.webp\" alt=\"Festival Slam Poetry cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Verse against verse.</em></p><p>The Battle of the Bards engine with Slam Poet kits: verses, retorts, refrains and a finale.</p><h3>At a glance</h3><ul><li><b>Players:</b> Exactly 2 performers.</li><li><b>Length:</b> First to 38 favour, or 8 rounds</li><li><b>Goal:</b> Earn 38 audience favour first, or lead after 8 rounds.</li></ul><h3>Setup</h3><ul><li>Slam Poet kits by default.</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Refrain restores focus and stamina; Take centre stage scores without a target.</li></ol><h3>Scoring</h3><ul><li>As Battle of the Bards: spotlight, momentum, crowd mood and novelty all modify each piece.</li></ul><h3>End of the game</h3><p>First to 38, or most favour after 8 rounds.</p><h3>Tips</h3><ul><li>Refrain on the round the crowd’s mood does not suit your plan.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 7300000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "festival-slam-poetry"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "9JiQ5KxVYeGikyZU",
+   "_key": "!journal.pages!pfaArcadeRules01.9JiQ5KxVYeGikyZU",
+   "name": "Trial by Debate",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/trial-by-debate.webp\" alt=\"Trial by Debate cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Sway the jury.</em></p><p>A courtroom duel of arguments, rebuttals and evidence, scored like a performance.</p><h3>At a glance</h3><ul><li><b>Players:</b> Exactly 2 advocates.</li><li><b>Length:</b> First to 38 favour, or 8 rounds</li><li><b>Goal:</b> Win 38 jury favour first, or lead after 8 rounds.</li></ul><h3>Setup</h3><ul><li>Debater kits by default.</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Opening argument (7), Rebuttal (9; +5 if your rival’s last act was an argument, verse, heckle, evidence or finale), Produce evidence (12, 2 AP).</li></ol><h3>Scoring</h3><ul><li>As Battle of the Bards; the jury’s mood rotates each round.</li></ul><h3>End of the game</h3><p>First to 38, or most favour after 8 rounds.</p><h3>Tips</h3><ul><li>Rebuttal is strongest immediately after the other side makes a claim.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 7400000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "trial-by-debate"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "7ItB4ZEXGQZ2LkGJ",
+   "_key": "!journal.pages!pfaArcadeRules01.7ItB4ZEXGQZ2LkGJ",
+   "name": "Bardic Duet",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/bardic-duet.webp\" alt=\"Bardic Duet cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Two voices, one standing ovation.</em></p><p>A co-operative show: both performers play to the audience together.</p><h3>At a glance</h3><ul><li><b>Players:</b> 2 co-operative performers.</li><li><b>Length:</b> 9 rounds</li><li><b>Goal:</b> Earn a combined 55 applause by the end of round 9.</li></ul><h3>Setup</h3><ul><li>Virtuoso kits by default. Performances target the audience, never your partner.</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Harmonise scores 8 and grants +4 more when you stand within 2 squares of your partner.</li></ol><h3>Scoring</h3><ul><li>Each piece scores as in Battle of the Bards; partner scores combine.</li></ul><h3>End of the game</h3><p>Success if the combined total is 55+ after round 9.</p><h3>Tips</h3><ul><li>Meet near the spotlight, then alternate Harmonise and verses.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 7500000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "bardic-duet"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "NEJcJK5YoM4dI8Dt",
+   "_key": "!journal.pages!pfaArcadeRules01.NEJcJK5YoM4dI8Dt",
+   "name": "— Combat & Arena —",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 1
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p><em>10 games.</em></p><ul><li>@UUID[.JD6eJNtOFIq9EKwI]{Fighting Pit Tournament} — Footwork, steel and nerve.</li><li>@UUID[.hV56YNc4D2AZVHxY]{Wizard Duel} — Every spell is an argument.</li><li>@UUID[.MwXZ1egbhZY6tmJo]{Monster Wrestler Championship} — Two pins and the belt is yours.</li><li>@UUID[.feB8PEHreWAjrmiq]{Shield Wall} — Hold the gate. Nobody falls alone.</li><li>@UUID[.qOxfUlY9RX9PBjUQ]{Arrow Storm} — Watch the lanes.</li><li>@UUID[.HymGq9Ns1KzUpgaY]{Gladiator’s Gauntlet} — Survive the arena itself.</li><li>@UUID[.Aif3QXTDhnlhTbjh]{The Gloop} — Free the captive before the slime eats you.</li><li>@UUID[.nbwJonPvfAshLQYF]{Melee Training Dummy} — Drills before duels.</li><li>@UUID[.z5evvUWxHIUmV6AB]{Arena Beast-Rider} — Lances down!</li><li>@UUID[.RjzYIYVFQkR1mVDL]{Shadow Heist} — No witnesses.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 7600000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "category-Combat & Arena"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "JD6eJNtOFIq9EKwI",
+   "_key": "!journal.pages!pfaArcadeRules01.JD6eJNtOFIq9EKwI",
+   "name": "Fighting Pit Tournament",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/fighting-pit-tournament.webp\" alt=\"Fighting Pit Tournament cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Footwork, steel and nerve.</em></p><p>Tactical 1v1 pit fighting on a 9×7 grid with two pillars.</p><h3>At a glance</h3><ul><li><b>Players:</b> Exactly 2 fighters (an NPC fills an empty seat). Supports Tournament Hall brackets.</li><li><b>Length:</b> Knockout, or 18 rounds</li><li><b>Goal:</b> Knock your rival out, or win the judges’ decision.</li></ul><h3>Setup</h3><ul><li>Choose a kit: Duelist, Bruiser, Sentinel, Wrestler, Shadowrunner or Beast Rider.</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Damage = the ability’s base + half your Power (rounded down) + 0–2 + any Aim bonus. The target subtracts its Guard, Dodge bonus, +2 if standing in cover and +2 if hidden (maximum 10 total); an exposed target takes +2. Each hit strips 2 Guard.</li><li>Guard adds defence; Dodge moves one square with +3 evasion; Feint strips 2 guard and exposes; Grapple locks a rival in place.</li></ol><h3>Scoring</h3><ul><li>Each hit earns half its damage as score.</li></ul><h3>End of the game</h3><p>Knockout wins. After 18 rounds the judges score each fighter as health × 2 + score + pins × 12.</p><h3>Tips</h3><ul><li>Pillars block movement and line of sight — break contact when you need to recover.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 7700000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "fighting-pit-tournament"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "hV56YNc4D2AZVHxY",
+   "_key": "!journal.pages!pfaArcadeRules01.hV56YNc4D2AZVHxY",
+   "name": "Wizard Duel",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/wizard-duel.webp\" alt=\"Wizard Duel cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Every spell is an argument.</em></p><p>Ranged spell combat with line of sight, focus management and counterspells in an arena with four pillars.</p><h3>At a glance</h3><ul><li><b>Players:</b> Exactly 2 Battlemages.</li><li><b>Length:</b> Knockout, or 18 rounds</li><li><b>Goal:</b> Knock out the rival mage.</li></ul><h3>Setup</h3><ul><li>Both duellists use the Battlemage kit (24 HP, 16 focus).</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Damage = the ability’s base + half your Power (rounded down) + 0–2 + any Aim bonus. The target subtracts its Guard, Dodge bonus, +2 if standing in cover and +2 if hidden (maximum 10 total); an exposed target takes +2. Each hit strips 2 Guard.</li><li>Ember lance (range 4), Frost bind (slows), Thunder wave (2 AP, knockback), Blink (teleport 3), Arcane aegis, Arcane focus (+5 focus).</li><li>Counterspell: the next magical attack against you this round is nullified.</li></ol><h3>Scoring</h3><ul><li>Each hit earns half its damage as score.</li></ul><h3>End of the game</h3><p>Knockout, or the judges’ decision after 18 rounds.</p><h3>Tips</h3><ul><li>Never cast into a ready counterspell — the rival’s status line shows it.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 7800000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "wizard-duel"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "MwXZ1egbhZY6tmJo",
+   "_key": "!journal.pages!pfaArcadeRules01.MwXZ1egbhZY6tmJo",
+   "name": "Monster Wrestler Championship",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/monster-wrestler-championship.webp\" alt=\"Monster Wrestler Championship cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Two pins and the belt is yours.</em></p><p>Ring wrestling: clinch, break holds, throw and pin.</p><h3>At a glance</h3><ul><li><b>Players:</b> Exactly 2 (Wrestler vs Arena Beast).</li><li><b>Length:</b> Two pins, knockout, or 16 rounds</li><li><b>Goal:</b> Score two legal pins (or a knockout).</li></ul><h3>Setup</h3><ul><li>Wrestler (33 HP) against Arena Beast (35 HP). The ring ropes are its edge.</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Grapple/Body lock succeeds when your stamina + power × 2 + (0–4) reaches their stamina + protection − 5.</li><li>Pin (requires a hold, 2 AP) succeeds when your stamina + power × 2 + (0–5) reaches their stamina + protection × 2 − 3. Success scores a pin (+12) and releases the hold.</li><li>Break hold: escape needs your stamina + power × 2 + (0–6) to beat the holder’s stamina + power × 2 by 3.</li><li>Throw (requires a hold): 6–8 damage minus protection and a knockback.</li></ol><h3>Scoring</h3><ul><li>Pins +12; throws +4; strikes half their damage.</li></ul><h3>End of the game</h3><p>Two pins, a knockout, or the judges after 16 rounds.</p><h3>Tips</h3><ul><li>Pin attempts are stamina contests — recover before you commit.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 7900000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "monster-wrestler-championship"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "feB8PEHreWAjrmiq",
+   "_key": "!journal.pages!pfaArcadeRules01.feB8PEHreWAjrmiq",
+   "name": "Shield Wall",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/shield-wall.webp\" alt=\"Shield Wall cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Hold the gate. Nobody falls alone.</em></p><p>Co-operative defence: raiders strike the gate at the end of every round.</p><h3>At a glance</h3><ul><li><b>Players:</b> 2 co-operative Sentinels.</li><li><b>Length:</b> 8 waves</li><li><b>Goal:</b> Keep the gate standing (24 integrity) through eight waves.</li></ul><h3>Setup</h3><ul><li>Two raiders appear each wave (power 4; power 5 and tougher after round 4).</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Strike raiders to remove them before the wave lands.</li><li>At the end of each round the gate takes the total power of every raider still standing, reduced by half of the defenders’ combined guard.</li></ol><h3>Scoring</h3><ul><li>Damage dealt to raiders is your score.</li></ul><h3>End of the game</h3><p>Success if the gate survives the final round; failure if it reaches 0.</p><h3>Tips</h3><ul><li>Shield wall (cooldown 2) is enormous when the raiders survive.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 8000000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "shield-wall"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "qOxfUlY9RX9PBjUQ",
+   "_key": "!journal.pages!pfaArcadeRules01.qOxfUlY9RX9PBjUQ",
+   "name": "Arrow Storm",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/arrow-storm.webp\" alt=\"Arrow Storm cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Watch the lanes.</em></p><p>Co-operative ranged defence with telegraphed arrow volleys.</p><h3>At a glance</h3><ul><li><b>Players:</b> 2 co-operative Archers.</li><li><b>Length:</b> 9 waves</li><li><b>Goal:</b> Protect the gate through nine waves.</li></ul><h3>Setup</h3><ul><li>Raiders advance as in Shield Wall. One row of the battlefield is marked as the incoming volley lane.</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Shoot raiders with Aimed shot (range 5) and Volley; Steady aim adds +3 to your next shot.</li><li>At the end of each round the marked lane is raked by arrows: anyone in it (outside cover) takes 5 minus half their guard and dodge (the storm never knocks you below 1 HP). A new lane is then marked.</li></ol><h3>Scoring</h3><ul><li>Damage dealt to raiders is your score.</li></ul><h3>End of the game</h3><p>Success if the gate survives the final wave.</p><h3>Tips</h3><ul><li>Step out of the marked row before you end your turn.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 8100000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "arrow-storm"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "HymGq9Ns1KzUpgaY",
+   "_key": "!journal.pages!pfaArcadeRules01.HymGq9Ns1KzUpgaY",
+   "name": "Gladiator’s Gauntlet",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/gladiator-s-gauntlet.webp\" alt=\"Gladiator’s Gauntlet cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Survive the arena itself.</em></p><p>A duel in an arena full of traps: pillars, hazard squares and a pit trap that moves every round.</p><h3>At a glance</h3><ul><li><b>Players:</b> Exactly 2 gladiators.</li><li><b>Length:</b> Knockout, or 14 rounds</li><li><b>Goal:</b> Outlast your rival.</li></ul><h3>Setup</h3><ul><li>Duelist vs Bruiser by default. Two hazard squares deal 3 damage when entered.</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Damage = the ability’s base + half your Power (rounded down) + 0–2 + any Aim bonus. The target subtracts its Guard, Dodge bonus, +2 if standing in cover and +2 if hidden (maximum 10 total); an exposed target takes +2. Each hit strips 2 Guard.</li><li>At the end of each round a pit trap erupts along one column (it shifts each round), dealing 2–5 damage to anyone standing there.</li></ol><h3>Scoring</h3><ul><li>Each hit earns half its damage as score.</li></ul><h3>End of the game</h3><p>Knockout, or the judges after 14 rounds.</p><h3>Tips</h3><ul><li>Knockbacks into the next trap column are devastating.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 8200000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "gladiator-s-gauntlet"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "Aif3QXTDhnlhTbjh",
+   "_key": "!journal.pages!pfaArcadeRules01.Aif3QXTDhnlhTbjh",
+   "name": "The Gloop",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/the-gloop.webp\" alt=\"The Gloop cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Free the captive before the slime eats you.</em></p><p>A co-operative rescue across a floor of burning slime pools.</p><h3>At a glance</h3><ul><li><b>Players:</b> 2 co-operative rescuers.</li><li><b>Length:</b> 12 rounds</li><li><b>Goal:</b> Reach the captive and Free them.</li></ul><h3>Setup</h3><ul><li>Wrestler and Sentinel kits. The captive (✨) is held at the top of the arena.</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Stepping into slime costs 2 stamina and leaves you exposed; standing in slime at the end of a round burns 2 HP.</li><li>Free captive (2 AP) when within one square of the captive.</li></ol><h3>Scoring</h3><ul><li>Freeing the captive scores +20.</li></ul><h3>End of the game</h3><p>Success when the captive is freed; failure when time runs out.</p><h3>Tips</h3><ul><li>Two Steps cover four squares — plan a route around the pools.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 8300000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "the-gloop"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "nbwJonPvfAshLQYF",
+   "_key": "!journal.pages!pfaArcadeRules01.nbwJonPvfAshLQYF",
+   "name": "Melee Training Dummy",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/melee-training-dummy.webp\" alt=\"Melee Training Dummy cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Drills before duels.</em></p><p>A low-stakes practice yard for footwork, strikes and stamina management.</p><h3>At a glance</h3><ul><li><b>Players:</b> 1 trainee (the dummy is automatic).</li><li><b>Length:</b> 30 technique points or 10 rounds</li><li><b>Goal:</b> Score 30 technique points within 10 rounds.</li></ul><h3>Setup</h3><ul><li>The training construct has 99 HP and hits back gently.</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Training combo (2 AP, 3 stamina, range 1) is only available here.</li></ol><h3>Scoring</h3><ul><li>Each hit scores its damage (at least 2).</li></ul><h3>End of the game</h3><p>Reaching 30 points completes the drill.</p><h3>Tips</h3><ul><li>Recover when stamina drops below 4 — exhausted fighters cannot attack.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 8400000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "melee-training-dummy"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "z5evvUWxHIUmV6AB",
+   "_key": "!journal.pages!pfaArcadeRules01.z5evvUWxHIUmV6AB",
+   "name": "Arena Beast-Rider",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/arena-beast-rider.webp\" alt=\"Arena Beast-Rider cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>Lances down!</em></p><p>Mounted duelling in the ring: charges, vaults and tramples.</p><h3>At a glance</h3><ul><li><b>Players:</b> Exactly 2 Beast Riders.</li><li><b>Length:</b> Knockout, or 18 rounds</li><li><b>Goal:</b> Unhorse your rival by knockout or win on points.</li></ul><h3>Setup</h3><ul><li>Both riders use the Beast Rider kit (32 HP, 15 stamina).</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Damage = the ability’s base + half your Power (rounded down) + 0–2 + any Aim bonus. The target subtracts its Guard, Dodge bonus, +2 if standing in cover and +2 if hidden (maximum 10 total); an exposed target takes +2. Each hit strips 2 Guard.</li><li>Charging lance (range 2, 10 damage, knockback, cooldown 2) · Trample (8, knockback) · Vault (teleport 3).</li></ol><h3>Scoring</h3><ul><li>Each hit earns half its damage as score.</li></ul><h3>End of the game</h3><p>Knockout, or the judges after 18 rounds.</p><h3>Tips</h3><ul><li>Vault out of reach on the turn their charge is ready.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 8500000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "arena-beast-rider"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  },
+  {
+   "_id": "RjzYIYVFQkR1mVDL",
+   "_key": "!journal.pages!pfaArcadeRules01.RjzYIYVFQkR1mVDL",
+   "name": "Shadow Heist",
+   "type": "text",
+   "title": {
+    "show": true,
+    "level": 2
+   },
+   "image": {},
+   "text": {
+    "format": 1,
+    "content": "<p class=\"pfa-rules-art\"><img src=\"modules/pacts-fantasy-arcade/assets/art/covers/shadow-heist.webp\" alt=\"Shadow Heist cover art\" width=\"320\"/></p><p class=\"pfa-rules-tagline\"><em>No witnesses.</em></p><p>A co-operative stealth trial: cross the vault, reach the prize and extract before the patrol raises the alarm.</p><h3>At a glance</h3><ul><li><b>Players:</b> 2 co-operative Shadowrunners.</li><li><b>Length:</b> 12 rounds, or the alarm</li><li><b>Goal:</b> Extract the prize while the alert is 6 or less.</li></ul><h3>Setup</h3><ul><li>Patrol alert starts at 0 of 7. Cover squares are scattered across the floor.</li></ul><h3>On your turn</h3><ol><li>Arena turn: you have 2 action points (AP). Choose an ability, then click a highlighted square (or use a self-targeted ability). Stamina and focus pay for abilities; at the start of your turn you regain 2 stamina and 1 focus, your guard fades by 1 and cooldowns tick down.</li><li>Alert rises by 1 at the end of every round, and by 1 whenever you move onto open ground while not hidden.</li><li>Fade into shadow hides you (and lowers alert by 1) until you attack. Distract patrol lowers alert by 3.</li><li>Extract quietly (2 AP) within one square of the prize.</li></ol><h3>Scoring</h3><ul><li>Extracting scores +20.</li></ul><h3>End of the game</h3><p>Success on extraction; failure if the alert reaches 7 or time runs out.</p><h3>Tips</h3><ul><li>One runner distracts while the other moves.</li></ul>",
+    "markdown": ""
+   },
+   "video": {
+    "controls": true,
+    "volume": 0.5
+   },
+   "src": null,
+   "system": {},
+   "sort": 8600000,
+   "ownership": {
+    "default": -1
+   },
+   "flags": {
+    "pacts-fantasy-arcade": {
+     "key": "shadow-heist"
+    }
+   },
+   "_stats": {
+    "coreVersion": "14",
+    "systemId": null,
+    "systemVersion": null,
+    "createdTime": 1795046400000,
+    "modifiedTime": 1795046400000,
+    "lastModifiedBy": null,
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "exportSource": null
+   }
+  }
+ ],
+ "folder": null,
+ "categories": [],
+ "sort": 0,
+ "ownership": {
+  "default": 2
+ },
+ "flags": {
+  "pacts-fantasy-arcade": {
+   "version": "0.5.2-alpha.5.2"
+  }
+ },
+ "_stats": {
+  "coreVersion": "14",
+  "systemId": null,
+  "systemVersion": null,
+  "createdTime": 1795046400000,
+  "modifiedTime": 1795046400000,
+  "lastModifiedBy": null,
+  "compendiumSource": null,
+  "duplicateSource": null,
+  "exportSource": null
+ }
+}

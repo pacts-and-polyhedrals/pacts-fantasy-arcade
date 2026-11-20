@@ -1,0 +1,59 @@
+/** Keyboard-accessible arena board, responsive tactical controls and public replay. */
+import {ARENA_KITS,ARENA_ABILITIES,ARENA_CONFIGS} from '../core/arena-data.mjs';
+import {arenaAbility,arenaMatrix,legalArenaActions} from '../core/arena-engine.mjs';
+import {ARENA_PERSONAS} from '../core/arena-dialogue.mjs';
+import {KIT_ART} from '../core/art.mjs';
+const token=(kit,fallback)=>KIT_ART[kit]?`<img class="pfa-kit-img" src="${esc(KIT_ART[kit])}" alt="" draggable="false"/>`:esc(fallback);
+const esc=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
+const btn=(text,act,options={},disabled=false,cls='')=>`<button type="button" class="pfa-btn ${cls}" data-act="${esc(act)}" ${Object.entries(options).map(([k,v])=>`data-${esc(k)}="${esc(v)}"`).join(' ')} ${disabled?'disabled':''}>${esc(text)}</button>`;
+const bar=(v,max,kind)=>`<meter class="pfa-arena-meter ${kind}" min="0" max="${Math.max(1,max)}" value="${Math.max(0,v)}">${v}/${max}</meter>`;
+const pct=(x,max)=>`${Math.round(Math.max(0,Math.min(1,x/max))*100)}%`;
+const roundScore=(n)=>Number.isFinite(n)?n:0;
+export function renderArenaSetup(session,ctx){const preset=ARENA_CONFIGS[session.gameId];const kitNames=Object.entries(ARENA_KITS).filter(([id])=>id!=='dummy').map(([id,info])=>({id,label:`${info.icon} ${info.label}`}));
+ const actorRows=session.seats.map((seat,i)=>{
+  const current=seat.arenaKit||preset.profile[i]||'duelist',allowed=ctx.gm||seat.ownerId===ctx.user.id;
+  const kits=(session.gameId==='fighting-pit-tournament'?kitNames.filter(k=>['duelist','bruiser','guardian','wrestler','rogue','rider'].includes(k.id)):session.gameId==='wizard-duel'?kitNames.filter(k=>k.id==='mage'):['battle-of-the-bards','festival-slam-poetry','trial-by-debate','bardic-duet'].includes(session.gameId)?kitNames.filter(k=>['bard','poet','orator'].includes(k.id)):kitNames.filter(k=>k.id===preset.profile[i]));
+  const kitSelect=`<select data-act="arena-kit" data-seat="${esc(seat.id)}" ${!allowed?'disabled':''}>${kits.map(k=>`<option value="${esc(k.id)}" ${current===k.id?'selected':''}>${esc(k.label)}</option>`).join('')}</select>`;
+  const persona=`<select data-act="arena-persona" data-seat="${esc(seat.id)}" ${!allowed?'disabled':''}><option value="">Automatic dialogue personality</option>${Object.entries(ARENA_PERSONAS).map(([id,p])=>`<option value="${esc(id)}" ${seat.arenaPersona===id?'selected':''}>${esc(p.name)}</option>`).join('')}</select>`;
+  return `<div class="pfa-arena-setup-row"><b>${esc(seat.name)}</b><div>${kitSelect}${persona}</div></div>`;
+ }).join('');
+ const difficulty=Number(session.config?.difficulty||2);
+ return `<section class="pfa-arena-setup"><h4>⚔️ Arena preparation</h4><p>Each character has a unique resource pool, legal abilities and opponent personality. Change your kit before the match begins. The GM may configure NPCs.</p>${actorRows}${ctx.gm?`<label>NPC tactics difficulty <select data-act="arena-difficulty"><option value="1" ${difficulty===1?'selected':''}>1 · Casual</option><option value="2" ${difficulty===2?'selected':''}>2 · Skilled</option><option value="3" ${difficulty===3?'selected':''}>3 · Tactical lookahead</option></select></label>`:''}<p class="pfa-muted">Scene-independent arena: no Foundry actor HP, spell slots, weapons, or inventory are changed by default. The future fighting-pit adapter can optionally map those systems.</p></section>`;
+}
+export function renderArenaGame(session,ctx){const s=session?.board;if(!s)return '<p>Waiting for the contest to start.</p>';
+ const fromReplay=Number.isInteger(ctx.replayIndex)&&ctx.replayIndex>=0;const snapshot=fromReplay?s.timeline[Math.min(s.timeline.length-1,ctx.replayIndex)]:null;
+ const display=snapshot?{...s,...snapshot,lastEvent:snapshot.event,events:s.events,terrain:s.terrain,objective:s.objective,kind:s.kind,venue:s.venue,gameId:s.gameId,seats:s.seats,width:s.width,height:s.height}:s;
+ const own=session.seats.find(z=>z.id===ctx.seatId),turnSeat=session.seats[display.turn],active=Boolean(ctx.canPlay&&!s.done&&!s.paused&&!fromReplay&&turnSeat?.id===ctx.seatId);
+ const fighter=s.fighters[ctx.seatId],legal=active?legalArenaActions(s,ctx.seatId):[],selected=ctx.arenaAbility||'move',targets=legal.filter(a=>a.ability===selected);
+ const canTarget=new Set(targets.filter(t=>Number.isInteger(t.x)).map(t=>`${t.x},${t.y}`)),selfAbility=targets.some(t=>t.x===undefined);
+ const grid=arenaMatrix(display);
+ const actorTags=Object.values(display.fighters).map(f=>{
+  const name=session.seats.find(z=>z.id===f.id)?.name||'Contestant';
+  return `<div class="pfa-arena-portrait ${f.id===ctx.seatId?'mine':''}"><b>${token(f.kit,f.icon||ARENA_KITS[f.kit]?.icon||'⚔️')} ${esc(name)}</b><small>${esc(ARENA_KITS[f.kit]?.label||f.kit)}</small>${bar(f.hp,s.fighters[f.id]?.maxHp||40,'health')}<small>${esc(f.hp)} HP · ${esc(f.stamina)} stamina · ${esc(f.focus)} focus · ${esc(f.score||0)} score ${f.pins?`· ${esc(f.pins)} pins`:''}</small><span>${f.guard?'🛡 Guard '+f.guard+' ':''}${f.hidden?'🌘 Hidden ':''}${f.grappledBy?'🔗 Grappled ':''}${f.counter?'✦ Counterspell ready':''}</span></div>`;
+ }).join('');
+ const cells=grid.map(row=>row.map(c=>{
+  const at=display.fighters[c.actor],threat=c.threat,valid=active&&canTarget.has(`${c.x},${c.y}`),actorHere=Boolean(at);
+  const label=`Row ${c.y+1} column ${c.x+1}, ${c.terrain}${at?`, ${session.seats.find(z=>z.id===at.id)?.name||'combatant'} ${at.hp} health`:''}${threat?`, raider ${threat.hp} health`:''}${c.objective?', objective':''}${valid?', legal target':''}`;
+  return `<button type="button" class="pfa-arena-cell ${esc(c.terrain)} ${c.volley?'volley':''} ${valid?'target':''} ${actorHere?'occupied':''} ${at?.side===0?'side-a':'side-b'}" style="--x:${c.x};--y:${c.y}" data-act="arena-cell" data-x="${c.x}" data-y="${c.y}" ${valid?'':'disabled'} aria-label="${esc(label)}" title="${esc(label)}">${at?`<span class="pfa-arena-token" aria-hidden="true">${token(at.kit,at.icon||ARENA_KITS[at.kit]?.icon||'♟️')}<i>${esc(at.hp)}</i></span>`:threat?`<span class="pfa-arena-threat" aria-hidden="true">${token('raider','👺')}<i>${esc(threat.hp)}</i></span>`:c.objective?'✨':c.terrain==='pillar'?'▥':c.terrain==='slime'?'◉':c.terrain==='hazard'?'⚠':c.terrain==='spotlight'?'✦':' '}</button>`;
+ })).flat().join('');
+ const grouped=fighter?[...new Set([...ARENA_KITS[fighter.kit].abilities,...(s.kind==='rescue'?['free']:[]),...(s.kind==='stealth'?['extract']:[]),...(s.kind==='training'&&fighter.kit!=='dummy'?['combo']:[])])].filter(id=>id!=='harmony'||s.kind==='cooperative'):[];
+ const abilityControls=`<div class="pfa-arena-abilities" role="group" aria-label="Tactical abilities">${grouped.map(id=>{
+  const ab=arenaAbility(id),can=legal.some(a=>a.ability===id);
+  return btn(`${selected===id?'◉ ':'○ '}${ab.name} · ${ab.ap}AP${ab.st?' · '+ab.st+' stamina':''}${ab.fo?' · '+ab.fo+' focus':''}`,'arena-select',{ability:id},!active||!can,`pfa-arena-ability ${selected===id?'selected':''}`);
+ }).join('')}</div>`;
+ const event=display.lastEvent||s.lastEvent,from=event?.from,to=event?.to;
+ const moving=event&&from&&to&&(from.x!==to.x||from.y!==to.y)&&!ctx.reducedMotion;
+ const effect=event&&event.amount&&event.kind!=='performance';
+ const ghost=moving?`<span class="pfa-arena-flight" style="--sx:${from.x};--sy:${from.y};--tx:${to.x};--ty:${to.y}" aria-hidden="true">${esc(ARENA_KITS[s.fighters[event.actorId]?.kit]?.icon||'✦')}</span>`:'';
+ const projectile=event?.impact&&from&&(event.impact.x!==from.x||event.impact.y!==from.y)&&!ctx.reducedMotion&&(ARENA_ABILITIES[event.ability]?.magic||ARENA_ABILITIES[event.ability]?.ranged)?`<span class="pfa-arena-projectile ${ARENA_ABILITIES[event.ability]?.magic?'arcane':'arrow'}" style="--sx:${from.x};--sy:${from.y};--tx:${event.impact.x};--ty:${event.impact.y}" aria-hidden="true">${ARENA_ABILITIES[event.ability]?.magic?'✦':'➶'}</span>`:'';
+ const impact=event?.impact&&event.kind!=='move'&&event.kind!=='evade'&&!ctx.reducedMotion?`<span class="pfa-arena-impact ${ARENA_ABILITIES[event.ability]?.magic?'arcane':''}" style="--ix:${event.impact.x};--iy:${event.impact.y}" aria-hidden="true"></span>`:'';
+ const quote=event?.quote;
+ const commentary=`<div class="pfa-arena-commentary" aria-live="polite"><b>${esc(quote?.speaker||'Arena Herald')}</b><p>${esc(quote?.text||event?.text||'The crowd anticipates the next move.')}</p><small>${esc(event?.text||'')}</small></div>`;
+ const events=(s.events||[]).slice(-7).reverse().map(e=>`<li><small>Round ${e.round}</small> ${esc(e.text)}</li>`).join('');
+ const replay=`<nav class="pfa-replay-nav" aria-label="Public arena replay"><b>${fromReplay?`Replay ${ctx.replayIndex+1}/${s.timeline.length}`:'Live match'}</b><div class="pfa-actions">${btn('◀ Back','arena-replay-prev',{},!s.timeline?.length)}${btn('Forward ▶','arena-replay-next',{},!s.timeline?.length)}${btn('Live','arena-replay-live')}</div></nav>`;
+ const delivery=display.kind==='performance'||display.kind==='cooperative'&&display.venue==='theatre';
+ const deliveryControl=delivery?`<label for="pfa-arena-delivery">Performance style (audience preference: <strong>${esc(display.crowdPreference||'heroic')}</strong>)</label><select id="pfa-arena-delivery" data-act="arena-delivery"><option value="heroic" ${ctx.arenaDelivery==='heroic'?'selected':''}>Heroic</option><option value="comic" ${ctx.arenaDelivery==='comic'?'selected':''}>Comic</option><option value="heartfelt" ${ctx.arenaDelivery==='heartfelt'?'selected':''}>Heartfelt</option></select><p class="pfa-muted">Matching the audience earns extra favour; repeating the same performance loses freshness.</p>`:'';
+ const location=s.kind==='rescue'?'Release the captive (✨)':s.kind==='stealth'?'Reach the exit (✨) before alert 7/7':s.kind==='defence'?`Gate integrity ${display.gate}/24, wave ${display.round}/${s.roundLimit}${Number.isInteger(display.volleyRow)?` · 🏹 Arrow lane: row ${display.volleyRow+1}`:''}`:s.kind==='training'?`Technique ${display.fighters[s.seats[0]].score}/${s.goal}`:s.kind==='cooperative'?`Combined applause ${display.fighters[s.seats[0]].score+display.fighters[s.seats[1]].score}/${s.goal}`:`Round ${display.round}/${s.roundLimit}`;
+ const text=active?selected==='move'?'Select a highlighted destination.':`${esc(arenaAbility(selected)?.tip||'Choose an ability.')}${selfAbility?' Execute the selected self-action below.':' Click a highlighted target on the board.'}`:s.done?`Winner: ${Number.isInteger(s.winner)?esc(session.seats[s.winner]?.name||'Unknown'):'Cooperative result / draw'} · ${s.success===false?'Objective failed':'Complete'}`:`${esc(turnSeat?.name||'Contestant')} is deciding their next move.`;
+ return `<article class="pfa-arena-stage"><div class="pfa-arena-banner"><span>⚔️ ${esc(s.venue.toUpperCase())} · ${esc(location)}</span><strong>${s.done?'Contest complete':s.paused?'Paused':`Round ${display.round} · ${display.ap} AP`}</strong></div><div class="pfa-arena-portraits">${actorTags}</div><div class="pfa-arena-info" role="status">${text} ${s.kind==='stealth'?`Alert ${display.alert}/7.`:''}</div><div class="pfa-arena-grid-shell" style="--cols:${s.width}"><div class="pfa-arena-grid" style="--cols:${s.width};--rows:${s.height}" role="grid" aria-label="Tactical arena map">${cells}</div>${ghost}${projectile}${impact}</div>${commentary}${deliveryControl}${abilityControls}<div class="pfa-actions">${selfAbility?btn('Use '+arenaAbility(selected).name,'arena-use-self',{ability:selected},!active,'pfa-primary'):''}${btn('End turn','arena-end-turn',{},!active)}${ctx.gm?btn(s.paused?'Resume arena':'Pause arena','arena-pause',{},s.done):''}</div>${replay}<details class="pfa-arena-log" open><summary>Match commentary and history</summary><ol>${events}</ol></details><p class="pfa-muted">Each move is validated by the host against legal AP, range, resources and terrain. NPC dialogue is pre-authored; no outside AI calls or character-sheet modification.</p></article>`;
+}

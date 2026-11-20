@@ -1,0 +1,8 @@
+Copyright (c) 2026 Pacts & Polyhedrals / DM Asmo.
+All rights reserved. Redistribution or commercialization of the core Fantasy Arcade module requires the rights holder's permission.
+
+Wyvern Chess Foundry adaptation: modified, unofficial non-commercial port based on the original Wyvern Chess rules by DM Asmo / Pacts & Polyhedrals. Its original Wyvern Chess Community License is reproduced unchanged at licenses/WYVERN-CHESS-LICENSE.md. Commercial distribution of Wyvern Chess requires rights-holder permission under that license.
+
+No original Wyvern Chess sprite files, original artwork, audio or third-party asset packs are bundled. This module uses text/Unicode symbols for chess piece representations.
+
+The full 131-game planning register is included for project development and provenance.

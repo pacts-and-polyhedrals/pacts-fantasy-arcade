@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Fantasy Arcade UI preview</title><link rel="stylesheet" href="../styles/arcade.css"><style>body{margin:0;background:#12141d;padding:18px;display:flex;justify-content:center}.pfa-application{width:1150px;height:760px;border:1px solid #9e7e74;box-shadow:0 15px 40px #0009}.pfa-application .window-content{height:100%;}</style></head><body><div class="pfa-application"><div class="window-content" id="preview"></div></div><script type="module">
+import {renderArcade} from "../scripts/ui/view.mjs";
+import {ArcadeSessions} from "../scripts/core/session.mjs";
+const r=await fetch('../data/catalog.json');let {games}=await r.json();
+let a=new ArcadeSessions(()=>0.42);a.create({gameId:'three-dragon-slots',id:'table-example-123',userId:'u1',userName:'DM Asmo'});a.addNpc({id:'table-example-123',userId:'u1',name:'Grukk the Goblin',controlled:false,gm:true});a.start({id:'table-example-123',userId:'u1',gm:true});a.play({id:'table-example-123',seatId:a.summaries()[0].seats[0].id,userId:'u1',action:{type:'spin'}});
+let session=a.summaries()[0];
+document.querySelector('#preview').innerHTML=renderArcade({catalog:games,sessions:[session],session,selected:'three-dragon-slots',seatId:session.seats[0].id,user:{id:'u1',name:'DM Asmo'},gm:true,showAll:false,filter:'',tutorialStep:0,power:70,aimX:0,aimY:0,selectedSquare:null});
+window.arcadePreviewReady=true;
+</script></body></html>
